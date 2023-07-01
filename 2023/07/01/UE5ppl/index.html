@@ -39,7 +39,7 @@
 <meta property="og:image" content="https://mikumikudaifans.github.io/Displace.github.io/images/PostProcessOutLine/Snipastesample_2023-07-01_16-18-50.png">
 <meta property="og:image" content="https://mikumikudaifans.github.io/Displace.github.io/images/PostProcessOutLine/InkedMaterial_0-MaterialGrhhh.jpg">
 <meta property="article:published_time" content="2023-06-30T16:00:00.000Z">
-<meta property="article:modified_time" content="2023-07-01T08:38:31.589Z">
+<meta property="article:modified_time" content="2023-07-01T09:58:47.205Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://mikumikudaifans.github.io/Displace.github.io/images/PostProcessOutLine/fix_jvchi.png">
@@ -556,8 +556,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2023-07-01 16:38:31</span>
-            <span class="mobile">2023-07-01 16:38</span>
+            <span class="desktop">2023-07-01 17:58:47</span>
+            <span class="mobile">2023-07-01 17:58</span>
             <span class="hover-info">Updated</span>
         </span>
     
@@ -568,12 +568,12 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>580 Words</span>
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>621 Words</span>
         </span>
     
     
         <span class="article-min2read article-meta-item">
-            <i class="fa-regular fa-clock"></i>&nbsp;<span>1 Mins</span>
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>2 Mins</span>
         </span>
     
     
@@ -592,9 +592,9 @@
                 <p>ue常用的三种描边方法，各有优劣，一些小的要点值得记录一下</p>
 <h2 id="PostProcessOutLine-Theory"><a href="#PostProcessOutLine-Theory" class="headerlink" title="PostProcessOutLine_Theory"></a>PostProcessOutLine_Theory</h2><p>后期描边本质是通过UE渲染时产生的各种SceneTexture来获取模型的轮廓，在使用像素偏移产生描边效果</p>
 <h2 id="PostProcessOutLine-MaterialSetting"><a href="#PostProcessOutLine-MaterialSetting" class="headerlink" title="PostProcessOutLine_MaterialSetting"></a>PostProcessOutLine_MaterialSetting</h2><p>在进行描边之前，修改后期材质的渲染次序是必要的，否则会出现锯齿和颜色出错等问题<br><img lazyload src="/images/loading.svg" data-src="/Displace.github.io/images/PostProcessOutLine/fix_jvchi.png"></p>
-<h3 id="PostProcessOutLine-Normal"><a href="#PostProcessOutLine-Normal" class="headerlink" title="PostProcessOutLine_Normal"></a>PostProcessOutLine_Normal</h3><p>根据模型法线进行描边，这种方法对模型的要求很高，首先就是不能有明显接缝和法线错误，其次从效果爱看他对模型尖锐部分的描边容易出现较强的锯齿和闪烁<br><img lazyload src="/images/loading.svg" data-src="/Displace.github.io/images/PostProcessOutLine/Inkednormal_bug.jpg"></p>
+<h3 id="PostProcessOutLine-Normal"><a href="#PostProcessOutLine-Normal" class="headerlink" title="PostProcessOutLine_Normal"></a>PostProcessOutLine_Normal</h3><p>根据模型法线进行描边，这种方法对模型的要求很高，首先就是不能有明显接缝和法线错误，其次从效果来看他对模型尖锐部分的描边容易出现较强的锯齿和闪烁<br><img lazyload src="/images/loading.svg" data-src="/Displace.github.io/images/PostProcessOutLine/Inkednormal_bug.jpg"></p>
 <p>法线显然更是个多个简单模型的统一描边，算法也相对简单，但开销不是很好<br><img lazyload src="/images/loading.svg" data-src="/Displace.github.io/images/PostProcessOutLine/Pos_Stencil_NormalOutLine-MaterialGraph_0.png"></p>
-<h3 id="PostProcessOutLine-Depth"><a href="#PostProcessOutLine-Depth" class="headerlink" title="PostProcessOutLine_Depth"></a>PostProcessOutLine_Depth</h3><p>通过读取DepthTexture来得到模型之间的深度信息，通过if进行判断再描边，效果相比法线描边好很多，但由于算法的原因地面会出现我不要要的描边<br><img lazyload src="/images/loading.svg" data-src="/Displace.github.io/images/PostProcessOutLine/deeph_bug.png"><br><img lazyload src="/images/loading.svg" data-src="/Displace.github.io/images/PostProcessOutLine/Pos_Stemcil_DepthOutLine-MaterialGraph_0_0.png"><br><img lazyload src="/images/loading.svg" data-src="/Displace.github.io/images/PostProcessOutLine/Material_2-MaterialGraph.png"></p>
+<h3 id="PostProcessOutLine-Depth"><a href="#PostProcessOutLine-Depth" class="headerlink" title="PostProcessOutLine_Depth"></a>PostProcessOutLine_Depth</h3><p>通过读取DepthTexture来得到模型之间的深度信息，通过if进行判断再描边，效果相比法线描边好很多，但由于算法的原因地面会出现我不想要的描边<br><img lazyload src="/images/loading.svg" data-src="/Displace.github.io/images/PostProcessOutLine/deeph_bug.png"><br><img lazyload src="/images/loading.svg" data-src="/Displace.github.io/images/PostProcessOutLine/Pos_Stemcil_DepthOutLine-MaterialGraph_0_0.png"><br><img lazyload src="/images/loading.svg" data-src="/Displace.github.io/images/PostProcessOutLine/Material_2-MaterialGraph.png"></p>
 <p>通常可以通过减小计算时的深度差阈值来弥补和淡化，但貌似不能100%消除。对于效果来说无伤大雅<br><img lazyload src="/images/loading.svg" data-src="/Displace.github.io/images/PostProcessOutLine/deeph_fix.png"></p>
 <h3 id="PostProcessOutLine-CustomDepth"><a href="#PostProcessOutLine-CustomDepth" class="headerlink" title="PostProcessOutLine_CustomDepth"></a>PostProcessOutLine_CustomDepth</h3><p>通过自定义深度功能，赋予模型各自的深度数值，以此进行描边能避免使用DepthTexture时遇到的地面描边Bug<br><img lazyload src="/images/loading.svg" data-src="/Displace.github.io/images/PostProcessOutLine/Custom_01.png"></p>
 <p>算法上和基于DepthTexture描边是一致的<br><img lazyload src="/images/loading.svg" data-src="/Displace.github.io/images/PostProcessOutLine/CustomDepth_Pos-MaterialGraph_0_0.png"><br><img lazyload src="/images/loading.svg" data-src="/Displace.github.io/images/PostProcessOutLine/Material_0-MaterialGraph.png"></p>
@@ -602,6 +602,7 @@
 <h2 id="Technical-Detail"><a href="#Technical-Detail" class="headerlink" title="Technical Detail"></a>Technical Detail</h2><p>在描边过程中单次采样的像素偏移不能达到理想的效果，因此可以采用卷积采样（在算出的边缘结果上向多个方向进行偏移，以达到更好的效果），但多次采样势必会让开销变得非常庞大，通常进行四个方向的卷积采样即可<br><img lazyload src="/images/loading.svg" data-src="/Displace.github.io/images/PostProcessOutLine/Snipastesample_2023-07-01_16-18-50.png"></p>
 <p>由于不同的显示窗口大小不一，使的算法在读取SceneTexture时会出现bug，导致效果出现拉伸，此时将ViewSize关联进来可以解决bug<br><img lazyload src="/images/loading.svg" data-src="/Displace.github.io/images/PostProcessOutLine/InkedMaterial_0-MaterialGrhhh.jpg"></p>
 <h2 id="Last"><a href="#Last" class="headerlink" title="Last"></a>Last</h2><p>这是我学习后期描边的一个小笔记，其中依然有很多不明白的地方，欢迎大佬来指出其中的错误（虽然网站的评论功能我还没做好</p>
+<p>上述是从月神的官方直播课学来的知识，详情参见B站视频：<a class="link" target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Pk4y1R7MN/?spm_id_from=333.337.search-card.all.click&vd_source=4e582438f10b3a0a6aea029597eb7253">https://www.bilibili.com/video/BV1Pk4y1R7MN/?spm_id_from=333.337.search-card.all.click&amp;vd_source=4e582438f10b3a0a6aea029597eb7253 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
 
             </div>
 
@@ -614,7 +615,7 @@
         <li><strong>Created at:</strong> 2023-07-01 00:00:00</li>
         
             <li>
-                <strong>Updated at:</strong> 2023-07-01 16:38:31
+                <strong>Updated at:</strong> 2023-07-01 17:58:47
             </li>
         
         <li>
