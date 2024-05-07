@@ -37,24 +37,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/Displace.github.io/2023/05/25/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a class="link" href="https://hexo.io/">Hexo <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>! This is your very first post. Check <a class="link" href="https://hexo.io/docs/">documentation <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> for more info. If you get any problems when using Hexo, you can find the answer in <a class="link" href="https://hexo.io/docs/troubleshooting.html">troubleshooting <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a> or you can ask me on <a class="link" href="https://github.com/hexojs/hexo/issues">GitHub <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure></div>
-
-<p>More info: <a class="link" href="https://hexo.io/docs/writing.html">Writing <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure></div>
-
-<p>More info: <a class="link" href="https://hexo.io/docs/server.html">Server <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure></div>
-
-<p>More info: <a class="link" href="https://hexo.io/docs/generating.html">Generating <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><div class="highlight-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure></div>
-
-<p>More info: <a class="link" href="https://hexo.io/docs/one-command-deployment.html">Deployment <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-]]></content>
-  </entry>
-  <entry>
     <title>Bug Fix Log</title>
     <url>/Displace.github.io/2023/05/25/ttttt/</url>
     <content><![CDATA[<p>太菜了，这博客做不了一点</p>
@@ -115,7 +97,7 @@
 <h2 id="PostProcessOutLine-Theory"><a href="#PostProcessOutLine-Theory" class="headerlink" title="PostProcessOutLine_Theory"></a>PostProcessOutLine_Theory</h2><p>后期描边本质是通过UE渲染时产生的各种SceneTexture来获取模型的轮廓，在使用像素偏移产生描边效果</p>
 <h2 id="PostProcessOutLine-MaterialSetting"><a href="#PostProcessOutLine-MaterialSetting" class="headerlink" title="PostProcessOutLine_MaterialSetting"></a>PostProcessOutLine_MaterialSetting</h2><p>在进行描边之前，修改后期材质的渲染次序是必要的，否则会出现锯齿和颜色出错等问题<br><img lazyload src="/images/loading.svg" data-src="/Displace.github.io/images/PostProcessOutLine/fix_jvchi.png"></p>
 <h3 id="PostProcessOutLine-Normal"><a href="#PostProcessOutLine-Normal" class="headerlink" title="PostProcessOutLine_Normal"></a>PostProcessOutLine_Normal</h3><p>根据模型法线进行描边，这种方法对模型的要求很高，首先就是不能有明显接缝和法线错误，其次从效果来看他对模型尖锐部分的描边容易出现较强的锯齿和闪烁<br><img lazyload src="/images/loading.svg" data-src="/Displace.github.io/images/PostProcessOutLine/Inkednormal_bug.jpg"></p>
-<p>法线显然更是个多个简单模型的统一描边，算法也相对简单，但开销不是很好<br><img lazyload src="/images/loading.svg" data-src="/Displace.github.io/images/PostProcessOutLine/Pos_Stencil_NormalOutLine-MaterialGraph_0.png"></p>
+<p>法线显然更适合多个简单模型的统一描边，算法也相对简单，但开销不是很好<br><img lazyload src="/images/loading.svg" data-src="/Displace.github.io/images/PostProcessOutLine/Pos_Stencil_NormalOutLine-MaterialGraph_0.png"></p>
 <h3 id="PostProcessOutLine-Depth"><a href="#PostProcessOutLine-Depth" class="headerlink" title="PostProcessOutLine_Depth"></a>PostProcessOutLine_Depth</h3><p>通过读取DepthTexture来得到模型之间的深度信息，通过if进行判断再描边，效果相比法线描边好很多，但由于算法的原因地面会出现我不想要的描边<br><img lazyload src="/images/loading.svg" data-src="/Displace.github.io/images/PostProcessOutLine/deeph_bug.png"><br><img lazyload src="/images/loading.svg" data-src="/Displace.github.io/images/PostProcessOutLine/Pos_Stemcil_DepthOutLine-MaterialGraph_0_0.png"><br><img lazyload src="/images/loading.svg" data-src="/Displace.github.io/images/PostProcessOutLine/Material_2-MaterialGraph.png"></p>
 <p>通常可以通过减小计算时的深度差阈值来弥补和淡化，但貌似不能100%消除。对于效果来说无伤大雅<br><img lazyload src="/images/loading.svg" data-src="/Displace.github.io/images/PostProcessOutLine/deeph_fix.png"></p>
 <h3 id="PostProcessOutLine-CustomDepth"><a href="#PostProcessOutLine-CustomDepth" class="headerlink" title="PostProcessOutLine_CustomDepth"></a>PostProcessOutLine_CustomDepth</h3><p>通过自定义深度功能，赋予模型各自的深度数值，以此进行描边能避免使用DepthTexture时遇到的地面描边Bug<br><img lazyload src="/images/loading.svg" data-src="/Displace.github.io/images/PostProcessOutLine/Custom_01.png"></p>
@@ -125,6 +107,27 @@
 <p>由于不同的显示窗口大小不一，使的算法在读取SceneTexture时会出现bug，导致效果出现拉伸，此时将ViewSize关联进来可以解决bug<br><img lazyload src="/images/loading.svg" data-src="/Displace.github.io/images/PostProcessOutLine/InkedMaterial_0-MaterialGrhhh.jpg"></p>
 <h2 id="Last"><a href="#Last" class="headerlink" title="Last"></a>Last</h2><p>这是我学习后期描边的一个小笔记，其中依然有很多不明白的地方，欢迎大佬来指出其中的错误（虽然网站的评论功能我还没做好</p>
 <p>上述是从月神的官方直播课学来的知识，详情参见B站视频：<a class="link" href="https://www.bilibili.com/video/BV1Pk4y1R7MN/?spm_id_from=333.337.search-card.all.click&vd_source=4e582438f10b3a0a6aea029597eb7253">https://www.bilibili.com/video/BV1Pk4y1R7MN/?spm_id_from=333.337.search-card.all.click&amp;vd_source=4e582438f10b3a0a6aea029597eb7253 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>Diary</title>
+    <url>/Displace.github.io/2024/05/05/Diary/</url>
+    <content><![CDATA[<p>感觉最近浑浑噩噩的，学习学不进去，运动动不起来，一定是前一段失恋导致的……吗？我母鸡哎。</p>
+<p>anyway，我决定来这里拉一坨，希望下次我再回来看的时候会觉得自己是个傻逼 .</p>
+<h2 id="Lack-of-motivation"><a href="#Lack-of-motivation" class="headerlink" title="Lack of motivation"></a>Lack of motivation</h2><h3 id="Forgetting-is-betrayal"><a href="#Forgetting-is-betrayal" class="headerlink" title="Forgetting is betrayal"></a>Forgetting is betrayal</h3><p>Now I couldn’t keep pushing myself to learn ,I’m sure I didn’t learn these things for money in the first place,But for what ?  I can’t answer it</p>
+<p>I have long forgotten why I began to strive for progress,Learning English or VFX or Management  or anyothers is to go out into the world and earn dollars to make my family richer,i tell me this over and over.</p>
+<p>It’s not easy being away from home.And now it seems that even if I do not go abroad, I can live in local peace of mind, the Internet is enough to let me contact the outside world, with the deepening of the sense of foreign insights, foreign countries are obviously not as good as domestic life.</p>
+<p>I can’t find the joy I had when I was gaining knowledge,I don’t know what to do next.There are so many things I need to do.But why i don’t have motivation? </p>
+<p>I must have forgotten something important things, something important reason, something that needs me to move on. I have betrayed myself.</p>
+<h3 id="About-love"><a href="#About-love" class="headerlink" title="About love"></a>About love</h3><p>I met a girl, actually, we’ve known each other for a long time in junior high school,I admit that I was a stupid pig when I was a student. that girl threw olive branches to me countless times and I was fooled by my stupidness.A year ago I decided to get to know her and talk to her,Caring, gifting, calling, like most couples do.But apart from seeing each other,I’m confused. I’ve been brushed off countless invitations,Even when she accepted the invitation, she always evaded it.My gus  told me about many possible reasons,but actually I don’t care about the cause, I just look at the action and the result.Apparently, she doesn’t like me.So I cut off contact,but it’s weird that she keeps reaching out to me.I can never read a girl’s mind.</p>
+<p>当断不断，必受其乱</p>
+<p>When a person can control your emotions, you should immediately disconnect from the practice, because I will become no longer me</p>
+<p>CUT OFF , Reason and experience tell me I must do it .</p>
+<h3 id="Now"><a href="#Now" class="headerlink" title="Now"></a>Now</h3><p>My life had been stagnant for three months, during which I felt no progress, no hope for the future.I must think back to what I once desired, perhaps because I had lived too comfortably and had no sense of crisis</p>
+<p>生于忧患,死于安乐</p>
+<p>I’m DYING slowly</p>
+<h3 id="Other"><a href="#Other" class="headerlink" title="Other"></a>Other</h3><p>I decided to add the comments and photo gallery feature to the site in a few days,If I have the motivation to do it………………..</p>
+<p>If I finish it , come on ,shout shit on me !</p>
 ]]></content>
   </entry>
 </search>
