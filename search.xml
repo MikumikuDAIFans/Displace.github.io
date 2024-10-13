@@ -97,7 +97,7 @@
 <h2 id="基础语法"><a href="#基础语法" class="headerlink" title="基础语法"></a>基础语法</h2><p>P(屁) y(眼) t(通) hon(红)<br><img lazyload src="/images/loading.svg" data-src="/Displace.github.io/images/PythonNotes/xuehuan_cry.png"></p>
 <h3 id="标准代码架构"><a href="#标准代码架构" class="headerlink" title="标准代码架构"></a>标准代码架构</h3><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">find7</span>():  <span class="comment">#含参fuction</span></span><br><span class="line">    num_I = <span class="number">1</span></span><br><span class="line">    <span class="keyword">while</span> num_I&lt;= <span class="number">100</span>:</span><br><span class="line">        <span class="keyword">if</span> num_I % <span class="number">7</span> == <span class="number">0</span> <span class="keyword">or</span> <span class="string">&#x27;7&#x27;</span> <span class="keyword">in</span> <span class="built_in">str</span>(num_I):</span><br><span class="line">            num_yv = num_I</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">f&#x27;<span class="subst">&#123;num_yv&#125;</span>&#x27;</span>)</span><br><span class="line">            num_I += <span class="number">1</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            num_I += <span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">main</span>():  <span class="comment">#主函数执行fuction调用</span></span><br><span class="line">    find7()</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:  <span class="comment">#启动语句</span></span><br><span class="line">    main()</span><br></pre></td></tr></table></figure></div>
 <p>优秀的代码架构是后期修bug的救命稻草</p>
-<h3 id="数据转换-数据计算"><a href="#数据转换-数据计算" class="headerlink" title="数据转换&amp;数据计算"></a>数据转换&amp;数据计算</h3><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">bin</span>(x) <span class="comment">#转为2进制 </span></span><br><span class="line"><span class="built_in">oct</span>(x) <span class="comment">#转为8进制</span></span><br><span class="line"><span class="built_in">int</span>(x) <span class="comment">#转为10进制,整数  常用 y = int(input(&#x27;啊吧啊吧&#x27;))</span></span><br><span class="line"><span class="built_in">hex</span>(x) <span class="comment">#转为16进制</span></span><br><span class="line"><span class="built_in">float</span>(x) <span class="comment">#转为浮点数</span></span><br><span class="line"><span class="built_in">complex</span>(x) <span class="comment">#转为复数</span></span><br><span class="line">_________________________</span><br><span class="line">+,-,*,/</span><br><span class="line">// <span class="comment">#整除</span></span><br><span class="line">** <span class="comment">#幂运算</span></span><br><span class="line">__________________________</span><br><span class="line">num += <span class="number">2</span> <span class="comment">#表示num = num + 2</span></span><br><span class="line">-=,*=,/=,//=,%=,**=</span><br><span class="line">__________________________</span><br></pre></td></tr></table></figure></div>
+<h3 id="数据转换-数据计算"><a href="#数据转换-数据计算" class="headerlink" title="数据转换&amp;数据计算"></a>数据转换&amp;数据计算</h3><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">bin</span>(x) <span class="comment">#转为2进制 </span></span><br><span class="line"><span class="built_in">oct</span>(x) <span class="comment">#转为8进制</span></span><br><span class="line"><span class="built_in">int</span>(x) <span class="comment">#转为10进制,整数  常用 y = int(input(&#x27;啊吧啊吧&#x27;))</span></span><br><span class="line"><span class="built_in">hex</span>(x) <span class="comment">#转为16进制</span></span><br><span class="line"><span class="built_in">float</span>(x) <span class="comment">#转为浮点数</span></span><br><span class="line"><span class="built_in">complex</span>(x) <span class="comment">#转为复数</span></span><br><span class="line">_________________________</span><br><span class="line">+,-,*,/</span><br><span class="line">% <span class="comment">#取余</span></span><br><span class="line">// <span class="comment">#整除</span></span><br><span class="line">** <span class="comment">#幂运算</span></span><br><span class="line">__________________________</span><br><span class="line">num += <span class="number">2</span> <span class="comment">#表示num = num + 2</span></span><br><span class="line">-=,*=,/=,//=,%=,**=</span><br><span class="line">__________________________</span><br></pre></td></tr></table></figure></div>
 
 <p>好</p>
 <h3 id="逻辑-逻辑运算符"><a href="#逻辑-逻辑运算符" class="headerlink" title="逻辑&amp;逻辑运算符"></a>逻辑&amp;逻辑运算符</h3><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> x &lt; y :</span><br><span class="line">	<span class="built_in">print</span>(x)</span><br><span class="line"><span class="keyword">elif</span> x = y:</span><br><span class="line">	<span class="built_in">print</span>(x)</span><br><span class="line"><span class="keyword">else</span> :</span><br><span class="line">	<span class="built_in">print</span>(y)</span><br><span class="line">_______________________</span><br><span class="line"><span class="keyword">while</span> x &lt; y :</span><br><span class="line">	<span class="built_in">print</span>(x)</span><br><span class="line">______________________</span><br><span class="line"><span class="comment"># if 和 while 的判断条件输出的是bool值,因此可用 while True : 来实现无线循环</span></span><br><span class="line">判断条件:</span><br><span class="line">==,!=,&gt;,&lt;,&gt;=,&lt;=</span><br><span class="line">x <span class="keyword">and</span> y <span class="comment">#x和y均为true时输出y</span></span><br><span class="line">x <span class="keyword">or</span> y <span class="comment">#x和y均为true时输出x</span></span><br><span class="line"><span class="keyword">not</span> x  <span class="comment">#x为true时输出false</span></span><br><span class="line">x <span class="keyword">in</span> [<span class="string">&#x27;商业贷款&#x27;</span>, <span class="string">&#x27;公积金贷款&#x27;</span>, <span class="string">&#x27;组合贷款&#x27;</span>]:</span><br><span class="line">x <span class="keyword">not</span> <span class="keyword">in</span> [<span class="string">&#x27;商业贷款&#x27;</span>, <span class="string">&#x27;公积金贷款&#x27;</span>, <span class="string">&#x27;组合贷款&#x27;</span>]: <span class="comment">#用于判断多个条件中是否含有其中一个</span></span><br><span class="line"></span><br><span class="line">_____________________</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> rang(<span class="number">5</span>) : <span class="comment">#循环遍历数组里的元素</span></span><br><span class="line">	<span class="built_in">print</span>(i)</span><br><span class="line">________________________</span><br><span class="line"><span class="keyword">break</span> <span class="comment">#结束循环,执行下一段代码</span></span><br><span class="line"><span class="keyword">continue</span> <span class="comment">#跳过本次循环,执行下一次循环</span></span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
@@ -135,7 +135,8 @@
 
 
 
-<h3 id="递归-匿名函数"><a href="#递归-匿名函数" class="headerlink" title="递归&#x2F;匿名函数"></a>递归&#x2F;匿名函数</h3><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="number">114514</span></span><br></pre></td></tr></table></figure></div>
+<h3 id="递归-匿名函数"><a href="#递归-匿名函数" class="headerlink" title="递归&#x2F;匿名函数"></a>递归&#x2F;匿名函数</h3><p>这个学起来有点费劲,回头再补</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line">啊吧 啊吧 啊吧</span><br></pre></td></tr></table></figure></div>
 
 
 
@@ -148,37 +149,268 @@
 
 <h3 id="文件与目录-文件夹-管理"><a href="#文件与目录-文件夹-管理" class="headerlink" title="文件与目录(文件夹)管理"></a>文件与目录(文件夹)管理</h3><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#文件管理需调用os模块</span></span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line">_____________________________________________________</span><br><span class="line"><span class="comment">#删除文件</span></span><br><span class="line">os.remove(<span class="string">&#x27;F:\\mulyilytest\\python_test.txt&#x27;</span>)</span><br><span class="line">_____________________________________________________</span><br><span class="line"><span class="comment">#文件重命名</span></span><br><span class="line">os.rename(<span class="string">&#x27;F:\\mulyilytest\\pytest.txt&#x27;</span>,<span class="string">&#x27;F:\\mulyilytest\\python_test.txt&#x27;</span>) <span class="comment">#os.rename(旧地址和名字,新) #通常将地址和名字参数化</span></span><br><span class="line">_____________________________________________________</span><br><span class="line"><span class="comment">#创建/删除目录(文件夹)</span></span><br><span class="line">os.mkdir(<span class="string">&#x27;F:\\mulyilytest\\pytteesstt&#x27;</span>) <span class="comment">#创建目录makedirectory</span></span><br><span class="line">os.rmdir(<span class="string">&#x27;F:\\mulyilytest\\pytteesstt&#x27;</span>) <span class="comment">#删除目录removedirectory</span></span><br><span class="line">_____________________________________________________</span><br><span class="line"><span class="comment">#获取当前目录</span></span><br><span class="line">os.getcwd()</span><br><span class="line">_____________________________________________________</span><br><span class="line"><span class="comment">#更改默认目录</span></span><br><span class="line">os.chdir(<span class="string">&#x27;F:\\mulyilytest&#x27;</span>)</span><br><span class="line"><span class="comment">#os在没有指定路径时会自动在默认中寻找文件,修改默认目录后可不在重复书写路经</span></span><br><span class="line"></span><br><span class="line">_____________________________________________________</span><br><span class="line"><span class="comment">#获取文件名列表</span></span><br><span class="line">os.listdir(<span class="string">&#x27;./&#x27;</span>) <span class="comment">#输出的是列表类型数据 # ./ 表示当前工作目录</span></span><br><span class="line"> </span><br></pre></td></tr></table></figure></div>
 
-
-<h3 id="数据维度与数据格式化"><a href="#数据维度与数据格式化" class="headerlink" title="数据维度与数据格式化"></a>数据维度与数据格式化</h3><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure></div>
-
-
-<h2 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a>面向对象</h2><h3 id="基础应用"><a href="#基础应用" class="headerlink" title="基础应用"></a>基础应用</h3><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure></div>
+<h3 id="数据维度与数据格式化"><a href="#数据维度与数据格式化" class="headerlink" title="数据维度与数据格式化"></a>数据维度与数据格式化</h3><p>在代码输出栏里绘表???神金</p>
+<h2 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a>面向对象</h2><h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">cls_x</span>:  <span class="comment"># 创建类; class 类名称</span></span><br><span class="line">    name_a = <span class="number">66</span>  <span class="comment"># 类属性; 属性名 = 属性值</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">fuc_x</span>(<span class="params">self,value</span>):  <span class="comment"># 实例方法; def 方法名(self);</span></span><br><span class="line">        <span class="comment"># 实例方法的第一个参数总是 self，它指向调用这个方法的具体实例对象</span></span><br><span class="line">        self.value = value  <span class="comment">#实例属性value,可接受外部传参</span></span><br><span class="line">        <span class="built_in">print</span>(self.value)</span><br><span class="line">        instan_x = cls_x()  <span class="comment"># 创建类的实例</span></span><br><span class="line">        <span class="built_in">print</span>(instan_x.name_a)  <span class="comment"># 实例访问类属性；输出类属性</span></span><br><span class="line"></span><br><span class="line">        instan_x.name_a = <span class="number">1</span> <span class="comment">#通过实例访问类属性并修改</span></span><br><span class="line">        <span class="built_in">print</span>(instan_x.name_a) <span class="comment">#通过实例修改类属性后实例会在内存中创建一个专属于instan_x的name_a参数,不会对clas_x的name_a产生影响</span></span><br><span class="line">        <span class="built_in">print</span>(cls_x.name_a) <span class="comment">#通过类访问属性发现值并未改变</span></span><br><span class="line"></span><br><span class="line">        instan_x.str_new = <span class="string">&#x27;好i好i好i&#x27;</span></span><br><span class="line">        <span class="built_in">print</span>(instan_x.str_new)</span><br><span class="line">        <span class="comment">#print(cls_x.str_new) #类无法调用通过实例创建的新属性</span></span><br><span class="line"></span><br><span class="line">        cls_x.str_new01 = <span class="string">&#x27;n牛牛牛&#x27;</span></span><br><span class="line">        <span class="built_in">print</span>(instan_x.str_new01)</span><br><span class="line">        <span class="built_in">print</span>(cls_x.str_new01) <span class="comment">#通过类创建的新属性,类和实例均可调用</span></span><br><span class="line"></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;-----------------------------------------&#x27;</span>)</span><br><span class="line"></span><br><span class="line">        cls_x.name_a = <span class="number">9</span> <span class="comment">#通过类访问类属性并修改</span></span><br><span class="line">        <span class="built_in">print</span>(instan_x.name_a) <span class="comment">#通过类修改类属性后不影响实例属性</span></span><br><span class="line">        <span class="built_in">print</span>(cls_x.name_a)</span><br><span class="line">        <span class="comment">#类和实例的属性关系课理解为UE中母材质和材质实例的关系</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">    @classmethod </span><span class="comment"># 类方法修饰符</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">fuc_y</span>(<span class="params">cls</span>): <span class="comment">#类方法;; def 方法名(cls);</span></span><br><span class="line">        <span class="comment"># 类方法的第一个参数是 cls，它指向类本身，而不是具体的实例</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;bbbb&#x27;</span>)</span><br><span class="line">        instan_y = cls_x()</span><br><span class="line">        <span class="built_in">print</span>(instan_y.name_a)</span><br><span class="line"></span><br><span class="line">        instan_y.str_new = <span class="string">&#x27;好i好i好i&#x27;</span></span><br><span class="line">        <span class="built_in">print</span>(instan_y.str_new)</span><br><span class="line">        <span class="comment">#print(cls_x.str_new) #类无法调用通过实例创建的新属性</span></span><br><span class="line"></span><br><span class="line"><span class="meta">    @staticmethod  </span><span class="comment"># 类方法修饰符</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">fuc_z</span>():</span><br><span class="line">        <span class="built_in">print</span>(<span class="number">111</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建类的实例</span></span><br><span class="line">instance = cls_x()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 调用实例方法并向其传参;</span></span><br><span class="line">instance.fuc_x(<span class="number">233</span>) <span class="comment">#调用实例方法必须先将类实例化,然后才能调用,该参数传给value而非self</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">cls_x.fuc_y() <span class="comment">#调用类方法,类方法可直接通过类调用</span></span><br><span class="line"></span><br><span class="line">cls_x.fuc_z() <span class="comment">#调用静态方法,类方法可直接通过类调用</span></span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
 
 
-<h3 id="类成员"><a href="#类成员" class="headerlink" title="类成员"></a>类成员</h3><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure></div>
+<h3 id="类创建"><a href="#类创建" class="headerlink" title="类创建"></a>类创建</h3><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">cls_x</span>:  <span class="comment"># 创建类; class 类名称</span></span><br><span class="line">    name_a = <span class="number">66</span>  <span class="comment"># 类属性; 属性名 = 属性值</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">fuc_x</span>(<span class="params">self,value</span>):  <span class="comment"># 实例方法; def 方法名(self);</span></span><br><span class="line">        self.value = value  <span class="comment">#实例属性value,可接受外部传参</span></span><br><span class="line">        <span class="built_in">print</span>(self.value)</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="类成员"><a href="#类成员" class="headerlink" title="类成员"></a>类成员</h3><p>类和实例的属性关系课理解为UE中母材质和材质实例的关系</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#类/实例属性</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">cls_x</span>:  <span class="comment"># 创建类; class 类名称</span></span><br><span class="line">    name_a = <span class="number">66</span>  <span class="comment"># 类属性; 属性名 = 属性值</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">fuc_x</span>(<span class="params">self,value</span>):  <span class="comment"># 实例方法; def 方法名(self);</span></span><br><span class="line">        <span class="comment"># 实例方法的第一个参数总是 self，它指向调用这个方法的具体实例对象</span></span><br><span class="line">        self.value = value  <span class="comment">#实例属性value,可接受外部传参</span></span><br><span class="line">        <span class="built_in">print</span>(self.value)</span><br><span class="line">        instan_x = cls_x()  <span class="comment"># 创建类的实例</span></span><br><span class="line">        <span class="built_in">print</span>(instan_x.name_a)  <span class="comment"># 实例访问类属性；输出类属性</span></span><br><span class="line"></span><br><span class="line">        instan_x.name_a = <span class="number">1</span> <span class="comment">#通过实例访问类属性并修改</span></span><br><span class="line">        <span class="built_in">print</span>(instan_x.name_a) <span class="comment">#通过实例修改类属性后实例会在内存中创建一个专属于instan_x的name_a参数,不会对clas_x的name_a产生影响</span></span><br><span class="line">        <span class="built_in">print</span>(cls_x.name_a) <span class="comment">#通过类访问属性发现值并未改变</span></span><br><span class="line"></span><br><span class="line">        instan_x.str_new = <span class="string">&#x27;好i好i好i&#x27;</span></span><br><span class="line">        <span class="built_in">print</span>(instan_x.str_new)</span><br><span class="line">        <span class="comment">#print(cls_x.str_new) #类无法调用通过实例创建的新属性</span></span><br><span class="line"></span><br><span class="line">        cls_x.str_new01 = <span class="string">&#x27;n牛牛牛&#x27;</span></span><br><span class="line">        <span class="built_in">print</span>(instan_x.str_new01)</span><br><span class="line">        <span class="built_in">print</span>(cls_x.str_new01) <span class="comment">#通过类创建的新属性,类和实例均可调用</span></span><br><span class="line"></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;-----------------------------------------&#x27;</span>)</span><br><span class="line"></span><br><span class="line">        cls_x.name_a = <span class="number">9</span> <span class="comment">#通过类访问类属性并修改</span></span><br><span class="line">        <span class="built_in">print</span>(instan_x.name_a) <span class="comment">#通过类修改类属性后不影响实例属性</span></span><br><span class="line">        <span class="built_in">print</span>(cls_x.name_a)</span><br></pre></td></tr></table></figure></div>
+
+<p>关于对象:实例和对象本质是一个东西,均为类的继承体</p>
+<h3 id="实例方法"><a href="#实例方法" class="headerlink" title="实例方法"></a>实例方法</h3><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">cls_x</span>:  <span class="comment"># 创建类; class 类名称</span></span><br><span class="line">    name_a = <span class="number">66</span></span><br><span class="line"><span class="comment"># 实例方法</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">fuc_x</span>(<span class="params">self</span>):  <span class="comment"># 实例方法; def 方法名(self);slef代表函数本身</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;aaaa&#x27;</span>)</span><br><span class="line"><span class="comment">#调用:</span></span><br><span class="line"><span class="comment"># 创建类的实例</span></span><br><span class="line">instance = cls_x()</span><br><span class="line"><span class="comment"># 调用实例方法并向其传参;</span></span><br><span class="line">instance.fuc_x(<span class="number">233</span>) <span class="comment">#调用实例方法必须先将类实例化,然后才能调用,该参数传给value而非self       </span></span><br></pre></td></tr></table></figure></div>
+
+<p>两种方法中属性修改和继承关系是相同的</p>
+<h3 id="类方法"><a href="#类方法" class="headerlink" title="类方法"></a>类方法</h3><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">cls_x</span>:  </span><br><span class="line">    name_a = <span class="number">6</span></span><br><span class="line"><span class="comment">#类方法       </span></span><br><span class="line"><span class="meta">    @classmethod </span><span class="comment"># 类方法修饰符</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">fuc_y</span>(<span class="params">cls</span>): <span class="comment">#类方法;; def 方法名(cls);cls代表类本身</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;bbbb&#x27;</span>)    </span><br><span class="line"> <span class="comment">#调用:       </span></span><br><span class="line"> cls_x.fuc_y() <span class="comment">#调用类方法,类方法可直接通过类调用 </span></span><br></pre></td></tr></table></figure></div>
+
+<h4 id="类方法-vs-实例方法的区别"><a href="#类方法-vs-实例方法的区别" class="headerlink" title="类方法 vs 实例方法的区别"></a>类方法 vs 实例方法的区别</h4><table>
+<thead>
+<tr>
+<th>特性</th>
+<th>实例方法</th>
+<th>类方法</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>绑定对象</td>
+<td>实例（<code>self</code> 指向实例对象）</td>
+<td>类（<code>cls</code> 指向类本身）</td>
+</tr>
+<tr>
+<td>装饰器</td>
+<td>无特殊装饰器</td>
+<td><code>@classmethod</code></td>
+</tr>
+<tr>
+<td>调用方式</td>
+<td>通过实例调用</td>
+<td>通过类或实例调用</td>
+</tr>
+<tr>
+<td>访问权限</td>
+<td>可以访问和修改实例属性和方法</td>
+<td>不能访问实例属性，但可访问类属性</td>
+</tr>
+<tr>
+<td>常见用途</td>
+<td>操作对象实例，修改实例状态</td>
+<td>操作类的状态，通常用于工厂方法</td>
+</tr>
+</tbody></table>
+<h3 id="静态方法"><a href="#静态方法" class="headerlink" title="静态方法"></a>静态方法</h3><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">cls_x</span>:  </span><br><span class="line">    name_a = <span class="number">6</span></span><br><span class="line"><span class="comment">#静态法</span></span><br><span class="line"><span class="meta">    @staticmethod  </span><span class="comment"># 类方法修饰符</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">fuc_z</span>():</span><br><span class="line">        <span class="built_in">print</span>(<span class="number">111</span>)</span><br><span class="line"><span class="comment">#调用:</span></span><br><span class="line">cls_x.fuc_z() <span class="comment">#调用静态方法,类方法可直接通过类调用</span></span><br><span class="line">        </span><br></pre></td></tr></table></figure></div>
 
 
-<h3 id="类方法"><a href="#类方法" class="headerlink" title="类方法"></a>类方法</h3><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure></div>
 
+<h4 id="类方法-vs-静态方法的区别"><a href="#类方法-vs-静态方法的区别" class="headerlink" title="类方法 vs 静态方法的区别"></a>类方法 vs 静态方法的区别</h4><table>
+<thead>
+<tr>
+<th>特性</th>
+<th>类方法</th>
+<th>静态方法</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>绑定对象</td>
+<td>类（<code>cls</code> 指向类本身）</td>
+<td>无绑定对象</td>
+</tr>
+<tr>
+<td>装饰器</td>
+<td><code>@classmethod</code></td>
+<td><code>@staticmethod</code></td>
+</tr>
+<tr>
+<td>调用方式</td>
+<td>通过类或实例调用</td>
+<td>通过类或实例调用</td>
+</tr>
+<tr>
+<td>访问权限</td>
+<td>可以访问类属性，不能访问实例属性</td>
+<td>不能访问实例或类的任何属性</td>
+</tr>
+<tr>
+<td>常见用途</td>
+<td>操作类的状态，创建类方法</td>
+<td>定义功能函数，逻辑上和类有关</td>
+</tr>
+</tbody></table>
+<h3 id="私有成员"><a href="#私有成员" class="headerlink" title="私有成员"></a>私有成员</h3><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">cls_x</span> :</span><br><span class="line">    __attribute = <span class="number">8</span>  <span class="comment">#__参数名 = 值</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__fuction_1</span>(<span class="params">self</span>): <span class="comment">#__方法名()</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;aaa&#x27;</span>)</span><br><span class="line"></span><br><span class="line">instanse_x = cls_x()</span><br><span class="line"><span class="comment"># instanse_x.__fuction_1() #无法从外部访问私有方法</span></span><br><span class="line"><span class="comment"># print(instanse_x.__attribute) #无法从外部访问私有参数</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 虽然私有成员不能直接访问，但可以通过名称改编来访问</span></span><br><span class="line"><span class="built_in">print</span>(instanse_x._cls_x__attribute) <span class="comment">#实例名._类名__属性名</span></span><br></pre></td></tr></table></figure></div>
 
-<h3 id="私有成员"><a href="#私有成员" class="headerlink" title="私有成员"></a>私有成员</h3><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure></div>
+<p>关于私有成员调用,看封装模块的代码</p>
+<h3 id="受保护成员"><a href="#受保护成员" class="headerlink" title="受保护成员"></a>受保护成员</h3><p>除了公有和私有成员，还有一种称为<strong>受保护成员（Protected Members）</strong>的概念，尽管 Python 本身没有严格的受保护机制,用处不大</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">cls_x</span> :</span><br><span class="line">    _attribute = <span class="number">8</span>  <span class="comment">#受保护参数 #_参数名 = 值</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__fuction_1</span>(<span class="params">self</span>): <span class="comment">#__方法名(self):</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;aaa&#x27;</span>)</span><br><span class="line"></span><br><span class="line">instanse_x = cls_x()</span><br><span class="line"><span class="comment"># instanse_x.__fuction_1() #无法从外部访问私有方法</span></span><br><span class="line"><span class="comment"># print(instanse_x.__attribute) #无法从外部访问私有参数</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 虽然私有成员不能直接访问，但可以通过名称改编来访问</span></span><br><span class="line"><span class="built_in">print</span>(instanse_x._cls_x__attribute) <span class="comment">#实例名._类名__属性名</span></span><br></pre></td></tr></table></figure></div>
 
+<h4 id="共有成员-vs-私有成员-vs-受保护成员"><a href="#共有成员-vs-私有成员-vs-受保护成员" class="headerlink" title="共有成员 vs 私有成员 vs 受保护成员"></a>共有成员 vs 私有成员 vs 受保护成员</h4><table>
+<thead>
+<tr>
+<th>特性</th>
+<th>共有成员（Public Members）</th>
+<th>受保护成员（Protected Members）</th>
+<th>私有成员（Private Members）</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>前缀</td>
+<td>无前缀</td>
+<td><code>_</code> 开头</td>
+<td><code>__</code> 开头</td>
+</tr>
+<tr>
+<td>访问权限</td>
+<td>类内外都可访问</td>
+<td>子类可访问，外部不推荐访问</td>
+<td>只能在类内部访问（但有例外）</td>
+</tr>
+<tr>
+<td>子类访问</td>
+<td>可以访问</td>
+<td>可以访问</td>
+<td>无法直接访问</td>
+</tr>
+<tr>
+<td>外部访问</td>
+<td>可以访问</td>
+<td>按照惯例不建议访问</td>
+<td>不能直接访问</td>
+</tr>
+<tr>
+<td>使用场景</td>
+<td>对外公开的成员</td>
+<td>半封装，允许子类继承使用</td>
+<td>完全封装，隐藏类的实现细节</td>
+</tr>
+</tbody></table>
+<h3 id="构造方法"><a href="#构造方法" class="headerlink" title="构造方法"></a>构造方法</h3><p>构造方法在创建类的对象时自动调用，用来初始化对象的属性。它是类的实例化过程中执行的第一个方法，常用于设置实例的初始状态。</p>
+<p>相当于在类本身上附加一系列属性</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Person</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, name, age</span>): <span class="comment">#构造方法 #__int__(self,属性名):</span></span><br><span class="line">        self.name = name  <span class="comment"># 初始化属性 name</span></span><br><span class="line">        self.age = age  <span class="comment"># 初始化属性 age</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">introduce</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;My name is <span class="subst">&#123;self.name&#125;</span>, and I am <span class="subst">&#123;self.age&#125;</span> years old.&quot;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建类的实例</span></span><br><span class="line">person1 = Person(<span class="string">&quot;Alice&quot;</span>, <span class="number">30</span>) <span class="comment">#当 Person 类被实例化时，__init__ 方法被自动调用，设置了 name 和 age 属性</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 调用实例方法</span></span><br><span class="line">person1.introduce()  <span class="comment"># 输出: My name is Alice, and I am 30 years old.</span></span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
 
-<h3 id="特殊方法"><a href="#特殊方法" class="headerlink" title="特殊方法"></a>特殊方法</h3><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure></div>
+<h3 id="析构方法"><a href="#析构方法" class="headerlink" title="析构方法"></a>析构方法</h3><p>Python使用垃圾回收机制（Garbage Collection）来处理内存管理，当对象不再被引用时，它会自动调用 <code>__del__</code> 来进行清理。</p>
+<p>值得注意的是，Python 的垃圾回收机制是基于引用计数的。当对象不再有任何引用时，Python 会自动回收内存并调用 <code>__del__</code> 方法。但在实际开发中，除非有明确的资源管理需求，通常不需要定义 <code>__del__</code>。</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">FileManager</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, filename</span>):</span><br><span class="line">        self.file = <span class="built_in">open</span>(filename, <span class="string">&#x27;w&#x27;</span>)</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;<span class="subst">&#123;filename&#125;</span> 文件已打开&quot;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__del__</span>(<span class="params">self</span>): <span class="comment">#析构方法 #__del__(self):</span></span><br><span class="line">        <span class="comment"># 在对象被销毁时关闭文件</span></span><br><span class="line">        self.file.close()</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;文件已关闭&quot;</span>)</span><br></pre></td></tr></table></figure></div>
 
-<h3 id="封装"><a href="#封装" class="headerlink" title="封装"></a>封装</h3><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure></div>
+<h4 id="构造方法和析构方法的区别："><a href="#构造方法和析构方法的区别：" class="headerlink" title="构造方法和析构方法的区别："></a>构造方法和析构方法的区别：</h4><table>
+<thead>
+<tr>
+<th>特性</th>
+<th>构造方法 (<code>__init__()</code>)</th>
+<th>析构方法 (<code>__del__()</code>)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>作用</td>
+<td>在对象创建时初始化属性</td>
+<td>在对象销毁时清理资源</td>
+</tr>
+<tr>
+<td>调用时机</td>
+<td>对象实例化时自动调用</td>
+<td>对象销毁时自动调用</td>
+</tr>
+<tr>
+<td>使用场景</td>
+<td>设置初始状态、传递参数</td>
+<td>释放资源（如文件关闭、网络连接关闭等）</td>
+</tr>
+<tr>
+<td>手动调用</td>
+<td>通常不需要手动调用，但可以通过类名直接调用构造方法</td>
+<td>不需要手动调用，由 Python 自动管理</td>
+</tr>
+</tbody></table>
+<h3 id="封装"><a href="#封装" class="headerlink" title="封装"></a>封装</h3><p>在 Python 中，封装通常结合<strong>访问器方法</strong>（getter 和 setter）来管理属性的访问与修改。访问器方法用于控制对私有或受保护属性的读取和写入</p>
+<p>优秀的封装能大大降低维护难度</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#标准封装</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Car</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, brand, price,num</span>):</span><br><span class="line">        self.__brand = brand  <span class="comment">#私有属性</span></span><br><span class="line">        self.__price = price</span><br><span class="line">        self.num = num  <span class="comment">#共有属性</span></span><br><span class="line">        </span><br><span class="line">	<span class="comment"># 标准私有值调用方法</span></span><br><span class="line">    <span class="comment"># getter 方法，用于获取私有属性的值</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">get_price</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="keyword">return</span> self.__price  </span><br><span class="line">    </span><br><span class="line">	<span class="comment">#标准属性修改方法</span></span><br><span class="line">    <span class="comment"># setter 方法，用于修改私有属性的值</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">set_price</span>(<span class="params">self, new_price</span>):</span><br><span class="line">        <span class="keyword">if</span> new_price &gt; <span class="number">0</span>:</span><br><span class="line">            self.__price = new_price * self.num</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">&quot;Price cannot be negative!&quot;</span>)</span><br><span class="line"></span><br><span class="line">car = Car(<span class="string">&quot;Audi&quot;</span>, <span class="number">40000</span>,<span class="number">2</span>)</span><br><span class="line"><span class="built_in">print</span>(car.get_price())  </span><br><span class="line"></span><br><span class="line"><span class="comment"># 修改私有属性的值</span></span><br><span class="line">car.set_price(<span class="number">45000</span>)</span><br><span class="line"><span class="built_in">print</span>(car.get_price()) </span><br></pre></td></tr></table></figure></div>
 
-<h3 id="多态"><a href="#多态" class="headerlink" title="多态"></a>多态</h3><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure></div>
+<h3 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h3><p>定义一个子类，使它获得代码中已有类的属性和方法</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#单继承（Single Inheritance）</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 定义一个父类</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Animal</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, name</span>):</span><br><span class="line">        self.name = name</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">speak</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;<span class="subst">&#123;self.name&#125;</span> makes a sound.&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 定义一个子类，继承自 Animal</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Dog</span>(<span class="title class_ inherited__">Animal</span>):  <span class="comment">#此时Dog类获得了Animal类的所有属性和方法</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">speak</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;<span class="subst">&#123;self.name&#125;</span> barks.&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建 Dog 类的实例</span></span><br><span class="line">dog = Dog(<span class="string">&quot;Buddy&quot;</span>)</span><br><span class="line">dog.speak()  <span class="comment"># 输出: Buddy barks.</span></span><br><span class="line">_____________________________________________________</span><br><span class="line"><span class="comment">#多继承（Multiple Inheritance）</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 定义两个父类</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Animal</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, name</span>):</span><br><span class="line">        self.name = name</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">speak</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;<span class="subst">&#123;self.name&#125;</span> makes a sound.&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Runner</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">run</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;<span class="subst">&#123;self.name&#125;</span> runs fast.&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 定义一个子类，同时继承 Animal 和 Runner</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Dog</span>(Animal, Runner):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">speak</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;<span class="subst">&#123;self.name&#125;</span> barks.&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建 Dog 类的实例</span></span><br><span class="line">dog = Dog(<span class="string">&quot;Buddy&quot;</span>)</span><br><span class="line">dog.speak()  <span class="comment"># 输出: Buddy barks.</span></span><br><span class="line">dog.run()    <span class="comment"># 输出: Buddy runs fast.</span></span><br></pre></td></tr></table></figure></div>
 
-<h3 id="运算符重载"><a href="#运算符重载" class="headerlink" title="运算符重载"></a>运算符重载</h3><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure></div>
+<p><strong>单继承</strong>适用于简单的类层次结构，继承关系明确，易于管理。</p>
+<p><strong>多继承</strong>可以带来更强的灵活性和功能组合，但要小心类之间的复杂关系以及可能产生的命名冲突</p>
+<h3 id="重写"><a href="#重写" class="headerlink" title="重写"></a>重写</h3><p>子类和父类具有同名的方法，子类方法会覆盖父类的实现。</p>
+<p>子类可以通过 <code>super()</code> 调用被重写的父类方法。</p>
+<p>重写的过程中，子类通常会保留父类的功能并增加新的行为，但也可以完全改变父类的方法逻辑</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 父类</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Animal</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, name</span>):</span><br><span class="line">        self.name = name</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">speak</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;<span class="subst">&#123;self.name&#125;</span> makes a sound&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 子类</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Dog</span>(<span class="title class_ inherited__">Animal</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, name, breed</span>): <span class="comment">#重写构造方法,在重写后原父类的属性会被覆盖,需要重新调父类构造方法来初始化属性</span></span><br><span class="line">        <span class="comment"># 调用父类的构造方法，初始化 name 属性</span></span><br><span class="line">        <span class="built_in">super</span>().__init__(name) </span><br><span class="line">        <span class="comment"># 初始化子类的属性</span></span><br><span class="line">        self.breed = breed</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">speak</span>(<span class="params">self</span>): <span class="comment">#重写父类方法</span></span><br><span class="line">        <span class="built_in">super</span>().speak()  <span class="comment"># 调用父类的 speak 方法  #super().父类方法</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;<span class="subst">&#123;self.name&#125;</span> is a <span class="subst">&#123;self.breed&#125;</span> and barks&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建实例</span></span><br><span class="line">dog = Dog(<span class="string">&quot;Buddy&quot;</span>, <span class="string">&quot;Golden Retriever&quot;</span>)</span><br><span class="line">dog.speak()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 输出:</span></span><br><span class="line"><span class="comment"># Buddy makes a sound</span></span><br><span class="line"><span class="comment"># Buddy is a Golden Retriever and barks</span></span><br></pre></td></tr></table></figure></div>
 
+<h3 id="多态"><a href="#多态" class="headerlink" title="多态"></a>多态</h3><p>多态是面向对象编程中的一个重要概念，指的是不同的对象可以对同一个方法或操作作出不同的响应。换句话说，在多态中，<strong>同样的接口，可以根据对象的类型，执行不同的行为</strong>。</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Animal</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">speak</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;Animal makes a sound&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Dog</span>(<span class="title class_ inherited__">Animal</span>):  <span class="comment">#子类01</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">speak</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;Bark&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Cat</span>(<span class="title class_ inherited__">Animal</span>):  <span class="comment">#子类02</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">speak</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;Meow&quot;</span></span><br><span class="line">    </span><br><span class="line"><span class="comment">#创建多态函数</span></span><br><span class="line"><span class="comment">#animal_sound() 函数接受 Animal 类的对象，并调用 speak() 方法</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">animal_sound</span>(<span class="params">animal</span>):</span><br><span class="line">    <span class="built_in">print</span>(animal.speak())</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建对象</span></span><br><span class="line">dog = Dog()  <span class="comment">#实例化后即作为识别参数进入animal_sound() 函数中来决定执行哪个子类方法</span></span><br><span class="line">cat = Cat()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 调用相同的函数，传入不同的对象</span></span><br><span class="line">animal_sound(dog)  <span class="comment"># 输出: Bark</span></span><br><span class="line">animal_sound(cat)  <span class="comment"># 输出: Meow</span></span><br></pre></td></tr></table></figure></div>
 
+<h3 id="运算符重载"><a href="#运算符重载" class="headerlink" title="运算符重载"></a>运算符重载</h3><p>在 Python 中，运算符本质上是特殊方法的另一种表示方式。例如，<code>+</code> 运算符对应的特殊方法是 <code>__add__()</code>，<code>-</code> 运算符对应的是 <code>__sub__()</code>，等等。通过重载这些特殊方法，我们可以自定义运算符在自定义对象中的行为。</p>
+<p><del>(这B玩意改底层算法逻辑,看着都费劲,还容易和别的底层代码出现奇怪的耦合bug,我的评价是,不学!)</del></p>
+<p>想要啥新算法自己写方法或者导库,别整这玩意</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Vector</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, x, y</span>):</span><br><span class="line">        self.x = x</span><br><span class="line">        self.y = y</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__add__</span>(<span class="params">self, other</span>):</span><br><span class="line">        <span class="comment"># 重载 + 运算符，定义向量相加</span></span><br><span class="line">        <span class="keyword">return</span> Vector(self.x + other.x, self.y + other.y)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__sub__</span>(<span class="params">self, other</span>):</span><br><span class="line">        <span class="comment"># 重载 - 运算符，定义向量相减</span></span><br><span class="line">        <span class="keyword">return</span> Vector(self.x - other.x, self.y - other.y)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__eq__</span>(<span class="params">self, other</span>):</span><br><span class="line">        <span class="comment"># 重载 == 运算符，定义向量相等比较</span></span><br><span class="line">        <span class="keyword">return</span> self.x == other.x <span class="keyword">and</span> self.y == other.y</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__str__</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="comment"># 重载 str() 函数，使对象可读性更强</span></span><br><span class="line">        <span class="keyword">return</span> <span class="string">f&quot;Vector(<span class="subst">&#123;self.x&#125;</span>, <span class="subst">&#123;self.y&#125;</span>)&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建向量对象</span></span><br><span class="line">v1 = Vector(<span class="number">2</span>, <span class="number">3</span>)</span><br><span class="line">v2 = Vector(<span class="number">5</span>, <span class="number">7</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 使用 + 和 - 运算符进行向量运算</span></span><br><span class="line">v3 = v1 + v2</span><br><span class="line">v4 = v1 - v2</span><br><span class="line"></span><br><span class="line"><span class="comment"># 输出结果</span></span><br><span class="line"><span class="built_in">print</span>(v3)  <span class="comment"># Vector(7, 10)</span></span><br><span class="line"><span class="built_in">print</span>(v4)  <span class="comment"># Vector(-3, -4)</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 比较两个向量是否相等</span></span><br><span class="line"><span class="built_in">print</span>(v1 == v2)  <span class="comment"># False</span></span><br></pre></td></tr></table></figure></div>
 
-<h2 id="异常"><a href="#异常" class="headerlink" title="异常"></a>异常</h2><h3 id="异常类型"><a href="#异常类型" class="headerlink" title="异常类型"></a>异常类型</h3><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure></div>
+<p>下面是 Python 中一些常见的运算符及其对应的特殊方法：</p>
+<table>
+<thead>
+<tr>
+<th>运算符</th>
+<th>特殊方法</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>+</code></td>
+<td><code>__add__</code></td>
+</tr>
+<tr>
+<td><code>-</code></td>
+<td><code>__sub__</code></td>
+</tr>
+<tr>
+<td><code>*</code></td>
+<td><code>__mul__</code></td>
+</tr>
+<tr>
+<td><code>/</code></td>
+<td><code>__truediv__</code></td>
+</tr>
+<tr>
+<td><code>//</code></td>
+<td><code>__floordiv__</code></td>
+</tr>
+<tr>
+<td><code>%</code></td>
+<td><code>__mod__</code></td>
+</tr>
+<tr>
+<td><code>**</code></td>
+<td><code>__pow__</code></td>
+</tr>
+<tr>
+<td><code>==</code></td>
+<td><code>__eq__</code></td>
+</tr>
+<tr>
+<td><code>!=</code></td>
+<td><code>__ne__</code></td>
+</tr>
+<tr>
+<td><code>&gt;</code></td>
+<td><code>__gt__</code></td>
+</tr>
+<tr>
+<td><code>&lt;</code></td>
+<td><code>__lt__</code></td>
+</tr>
+<tr>
+<td><code>&gt;=</code></td>
+<td><code>__ge__</code></td>
+</tr>
+<tr>
+<td><code>&lt;=</code></td>
+<td><code>__le__</code></td>
+</tr>
+</tbody></table>
+<h2 id="异常"><a href="#异常" class="headerlink" title="异常"></a>异常</h2><p>出异常问GPT,这玩意总结了也没屌用</p>
+<p>这里有个好东西<a class="link" href="https://github.com/lencx/chatgpt">ChatGPT桌面版 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<h2 id="Python常用库"><a href="#Python常用库" class="headerlink" title="Python常用库"></a>Python常用库</h2><a class="button  regular" href="https://www.pythoncheatsheet.org/cheatsheet/basics" title="常用库速查"><i class="fa-solid fa-play-circle"></i> 常用库速查</a>
 
+<a class="button  regular" href="https://pypi.org/" title="官方的包管理库"><i class="fa-solid fa-play-circle"></i> 官方的包管理库</a>
 
+<a class="button  regular" href="https://docs.python.org/3/library/" title="官方提供的标准库文档"><i class="fa-solid fa-play-circle"></i> 官方提供的标准库文档</a>
 
-<h2 id="Python常用库"><a href="#Python常用库" class="headerlink" title="Python常用库"></a>Python常用库</h2>]]></content>
+<a class="button  regular" href="https://awesome-python.com/" title="按用途类型筛选库"><i class="fa-solid fa-play-circle"></i> 按用途类型筛选库</a>]]></content>
       <categories>
         <category>PythonNotes</category>
       </categories>
