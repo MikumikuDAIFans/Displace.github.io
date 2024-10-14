@@ -27,7 +27,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://mikumikudaifans.github.io/Displace.github.io/images/PythonNotes/xuehuan_cry.png">
 <meta property="article:published_time" content="2024-09-28T16:00:00.000Z">
-<meta property="article:modified_time" content="2024-10-13T12:21:50.126Z">
+<meta property="article:modified_time" content="2024-10-14T04:32:09.513Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="Python">
 <meta name="twitter:card" content="summary">
@@ -545,8 +545,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2024-10-13 20:21:50</span>
-            <span class="mobile">2024-10-13 20:21</span>
+            <span class="desktop">2024-10-14 12:32:09</span>
+            <span class="mobile">2024-10-14 12:32</span>
             <span class="hover-info">Updated</span>
         </span>
     
@@ -579,12 +579,12 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>7.1k Words</span>
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>7.3k Words</span>
         </span>
     
     
         <span class="article-min2read article-meta-item">
-            <i class="fa-regular fa-clock"></i>&nbsp;<span>29 Mins</span>
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>30 Mins</span>
         </span>
     
     
@@ -606,7 +606,10 @@
 <p>优秀的代码架构是后期修bug的救命稻草</p>
 <h3 id="数据转换-数据计算"><a href="#数据转换-数据计算" class="headerlink" title="数据转换&amp;数据计算"></a>数据转换&amp;数据计算</h3><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">bin</span>(x) <span class="comment">#转为2进制 </span></span><br><span class="line"><span class="built_in">oct</span>(x) <span class="comment">#转为8进制</span></span><br><span class="line"><span class="built_in">int</span>(x) <span class="comment">#转为10进制,整数  常用 y = int(input(&#x27;啊吧啊吧&#x27;))</span></span><br><span class="line"><span class="built_in">hex</span>(x) <span class="comment">#转为16进制</span></span><br><span class="line"><span class="built_in">float</span>(x) <span class="comment">#转为浮点数</span></span><br><span class="line"><span class="built_in">complex</span>(x) <span class="comment">#转为复数</span></span><br><span class="line">_________________________</span><br><span class="line">+,-,*,/</span><br><span class="line">% <span class="comment">#取余</span></span><br><span class="line">// <span class="comment">#整除</span></span><br><span class="line">** <span class="comment">#幂运算</span></span><br><span class="line">__________________________</span><br><span class="line">num += <span class="number">2</span> <span class="comment">#表示num = num + 2</span></span><br><span class="line">-=,*=,/=,//=,%=,**=</span><br><span class="line">__________________________</span><br></pre></td></tr></table></figure></div>
 
-<p>好</p>
+<p>在实际应用中二,八,十六进制数的显示方式分别为 : </p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 十进制转换为其他进制</span></span><br><span class="line">num = <span class="number">26</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 十进制转为二进制</span></span><br><span class="line">binary_num = <span class="built_in">bin</span>(num)  <span class="comment"># 输出为 &#x27;0b11010&#x27;</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&#x27;<span class="subst">&#123;num&#125;</span> 的二进制表示为: <span class="subst">&#123;binary_num&#125;</span>&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 十进制转为八进制</span></span><br><span class="line">octal_num = <span class="built_in">oct</span>(num)  <span class="comment"># 输出为 &#x27;0o32&#x27;</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&#x27;<span class="subst">&#123;num&#125;</span> 的八进制表示为: <span class="subst">&#123;octal_num&#125;</span>&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 十进制转为十六进制</span></span><br><span class="line">hex_num = <span class="built_in">hex</span>(num)  <span class="comment"># 输出为 &#x27;0x1a&#x27;</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&#x27;<span class="subst">&#123;num&#125;</span> 的十六进制表示为: <span class="subst">&#123;hex_num&#125;</span>&#x27;</span>)</span><br></pre></td></tr></table></figure></div>
+
+<p>带有 <code>0x</code> 前缀的数字代表十六进制数，<code>0b</code> 前缀代表二进制数，<code>0o</code> 代表八进制数。</p>
 <h3 id="逻辑-逻辑运算符"><a href="#逻辑-逻辑运算符" class="headerlink" title="逻辑&amp;逻辑运算符"></a>逻辑&amp;逻辑运算符</h3><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> x &lt; y :</span><br><span class="line">	<span class="built_in">print</span>(x)</span><br><span class="line"><span class="keyword">elif</span> x = y:</span><br><span class="line">	<span class="built_in">print</span>(x)</span><br><span class="line"><span class="keyword">else</span> :</span><br><span class="line">	<span class="built_in">print</span>(y)</span><br><span class="line">_______________________</span><br><span class="line"><span class="keyword">while</span> x &lt; y :</span><br><span class="line">	<span class="built_in">print</span>(x)</span><br><span class="line">______________________</span><br><span class="line"><span class="comment"># if 和 while 的判断条件输出的是bool值,因此可用 while True : 来实现无线循环</span></span><br><span class="line">判断条件:</span><br><span class="line">==,!=,&gt;,&lt;,&gt;=,&lt;=</span><br><span class="line">x <span class="keyword">and</span> y <span class="comment">#x和y均为true时输出y</span></span><br><span class="line">x <span class="keyword">or</span> y <span class="comment">#x和y均为true时输出x</span></span><br><span class="line"><span class="keyword">not</span> x  <span class="comment">#x为true时输出false</span></span><br><span class="line">x <span class="keyword">in</span> [<span class="string">&#x27;商业贷款&#x27;</span>, <span class="string">&#x27;公积金贷款&#x27;</span>, <span class="string">&#x27;组合贷款&#x27;</span>]:</span><br><span class="line">x <span class="keyword">not</span> <span class="keyword">in</span> [<span class="string">&#x27;商业贷款&#x27;</span>, <span class="string">&#x27;公积金贷款&#x27;</span>, <span class="string">&#x27;组合贷款&#x27;</span>]: <span class="comment">#用于判断多个条件中是否含有其中一个</span></span><br><span class="line"></span><br><span class="line">_____________________</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> rang(<span class="number">5</span>) : <span class="comment">#循环遍历数组里的元素</span></span><br><span class="line">	<span class="built_in">print</span>(i)</span><br><span class="line">________________________</span><br><span class="line"><span class="keyword">break</span> <span class="comment">#结束循环,执行下一段代码</span></span><br><span class="line"><span class="keyword">continue</span> <span class="comment">#跳过本次循环,执行下一次循环</span></span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
 
 <p>好啊</p>
@@ -929,7 +932,7 @@
         <li><strong>Created at:</strong> 2024-09-29 00:00:00</li>
         
             <li>
-                <strong>Updated at:</strong> 2024-10-13 20:21:50
+                <strong>Updated at:</strong> 2024-10-14 12:32:09
             </li>
         
         <li>
@@ -958,6 +961,21 @@
 
             
                 <div class="article-nav">
+                    
+                        <div class="article-prev">
+                            <a class="prev"
+                            rel="prev"
+                            href="/Displace.github.io/2024/10/14/C_Note/"
+                            >
+                                <span class="left arrow-icon flex-center">
+                                    <i class="fa-solid fa-chevron-left"></i>
+                                </span>
+                                <span class="title flex-center">
+                                    <span class="post-nav-title-item">C_Note</span>
+                                    <span class="post-nav-item">Prev posts</span>
+                                </span>
+                            </a>
+                        </div>
                     
                     
                         <div class="article-next">
