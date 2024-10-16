@@ -426,7 +426,12 @@
     <url>/Displace.github.io/2024/10/14/C_Note/</url>
     <content><![CDATA[<p>C _Base Grammars </p>
 <h2 id="基础语法"><a href="#基础语法" class="headerlink" title="基础语法"></a>基础语法</h2><p><strong>C_Language ?  Cat_Language!!!</strong><br><img lazyload src="/images/loading.svg" data-src="/Displace.github.io/images/C_Note/cat_oilpainting.png"></p>
-<h3 id="标准代码架构"><a href="#标准代码架构" class="headerlink" title="标准代码架构"></a>标准代码架构</h3><div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span>  <span class="comment">// 标准输入输出头文件，用于使用 printf 和 scanf 函数</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 定义一个常量宏</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> PI 3.14159</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 声明一个结构体</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Person</span> &#123;</span></span><br><span class="line">    <span class="type">char</span> name[<span class="number">50</span>];  <span class="comment">// 字符数组，用于存储名字</span></span><br><span class="line">    <span class="type">int</span> age;        <span class="comment">// 整数类型，用于存储年龄</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 函数声明</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">greet</span><span class="params">(<span class="keyword">struct</span> Person p)</span>;</span><br><span class="line"><span class="type">int</span> <span class="title function_">add</span><span class="params">(<span class="type">int</span> a, <span class="type">int</span> b)</span>;          <span class="comment">// 两个整数相加的函数</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">modifyValue</span><span class="params">(<span class="type">int</span> *ptr)</span>;     <span class="comment">// 使用指针修改变量值的函数</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 主函数，程序的入口</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="comment">// 变量声明与初始化</span></span><br><span class="line">    <span class="type">int</span> x = <span class="number">10</span>;  <span class="comment">// 声明一个整型变量并赋值</span></span><br><span class="line">    <span class="type">float</span> radius = <span class="number">5.5</span>;  <span class="comment">// 声明一个浮点型变量并赋值</span></span><br><span class="line">    <span class="type">double</span> area;  <span class="comment">// 声明一个双精度浮点型变量</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 条件判断语句 if-else</span></span><br><span class="line">    <span class="keyword">if</span> (x &gt; <span class="number">5</span>) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;x is greater than 5.\n&quot;</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;x is less than or equal to 5.\n&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 数组的声明与初始化</span></span><br><span class="line">    <span class="type">int</span> numbers[<span class="number">5</span>] = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>&#125;;  <span class="comment">// 声明一个整型数组</span></span><br><span class="line">    <span class="type">char</span> message[] = <span class="string">&quot;Hello, World!&quot;</span>;  <span class="comment">// 声明并初始化字符数组（字符串）</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 使用循环遍历数组</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;Array elements: &quot;</span>);</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>; i++) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%d &quot;</span>, numbers[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 计算圆的面积</span></span><br><span class="line">    area = PI * radius * radius;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;The area of the circle with radius %.2f is %.2f\n&quot;</span>, radius, area);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 调用函数</span></span><br><span class="line">    <span class="type">int</span> sum = add(<span class="number">5</span>, <span class="number">7</span>);  <span class="comment">// 调用加法函数</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;The sum of 5 and 7 is %d\n&quot;</span>, sum);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 指针的使用</span></span><br><span class="line">    <span class="type">int</span> value = <span class="number">20</span>;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;Original value: %d\n&quot;</span>, value);</span><br><span class="line">    modifyValue(&amp;value);  <span class="comment">// 使用指针修改变量的值</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;Modified value: %d\n&quot;</span>, value);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 使用结构体</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">Person</span> <span class="title">person1</span>;</span>  <span class="comment">// 声明一个结构体变量</span></span><br><span class="line">    person1.age = <span class="number">30</span>;       <span class="comment">// 赋值</span></span><br><span class="line">    <span class="built_in">strcpy</span>(person1.name, <span class="string">&quot;Alice&quot;</span>);  <span class="comment">// 使用 strcpy 函数复制字符串</span></span><br><span class="line">    greet(person1);  <span class="comment">// 调用 greet 函数，传递结构体变量</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 指针与数组</span></span><br><span class="line">    <span class="type">int</span> *ptr = numbers;  <span class="comment">// 指向数组的指针</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;First element using pointer: %d\n&quot;</span>, *ptr);  <span class="comment">// 通过指针访问数组第一个元素</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;  <span class="comment">// 主函数返回 0 表示程序正常结束</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 函数定义：用于打印欢迎信息</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">greet</span><span class="params">(<span class="keyword">struct</span> Person p)</span> &#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;Hello, %s! You are %d years old.\n&quot;</span>, p.name, p.age);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 函数定义：两个整数相加并返回结果</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">add</span><span class="params">(<span class="type">int</span> a, <span class="type">int</span> b)</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> a + b;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 函数定义：使用指针修改值</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">modifyValue</span><span class="params">(<span class="type">int</span> *ptr)</span> &#123;</span><br><span class="line">    *ptr = <span class="number">50</span>;  <span class="comment">// 通过指针修改传入的变量值</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+<details class="blue" data-header-exclude><summary><i class="fa-solid fa-chevron-right"></i>标准代码架构 </summary>
+              <div class="content">
+              <div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span>  <span class="comment">// 标准输入输出头文件，用于使用 printf 和 scanf 函数</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 定义一个常量宏</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> PI 3.14159</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 声明一个结构体</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Person</span> &#123;</span></span><br><span class="line">    <span class="type">char</span> name[<span class="number">50</span>];  <span class="comment">// 字符数组，用于存储名字</span></span><br><span class="line">    <span class="type">int</span> age;        <span class="comment">// 整数类型，用于存储年龄</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 函数声明</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">greet</span><span class="params">(<span class="keyword">struct</span> Person p)</span>;</span><br><span class="line"><span class="type">int</span> <span class="title function_">add</span><span class="params">(<span class="type">int</span> a, <span class="type">int</span> b)</span>;          <span class="comment">// 两个整数相加的函数</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">modifyValue</span><span class="params">(<span class="type">int</span> *ptr)</span>;     <span class="comment">// 使用指针修改变量值的函数</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 主函数，程序的入口</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="comment">// 变量声明与初始化</span></span><br><span class="line">    <span class="type">int</span> x = <span class="number">10</span>;  <span class="comment">// 声明一个整型变量并赋值</span></span><br><span class="line">    <span class="type">float</span> radius = <span class="number">5.5</span>;  <span class="comment">// 声明一个浮点型变量并赋值</span></span><br><span class="line">    <span class="type">double</span> area;  <span class="comment">// 声明一个双精度浮点型变量</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 条件判断语句 if-else</span></span><br><span class="line">    <span class="keyword">if</span> (x &gt; <span class="number">5</span>) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;x is greater than 5.\n&quot;</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;x is less than or equal to 5.\n&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 数组的声明与初始化</span></span><br><span class="line">    <span class="type">int</span> numbers[<span class="number">5</span>] = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>&#125;;  <span class="comment">// 声明一个整型数组</span></span><br><span class="line">    <span class="type">char</span> message[] = <span class="string">&quot;Hello, World!&quot;</span>;  <span class="comment">// 声明并初始化字符数组（字符串）</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 使用循环遍历数组</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;Array elements: &quot;</span>);</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>; i++) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%d &quot;</span>, numbers[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 计算圆的面积</span></span><br><span class="line">    area = PI * radius * radius;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;The area of the circle with radius %.2f is %.2f\n&quot;</span>, radius, area);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 调用函数</span></span><br><span class="line">    <span class="type">int</span> sum = add(<span class="number">5</span>, <span class="number">7</span>);  <span class="comment">// 调用加法函数</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;The sum of 5 and 7 is %d\n&quot;</span>, sum);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 指针的使用</span></span><br><span class="line">    <span class="type">int</span> value = <span class="number">20</span>;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;Original value: %d\n&quot;</span>, value);</span><br><span class="line">    modifyValue(&amp;value);  <span class="comment">// 使用指针修改变量的值</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;Modified value: %d\n&quot;</span>, value);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 使用结构体</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">Person</span> <span class="title">person1</span>;</span>  <span class="comment">// 声明一个结构体变量</span></span><br><span class="line">    person1.age = <span class="number">30</span>;       <span class="comment">// 赋值</span></span><br><span class="line">    <span class="built_in">strcpy</span>(person1.name, <span class="string">&quot;Alice&quot;</span>);  <span class="comment">// 使用 strcpy 函数复制字符串</span></span><br><span class="line">    greet(person1);  <span class="comment">// 调用 greet 函数，传递结构体变量</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 指针与数组</span></span><br><span class="line">    <span class="type">int</span> *ptr = numbers;  <span class="comment">// 指向数组的指针</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;First element using pointer: %d\n&quot;</span>, *ptr);  <span class="comment">// 通过指针访问数组第一个元素</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;  <span class="comment">// 主函数返回 0 表示程序正常结束</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 函数定义：用于打印欢迎信息</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">greet</span><span class="params">(<span class="keyword">struct</span> Person p)</span> &#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;Hello, %s! You are %d years old.\n&quot;</span>, p.name, p.age);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 函数定义：两个整数相加并返回结果</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">add</span><span class="params">(<span class="type">int</span> a, <span class="type">int</span> b)</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> a + b;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 函数定义：使用指针修改值</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">modifyValue</span><span class="params">(<span class="type">int</span> *ptr)</span> &#123;</span><br><span class="line">    *ptr = <span class="number">50</span>;  <span class="comment">// 通过指针修改传入的变量值</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+              </div>
+            </details>
+
 
 <h3 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h3><p>常量在设置后是不能更改的</p>
 <p>C语言中的常量可以根据其类型分为以下几类：</p>
@@ -521,7 +526,7 @@
 <div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">//变量</span></span><br><span class="line"><span class="type">int</span> x = <span class="number">5</span>;  <span class="comment">//数据类型 变量名 = 值</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//混合运算中的变量强制转换</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span>&#123;</span><br><span class="line">    <span class="type">int</span> i = <span class="number">5</span>;</span><br><span class="line">    <span class="type">float</span> f = i/<span class="number">2</span>; <span class="comment">//输出结果为2.000  </span></span><br><span class="line">    <span class="comment">//因为左右操作数均为整形变量,i/2的整形运算结果会省去小数变为2</span></span><br><span class="line">    </span><br><span class="line">    <span class="type">float</span> f = (<span class="type">float</span>)i/<span class="number">2</span>; <span class="comment">//(数据类型)变量名  </span></span><br><span class="line">    <span class="comment">//此时结果为2.5,由此也可推断混合运算的运算方法以左操作数为准</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
 
 <p>注意,在C语言中当变量被定义后它的类型就无法改变了,上文的<code>(float)i</code>应被视为一种将<code>i</code>转换为float形式的新的临时变量的表达式</p>
-<p>C语言中的混合运算以<code>float f = i/2;</code>为例,他的结果数据类型和运算数据类型是分开的,流程上来讲是先判断左操作数的数据类型,以它为准进行对应方式的运算,此时得出的结果为int类型数据,随后将结果返回变量<code>f</code>时被转换为float类型</p>
+<p>C语言中的混合运算以<code>float f = i/2;</code>为例,他的结果数据类型和运算数据类型是分开的,流程上来讲是先判断操作数的数据类型,当左右操作数均为整形时执行整形计算,其他情况执行浮点运算,此时得出的结果为int类型数据,随后将结果返回变量<code>f</code>时被转换为float类型</p>
 <p>下面是 C 语言中常用的变量类型的表格展示，包括每种类型的描述、占用的内存大小以及表示的范围</p>
 <table>
 <thead>
@@ -689,7 +694,7 @@
 <td><code>printf(&quot;%%&quot;);</code> &#x3D;&gt; <code>%</code></td>
 </tr>
 </tbody></table>
-<h3 id="其他格式化修饰符"><a href="#其他格式化修饰符" class="headerlink" title="其他格式化修饰符"></a>其他格式化修饰符</h3><table>
+<h4 id="其他格式化修饰符"><a href="#其他格式化修饰符" class="headerlink" title="其他格式化修饰符"></a>其他格式化修饰符</h4><table>
 <thead>
 <tr>
 <th>修饰符</th>
@@ -733,11 +738,7 @@
 <td><code>printf(&quot;%.2f&quot;, 3.14159);</code> &#x3D;&gt; <code>3.14</code></td>
 </tr>
 </tbody></table>
-<h3 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h3><div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line">ooo</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
-
-
-
-<h4 id="1-算术运算符"><a href="#1-算术运算符" class="headerlink" title="1. 算术运算符"></a>1. <strong>算术运算符</strong></h4><p>算术运算符用于执行基本的数学运算，如加法、减法、乘法、除法等。</p>
+<h3 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h3><h4 id="1-算术运算符"><a href="#1-算术运算符" class="headerlink" title="1. 算术运算符"></a>1. <strong>算术运算符</strong></h4><p>算术运算符用于执行基本的数学运算，如加法、减法、乘法、除法等。</p>
 <table>
 <thead>
 <tr>
@@ -795,7 +796,9 @@
 <li><code>--a</code> 和 <code>a--</code>：类似地，分别为前置和后置自减。</li>
 </ul>
 <hr>
-<h4 id="2-关系运算符"><a href="#2-关系运算符" class="headerlink" title="2. 关系运算符"></a>2. <strong>关系运算符</strong></h4><p>关系运算符用于比较两个操作数，结果返回布尔值 <code>1</code>（真）或 <code>0</code>（假）。</p>
+<h4 id="2-关系运算符"><a href="#2-关系运算符" class="headerlink" title="2. 关系运算符"></a>2. <strong>关系运算符</strong></h4><div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> </span><br><span class="line">&#123;</span><br><span class="line">      <span class="type">int</span> a = <span class="number">123</span>;</span><br><span class="line">error <span class="title function_">if</span> <span class="params">(<span class="number">3</span> &lt; a &lt; <span class="number">10</span>)</span>&#125;  <span class="comment">//比较运算符无法进行中间值判断</span></span><br><span class="line">    <span class="comment">//由于比较运算符返回的是0和1值,因此 3 &lt; a &lt; 10 实际执行的是result=3&lt;a和result&lt;10,因为result必定为0或1,故此判断式无效</span></span><br><span class="line">      <span class="title function_">if</span> <span class="params">(<span class="number">3</span> &lt; a &amp;&amp; a &lt; <span class="number">10</span>)</span> <span class="comment">//正确写法</span></span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+<p>关系运算符用于比较两个操作数，结果返回布尔值 <code>1</code>（真）或 <code>0</code>（假）。</p>
 <table>
 <thead>
 <tr>
@@ -843,7 +846,9 @@
 </tr>
 </tbody></table>
 <hr>
-<h4 id="3-逻辑运算符"><a href="#3-逻辑运算符" class="headerlink" title="3. 逻辑运算符"></a>3. <strong>逻辑运算符</strong></h4><p>逻辑运算符用于布尔运算，常用于条件语句中的复杂判断。</p>
+<h4 id="3-逻辑运算符"><a href="#3-逻辑运算符" class="headerlink" title="3. 逻辑运算符"></a>3. <strong>逻辑运算符</strong></h4><div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> </span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> i = <span class="number">1</span>; </span><br><span class="line">    i &amp;&amp; <span class="title function_">printf</span><span class="params">(<span class="string">&quot;y ct see me \n&quot;</span>)</span>;  <span class="comment">//此时i被当作一个判断值使用</span></span><br><span class="line">    <span class="comment">//逻辑与短路运算,当i为0时不执行,i为1时执行逻辑语后的表达式</span></span><br><span class="line">    <span class="comment">//等价于下列if语句</span></span><br><span class="line">    <span class="keyword">if</span> (i)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;y ct see me \n&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    <span class="type">int</span> a = <span class="number">1</span>; </span><br><span class="line">    a || <span class="built_in">printf</span>(<span class="string">&quot;y ct see me \n&quot;</span>);  <span class="comment">//此时i被当作一个判断值使用</span></span><br><span class="line">    <span class="comment">//逻辑或短路运算,当a为1时不执行,i为0时执行逻辑语后的表达式</span></span><br><span class="line">    <span class="comment">//等价于下列if语句</span></span><br><span class="line">    <span class="keyword">if</span> (!a)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;y ct see me \n&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p>逻辑运算符用于布尔运算，常用于条件语句中的复杂判断。</p>
 <table>
 <thead>
 <tr>
@@ -860,10 +865,10 @@
 <td>如果 <code>a</code> 和 <code>b</code> 都为真，返回 <code>1</code>；否则返回 <code>0</code></td>
 </tr>
 <tr>
-<td>&#96;</td>
-<td></td>
-<td>&#96;</td>
+<td>||</td>
 <td>逻辑或</td>
+<td>a || b</td>
+<td>如果 <code>a</code> 或 <code>b</code> 任一个为真，返回 <code>1</code>；否则返回 <code>0</code></td>
 </tr>
 <tr>
 <td><code>!</code></td>
@@ -890,10 +895,10 @@
 <td><code>a</code> 和 <code>b</code> 按位与</td>
 </tr>
 <tr>
-<td>&#96;</td>
-<td>&#96;</td>
+<td>|</td>
 <td>按位或</td>
-<td>&#96;a</td>
+<td>a | b</td>
+<td><code>a</code> 和 <code>b</code> 按位或</td>
 </tr>
 <tr>
 <td><code>^</code></td>
@@ -992,10 +997,10 @@
 <td><code>a = a ^ b</code></td>
 </tr>
 <tr>
-<td>&#96;</td>
-<td>&#x3D;&#96;</td>
+<td>|&#x3D;</td>
 <td>按位或后赋值</td>
-<td>&#96;a</td>
+<td>a |&#x3D; b</td>
+<td>a &#x3D; a | b</td>
 </tr>
 </tbody></table>
 <hr>
@@ -1017,7 +1022,9 @@
 </tr>
 </tbody></table>
 <hr>
-<h4 id="7-其他运算符"><a href="#7-其他运算符" class="headerlink" title="7. 其他运算符"></a>7. <strong>其他运算符</strong></h4><p>除了上述常用的运算符，还有一些其他的运算符，包括取地址、取值、大小、逗号等。</p>
+<h4 id="7-其他运算符"><a href="#7-其他运算符" class="headerlink" title="7. 其他运算符"></a>7. <strong>其他运算符</strong></h4><div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> a = <span class="number">0</span>;</span><br><span class="line">    <span class="type">int</span> c = <span class="keyword">sizeof</span>(a); <span class="comment">//计算数据的字节大小</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;num size is %d\n&quot;</span>, c); </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p>除了上述常用的运算符，还有一些其他的运算符，包括取地址、取值、大小、逗号等。</p>
 <table>
 <thead>
 <tr>
@@ -1064,6 +1071,139 @@
 <td>访问结构体 <code>s</code> 的成员</td>
 </tr>
 </tbody></table>
+<h4 id="运算符优先级"><a href="#运算符优先级" class="headerlink" title="运算符优先级"></a>运算符优先级</h4><details class="blue" data-header-exclude><summary><i class="fa-solid fa-chevron-right"></i>算数 > 关系 > 逻辑 ：表格如下 </summary>
+              <div class="content">
+              <p>C语言运算符优先级表</p><table><thead><tr><th>优先级最高符号</th><th>名称或含义</th><th>使用形式</th><th>结合方向</th><th>说明</th></tr></thead><tbody><tr><td>1</td><td><code>()</code></td><td>括号</td><td>表达式</td><td>左结合</td></tr><tr><td></td><td><code>[]</code></td><td>数组下标</td><td>表达式</td><td>左结合</td></tr><tr><td></td><td><code>-&gt;</code></td><td>取结构体成员（指针）</td><td>表达式</td><td>左结合</td></tr><tr><td></td><td><code>.</code></td><td>取结构体成员（非指针）</td><td>表达式</td><td>左结合</td></tr><tr><td></td><td><code>sizeof</code></td><td>返回数据类型大小</td><td>表达式</td><td>左结合</td></tr><tr><td>2</td><td><code>!</code></td><td>逻辑非</td><td>表达式</td><td>右结合</td></tr><tr><td></td><td><code>~</code></td><td>位取反</td><td>表达式</td><td>右结合</td></tr><tr><td></td><td><code>++</code></td><td>自增</td><td>表达式</td><td>右结合</td></tr><tr><td></td><td><code>--</code></td><td>自减</td><td>表达式</td><td>右结合</td></tr><tr><td></td><td><code>-</code></td><td>负号</td><td>表达式</td><td>右结合</td></tr><tr><td></td><td><code>*</code></td><td>指针</td><td>表达式</td><td>右结合</td></tr><tr><td></td><td><code>&amp;</code></td><td>取地址</td><td>表达式</td><td>右结合</td></tr><tr><td>3</td><td><code>*</code></td><td>乘</td><td>表达式</td><td>左结合</td></tr><tr><td></td><td><code>/</code></td><td>除</td><td>表达式</td><td>左结合</td></tr><tr><td></td><td><code>%</code></td><td>取余</td><td>表达式</td><td>左结合</td></tr><tr><td>4</td><td><code>+</code></td><td>加</td><td>表达式</td><td>左结合</td></tr><tr><td></td><td><code>-</code></td><td>减</td><td>表达式</td><td>左结合</td></tr><tr><td>5</td><td><code>&lt;&lt;</code></td><td>左移</td><td>表达式</td><td>左结合</td></tr><tr><td></td><td><code>&gt;&gt;</code></td><td>右移</td><td>表达式</td><td>左结合</td></tr><tr><td>6</td><td><code>&lt;</code></td><td>小于</td><td>表达式</td><td>左结合</td></tr><tr><td></td><td><code>&lt;=</code></td><td>小于等于</td><td>表达式</td><td>左结合</td></tr><tr><td></td><td><code>&gt;</code></td><td>大于</td><td>表达式</td><td>左结合</td></tr><tr><td></td><td><code>&gt;=</code></td><td>大于等于</td><td>表达式</td><td>左结合</td></tr><tr><td>7</td><td><code>==</code></td><td>等于</td><td>表达式</td><td>左结合</td></tr><tr><td></td><td><code>!=</code></td><td>不等</td><td>表达式</td><td>左结合</td></tr><tr><td>8</td><td><code>&amp;</code></td><td>按位与</td><td>表达式</td><td>左结合</td></tr><tr><td>9</td><td><code>^</code></td><td>按位异或</td><td>表达式</td><td>左结合</td></tr><tr><td>10</td><td>|</td><td>按位或</td><td>表达式</td><td>左结合</td></tr><tr><td>11</td><td><code>&amp;&amp;</code></td><td>逻辑与</td><td>表达式</td><td>左结合</td></tr><tr><td>12</td><td>||</td><td>逻辑或</td><td>表达式</td><td>左结合</td></tr><tr><td>13</td><td><code>? :</code></td><td>条件运算符</td><td>表达式</td><td>右结合</td></tr><tr><td>14</td><td><code>=</code></td><td>赋值</td><td>表达式</td><td>右结合</td></tr><tr><td></td><td><code>+=</code></td><td>加赋值</td><td>表达式</td><td>右结合</td></tr><tr><td></td><td><code>-=</code></td><td>减赋值</td><td>表达式</td><td>右结合</td></tr><tr><td></td><td><code>*=</code></td><td>乘赋值</td><td>表达式</td><td>右结合</td></tr><tr><td></td><td><code>/=</code></td><td>除赋值</td><td>表达式</td><td>右结合</td></tr><tr><td></td><td><code>%=</code></td><td>取余赋值</td><td>表达式</td><td>右结合</td></tr><tr><td></td><td><code>&lt;&lt;=</code></td><td>左移赋值</td><td>表达式</td><td>右结合</td></tr><tr><td></td><td><code>&gt;&gt;=</code></td><td>右移赋值</td><td>表达式</td><td>右结合</td></tr><tr><td></td><td><code>&amp;=</code></td><td>按位与赋值</td><td>表达式</td><td>右结合</td></tr><tr><td></td><td><code>^=</code></td><td>按位异或赋值</td><td>表达式</td><td>右结合</td></tr><tr><td></td><td>|&#x3D;</td><td>按位或赋值</td><td>表达式</td><td>右结合</td></tr><tr><td>15</td><td><code>,</code></td><td>逗号</td><td>表达式</td><td>左结合</td></tr></tbody></table><p>考研复试可能会用</p>
+              </div>
+            </details>
+
+
+
+
+<h2 id="逻辑语句"><a href="#逻辑语句" class="headerlink" title="逻辑语句"></a>逻辑语句</h2><h3 id="逻辑语句概述"><a href="#逻辑语句概述" class="headerlink" title="逻辑语句概述"></a>逻辑语句概述</h3><p>注意 逻辑语句后一般不加分号(;)</p>
+<div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="type">int</span> a = <span class="number">5</span>, b = <span class="number">10</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// if...else 语句</span></span><br><span class="line">    <span class="keyword">if</span> (a &gt; b) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;a is greater than b\n&quot;</span>);</span><br><span class="line">    &#125; </span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>(a = b)&#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;a is equcal than b\n&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;a is not greater than b\n&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 逻辑与、逻辑或</span></span><br><span class="line">    <span class="keyword">if</span> (a &lt; b &amp;&amp; b &gt; <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;Both conditions are true\n&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 三元运算符</span></span><br><span class="line">    <span class="type">int</span> max = (a &gt; b) ? a : b;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;The maximum is %d\n&quot;</span>, max);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// switch 语句</span></span><br><span class="line">    <span class="keyword">switch</span> (a) &#123;</span><br><span class="line">        <span class="keyword">case</span> <span class="number">5</span>:</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;a is 5\n&quot;</span>);</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> <span class="number">10</span>:</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;a is 10\n&quot;</span>);</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">default</span>:</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;a is not 5 or 10\n&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//for语句</span></span><br><span class="line">    <span class="type">int</span> length = <span class="number">10</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">size_t</span> t = <span class="number">2</span>; t &lt; length; t++)  <span class="comment">//for(初始化变量;判断条件;变量变化表达式)</span></span><br><span class="line">        <span class="comment">//for语句第一次循环 用初始量去判断条件,执行语句,执行变量变量变化表达式</span></span><br><span class="line">        <span class="comment">//二次后的循环则是 判断条件,执行语句,执行变量变量变化表达式</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;cool %d\n&quot;</span>,t);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p>C 语言中的逻辑语句主要包括<strong>逻辑运算符</strong>和<strong>条件语句</strong>。逻辑语句用于控制程序的执行流程，常用的逻辑语句有 <code>if</code>、<code>else if</code>、<code>else</code>、<code>switch</code>、<code>while</code>、<code>for</code>、<code>do...while</code> 等。</p>
+<h4 id="1-逻辑运算符"><a href="#1-逻辑运算符" class="headerlink" title="1. 逻辑运算符"></a>1. <strong>逻辑运算符</strong></h4><p>逻辑运算符用于连接条件表达式或进行条件判断。C 语言中的逻辑运算符如下表所示：</p>
+<table>
+<thead>
+<tr>
+<th>运算符</th>
+<th>名称</th>
+<th>用法</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>&amp;&amp;</code></td>
+<td>逻辑与（AND）</td>
+<td><code>expr1 &amp;&amp; expr2</code></td>
+<td>若 <code>expr1</code> 和 <code>expr2</code> 均为真，结果为真，否则为假</td>
+</tr>
+<tr>
+<td>|</td>
+<td>逻辑或（OR）</td>
+<td><code>expr1 逻辑或 expr2</code></td>
+<td>若 <code>expr1</code> 和 <code>expr2</code> 任一真，结果为真</td>
+</tr>
+<tr>
+<td><code>!</code></td>
+<td>逻辑非（NOT）</td>
+<td><code>!expr</code></td>
+<td>若 <code>expr</code> 为真，结果为假，反之亦然</td>
+</tr>
+</tbody></table>
+<h4 id="2-条件语句"><a href="#2-条件语句" class="headerlink" title="2. 条件语句"></a>2. <strong>条件语句</strong></h4><p>C 语言中的条件语句用于根据不同的条件执行不同的代码块。以下是常见的条件语句：</p>
+<table>
+<thead>
+<tr>
+<th>语句</th>
+<th>用法</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>if</code></td>
+<td><code>if (condition) &#123; /* code */ &#125;</code></td>
+<td>当 <code>condition</code> 为真时，执行 <code>&#123; /* code */ &#125;</code></td>
+</tr>
+<tr>
+<td><code>if...else</code></td>
+<td><code>if (condition) &#123; /* code1 */ &#125; else &#123; /* code2 */ &#125;</code></td>
+<td>如果 <code>condition</code> 为真，执行 <code>code1</code>，否则执行 <code>code2</code></td>
+</tr>
+<tr>
+<td><code>else if</code></td>
+<td><code>if (condition1) &#123; /* code1 */ &#125; else if (condition2) &#123; /* code2 */ &#125; else &#123; /* code3 */ &#125;</code></td>
+<td>多条件判断，第一个为真的条件执行相应的代码块</td>
+</tr>
+<tr>
+<td><code>switch</code></td>
+<td><code>switch (expression) &#123; case val1: /* code */ break; case val2: /* code */ break; default: /* code */ &#125;</code></td>
+<td>根据 <code>expression</code> 的值选择执行相应的 <code>case</code> 代码块</td>
+</tr>
+</tbody></table>
+<h4 id="3-循环语句"><a href="#3-循环语句" class="headerlink" title="3. 循环语句"></a>3. <strong>循环语句</strong></h4><p>C 语言中的循环语句用于重复执行某一代码块，直到满足指定的条件。</p>
+<table>
+<thead>
+<tr>
+<th>语句</th>
+<th>用法</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>while</code></td>
+<td><code>while (condition) &#123; /* code */ &#125;</code></td>
+<td>当 <code>condition</code> 为真时，重复执行 <code>&#123; /* code */ &#125;</code></td>
+</tr>
+<tr>
+<td><code>do...while</code></td>
+<td><code>do &#123; /* code */ &#125; while (condition);</code></td>
+<td>先执行一次代码块，再根据 <code>condition</code> 判断是否继续</td>
+</tr>
+<tr>
+<td><code>for</code></td>
+<td><code>for (init; condition; increment) &#123; /* code */ &#125;</code></td>
+<td>常用循环，按照初始化、条件判断、增量控制的顺序执行</td>
+</tr>
+</tbody></table>
+<h4 id="4-三元运算符"><a href="#4-三元运算符" class="headerlink" title="4. 三元运算符"></a>4. <strong>三元运算符</strong></h4><p>三元运算符是简化 <code>if...else</code> 语句的方式，语法如下：</p>
+<table>
+<thead>
+<tr>
+<th>运算符</th>
+<th>用法</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>?:</code></td>
+<td><code>condition ? expr1 : expr2</code></td>
+<td>当 <code>condition</code> 为真时，返回 <code>expr1</code>，否则返回 <code>expr2</code></td>
+</tr>
+</tbody></table>
+<h4 id="5-continue和break"><a href="#5-continue和break" class="headerlink" title="5.continue和break"></a>5.continue和break</h4><table>
+<thead>
+<tr>
+<th>语句</th>
+<th>用法</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>continue</code></td>
+<td><code>continue;</code></td>
+<td>当循环语句中出现 <code>continue</code> 时，跳过本次循环,执行下一次循环</td>
+</tr>
+<tr>
+<td><code>break</code></td>
+<td><code>break;</code></td>
+<td>当循环语句中出现 <code>break</code> 时，打断循环,执行后续语句</td>
+</tr>
+</tbody></table>
+<h3 id="标准代码架构"><a href="#标准代码架构" class="headerlink" title="标准代码架构"></a>标准代码架构</h3><div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line">ooo</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
 <h3 id="标准代码架构-1"><a href="#标准代码架构-1" class="headerlink" title="标准代码架构"></a>标准代码架构</h3><div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line">ooo</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
 
 <h3 id="标准代码架构-2"><a href="#标准代码架构-2" class="headerlink" title="标准代码架构"></a>标准代码架构</h3><div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line">ooo</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
@@ -1082,11 +1222,7 @@
 
 <h3 id="标准代码架构-9"><a href="#标准代码架构-9" class="headerlink" title="标准代码架构"></a>标准代码架构</h3><div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line">ooo</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
 
-<h3 id="标准代码架构-10"><a href="#标准代码架构-10" class="headerlink" title="标准代码架构"></a>标准代码架构</h3><div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line">ooo</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
-
-<h3 id="标准代码架构-11"><a href="#标准代码架构-11" class="headerlink" title="标准代码架构"></a>标准代码架构</h3><div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line">ooo</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
-
-<h3 id="标准代码架构-12"><a href="#标准代码架构-12" class="headerlink" title="标准代码架构"></a>标准代码架构</h3><div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line">ooo</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>]]></content>
+<h3 id="标准代码架构-10"><a href="#标准代码架构-10" class="headerlink" title="标准代码架构"></a>标准代码架构</h3><div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line">ooo</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>]]></content>
       <categories>
         <category>C_Note</category>
       </categories>
