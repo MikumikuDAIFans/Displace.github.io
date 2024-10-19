@@ -738,6 +738,100 @@
 <td><code>printf(&quot;%.2f&quot;, 3.14159);</code> &#x3D;&gt; <code>3.14</code></td>
 </tr>
 </tbody></table>
+<h3 id="标准读取函数"><a href="#标准读取函数" class="headerlink" title="标准读取函数"></a>标准读取函数</h3><h4 id="1-scanf"><a href="#1-scanf" class="headerlink" title="1.scanf( )"></a>1.<code>scanf( )</code></h4><p><code>scanf</code> 是 C 语言中用于从标准输入（通常是键盘）读取数据的函数。它可以根据指定的格式字符串，将输入的内容转换为对应的变量值,但他在Visual Studio 2022已被弃用,改用更安全的<code>scanf_s</code> </p>
+<p><code>scanf_s</code> 是 <code>scanf</code> 的安全版本，要求为字符串输入提供额外的参数，指定缓冲区的大小，以防止缓冲区溢出。在传入数组时缓冲区大小需要和数组长度相等,否者会出现致命bug,<code> (unsigned)sizeof(a)</code> 是常用的自主获取组长度的方法,传入单个数字时则不需要额外参数</p>
+<p><code>scanf_s</code> 向参数传入数据时实际是向该数据的内存地址传值,因此需写为<code>&amp;变量名 </code></p>
+<div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">//传入数字</span></span><br><span class="line">    <span class="type">int</span> num;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;enter a number:&quot;</span>);</span><br><span class="line">    scanf_s(<span class="string">&quot;%d&quot;</span>,&amp;num); <span class="comment">//传入数据时实际是向该数据的内存地址传值,因此需写为&amp;变量名</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;you enter number is %d\n&quot;</span>, num);</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//传入字符串</span></span><br><span class="line">    <span class="type">char</span> a[<span class="number">10</span>];</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;enter a string(max length is 9):&quot;</span>);</span><br><span class="line">    <span class="comment">//scanf_s(&quot;%s&quot;,a,10);</span></span><br><span class="line">    scanf_s(<span class="string">&quot;%s&quot;</span>, a, (<span class="type">unsigned</span>)<span class="keyword">sizeof</span>(a));  <span class="comment">// 传入数组a以及它的大小</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;you enter string is %s\n&quot;</span>,a);</span><br><span class="line"></span><br><span class="line">    <span class="comment">//混合传入</span></span><br><span class="line">    <span class="type">char</span> c[<span class="number">10</span>];</span><br><span class="line">    <span class="type">float</span> f[<span class="number">10</span>];</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;enter a string and float (max length is 9):\n&quot;</span>);</span><br><span class="line">    <span class="comment">//scanf_s(&quot;%s&quot;,a,10);</span></span><br><span class="line">    scanf_s(<span class="string">&quot;%s&quot;</span>,c, (<span class="type">unsigned</span>)<span class="keyword">sizeof</span>(c)); </span><br><span class="line">    scanf_s(<span class="string">&quot;%f&quot;</span>,&amp;f[<span class="number">0</span>]); <span class="comment">//数组只以单个索引的形式传入值</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;you enter string is %s\nyou enter float is%f\n&quot;</span>,c,f[<span class="number">0</span>]);</span><br><span class="line">    </span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//scanf已被启用,采用更安全感的scanf_s</span></span><br></pre></td></tr></table></figure></div>
+<h4 id="关于混合传值"><a href="#关于混合传值" class="headerlink" title="关于混合传值"></a>关于混合传值</h4><p>scanf通常读数读到空格就会中断,因此一次向多个变量传值使用空格来中断第一个传值过程,再次输入则向下一个变量传值</p>
+<h4 id="2-gets"><a href="#2-gets" class="headerlink" title="2.gets( )"></a><code>2.gets( )</code></h4><h4 id="格式说明符"><a href="#格式说明符" class="headerlink" title="格式说明符"></a>格式说明符</h4><p><code>scanf</code> 函数根据 <strong>格式说明符</strong> 将输入的字符转换为相应的数据类型。以下是常用的格式说明符：</p>
+<table>
+<thead>
+<tr>
+<th>数据类型</th>
+<th>格式说明符</th>
+<th>示例代码</th>
+<th>示例输入</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>int</code></td>
+<td><code>%d</code></td>
+<td><code>scanf_s(&quot;%d&quot;, &amp;num);</code></td>
+<td>123</td>
+<td>读取一个十进制整数。</td>
+</tr>
+<tr>
+<td><code>float</code></td>
+<td><code>%f</code></td>
+<td><code>scanf_s(&quot;%f&quot;, &amp;flt);</code></td>
+<td>3.14</td>
+<td>读取一个浮点数。</td>
+</tr>
+<tr>
+<td><code>double</code></td>
+<td><code>%lf</code></td>
+<td></td>
+<td>3.1415</td>
+<td>读取一个双精度浮点数。</td>
+</tr>
+<tr>
+<td><code>char</code></td>
+<td><code>%c</code></td>
+<td><code>scanf_s(&quot; %c&quot;, &amp;ch);</code></td>
+<td>A</td>
+<td>读取一个字符（包括空白字符）。</td>
+</tr>
+<tr>
+<td>字符串</td>
+<td><code>%s</code></td>
+<td><code>scanf_s(&quot;%s&quot;, str,(unsigned)sizeof(str));</code></td>
+<td>hello</td>
+<td>读取字符串，遇到空白符停止。</td>
+</tr>
+<tr>
+<td>无符号整数</td>
+<td><code>%u</code></td>
+<td></td>
+<td>123</td>
+<td>读取一个无符号整数。</td>
+</tr>
+<tr>
+<td>八进制整数</td>
+<td><code>%o</code></td>
+<td></td>
+<td>017</td>
+<td>读取一个八进制整数。</td>
+</tr>
+<tr>
+<td>十六进制整数</td>
+<td><code>%x</code></td>
+<td></td>
+<td>0x1F</td>
+<td>读取一个十六进制整数。</td>
+</tr>
+<tr>
+<td>长整数</td>
+<td><code>%ld</code></td>
+<td></td>
+<td>123456</td>
+<td>读取一个长整型变量。</td>
+</tr>
+<tr>
+<td>长长整数</td>
+<td><code>%lld</code></td>
+<td></td>
+<td>12345678</td>
+<td>读取一个长长整型变量。</td>
+</tr>
+<tr>
+<td>指针</td>
+<td><code>%p</code></td>
+<td></td>
+<td>0x7ffee</td>
+<td>读取一个指针类型的地址。</td>
+</tr>
+</tbody></table>
 <h3 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h3><h4 id="1-算术运算符"><a href="#1-算术运算符" class="headerlink" title="1. 算术运算符"></a>1. <strong>算术运算符</strong></h4><p>算术运算符用于执行基本的数学运算，如加法、减法、乘法、除法等。</p>
 <table>
 <thead>
@@ -1202,6 +1296,68 @@
 <td>当循环语句中出现 <code>break</code> 时，打断循环,执行后续语句</td>
 </tr>
 </tbody></table>
+<h2 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h2><table>
+<thead>
+<tr>
+<th>数组类型</th>
+<th>用法示例</th>
+<th>访问方式</th>
+<th>特点</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>一维数组</td>
+<td><code>int arr[5];</code></td>
+<td><code>arr[i]</code></td>
+<td>固定大小，元素在内存中连续存储。</td>
+</tr>
+<tr>
+<td>二维数组</td>
+<td><code>int arr[3][4];</code></td>
+<td><code>arr[i][j]</code></td>
+<td>类似矩阵，元素按行优先存储。</td>
+</tr>
+<tr>
+<td>多维数组</td>
+<td><code>int arr[2][3][4];</code></td>
+<td><code>arr[i][j][k]</code></td>
+<td>用于复杂的多维数据存储。</td>
+</tr>
+<tr>
+<td>字符数组</td>
+<td><code>char str[] = &quot;Hello&quot;;</code></td>
+<td><code>str[i]</code></td>
+<td>以 <code>&#39;\0&#39;</code> 结尾，表示字符串。</td>
+</tr>
+<tr>
+<td>动态数组</td>
+<td><code>int *arr = (int *)malloc(5 * sizeof(int));</code></td>
+<td><code>arr[i]</code></td>
+<td>动态分配内存，大小可变。</td>
+</tr>
+<tr>
+<td>参数传递</td>
+<td><code>void func(int arr[], int size)</code></td>
+<td><code>arr[i]</code></td>
+<td>传递指针，需要传递数组大小。</td>
+</tr>
+</tbody></table>
+<h3 id="一维数组"><a href="#一维数组" class="headerlink" title="一维数组"></a>一维数组</h3><div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">// 声明并初始化</span></span><br><span class="line">    <span class="type">int</span> a[<span class="number">10</span>] = &#123; <span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>,<span class="number">10</span> &#125;; <span class="comment">//数组类型 数组名[数组大小] = &#123; &#125;</span></span><br><span class="line">    <span class="type">int</span> b[] = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">6</span>,<span class="number">8</span>,<span class="number">90</span>,<span class="number">34</span>,<span class="number">3</span>,<span class="number">312</span>&#125; <span class="comment">//无数组大小的初始化方式,编辑器会自动匹配数组大小</span></span><br><span class="line">    <span class="type">int</span> length_b = <span class="keyword">sizeof</span>(a) / <span class="keyword">sizeof</span>(<span class="type">int</span>); <span class="comment">//获取数组长度,方便后续操作</span></span><br><span class="line">    </span><br><span class="line">    <span class="type">int</span> arr[<span class="number">5</span>];  <span class="comment">// 声明一个长度为5的整型空数组  此时数组里的值均为0</span></span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    <span class="comment">//访问数组</span></span><br><span class="line">    <span class="comment">// 给数组的第3个元素赋值</span></span><br><span class="line">    arr[<span class="number">2</span>] = <span class="number">10</span>;  <span class="comment">//数组名[索引号] = 值</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 获取第1个元素的值</span></span><br><span class="line">    <span class="type">int</span> x = arr[<span class="number">0</span>];  <span class="comment">// 变量名 = 数组名[索引号]</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment">//遍历数组</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>; i++) &#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d &quot;</span>, arr[i]);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p>主要 数组索引从0开始，因此大小为10的数组实际索引为0到9</p>
+<h4 id="关于数组初始化"><a href="#关于数组初始化" class="headerlink" title="关于数组初始化 :"></a>关于数组初始化 :</h4><p>通常可在数组后添加一个新的变量来动态的记录数组长度,常用的以为数组长度算法为<code>int length_a = sizeof(a) / sizeof(int);</code></p>
+<h4 id="关于数组越界的问题"><a href="#关于数组越界的问题" class="headerlink" title="关于数组越界的问题 :"></a>关于数组越界的问题 :</h4><p>在访问数组时，如果使用的索引超出了数组的有效范围，可能会导致不可预知的行为或程序崩溃。从内存层面上，溢出的数组值会和该数组相邻的变量产生冲突，使得该变量获得错误的值，Visual Studio 2022会自动检测数组下标溢出问题，并阻止编译，但其他编译器仍可能出现问题</p>
+<h3 id="多维数组"><a href="#多维数组" class="headerlink" title="多维数组"></a>多维数组</h3><div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> matrix[<span class="number">3</span>][<span class="number">4</span>];  <span class="comment">// 3行4列的二维数组</span></span><br><span class="line">    </span><br><span class="line">    <span class="type">int</span> matrix[<span class="number">2</span>][<span class="number">3</span>] = &#123;  <span class="comment">//初始化</span></span><br><span class="line">        &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>&#125;,</span><br><span class="line">        &#123;<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>&#125;</span><br><span class="line">    &#125;;    </span><br><span class="line">    </span><br><span class="line">    matrix[<span class="number">1</span>][<span class="number">2</span>] = <span class="number">10</span>;  <span class="comment">// 设置第2行第3列的值为10</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+<h4 id="多维数组的内存结构"><a href="#多维数组的内存结构" class="headerlink" title="多维数组的内存结构"></a>多维数组的内存结构</h4><p>二维数组在内存中是按行连续存储的。例如，<code>matrix[2][3]</code> 在内存中的存储顺序为：<code>matrix[0][0], matrix[0][1], matrix[0][2], matrix[1][0], matrix[1][1], matrix[1][2]</code>。</p>
+<h3 id="数组传递"><a href="#数组传递" class="headerlink" title="数组传递"></a>数组传递</h3><div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 函数原型声明，确保在 main 函数之前声明 print_a 函数</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">print_a</span><span class="params">(<span class="type">int</span> a[], <span class="type">int</span> length)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> a[<span class="number">10</span>] = &#123; <span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>,<span class="number">10</span> &#125;;</span><br><span class="line">    <span class="type">int</span> length_a = <span class="keyword">sizeof</span>(a) / <span class="keyword">sizeof</span>(<span class="type">int</span>);</span><br><span class="line">    </span><br><span class="line">    print_a(a, length_a); <span class="comment">// 调用 print_a 函数</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;length_a = %d\n&quot;</span>, length_a); <span class="comment">// 输出数组长度，输出为10</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">print_a</span><span class="params">(<span class="type">int</span> a[], <span class="type">int</span> length)</span>  <span class="comment">//数组a传递进print_a时传递的不是数组本身，而是指针</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> length_a_p = <span class="keyword">sizeof</span>(a) / <span class="keyword">sizeof</span>(<span class="type">int</span>); <span class="comment">//此时sizeof(a)的值为它指针的大小，即8byte，故length_a_p此时的值并不能反映数组a的大小</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;length_a_p = %d\n&quot;</span>, length_a_p); <span class="comment">//输出为2</span></span><br><span class="line">    </span><br><span class="line">    <span class="type">int</span> i;</span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; length; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, a[i]); </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p><strong>数组传递是按指针传递的</strong>，你传递的是数组首元素的地址，而不是整个数组。数组名退化为指针</p>
+<p><strong>数组的长度信息不会自动传递</strong>，数组长度信息丢失，需要手动传递长度。上述代码提供了一个可行的长度传递逻辑</p>
+<p><strong>指针传递使得函数可以修改原数组的值</strong>，因为指针指向的是相同的内存地址。</p>
+<h3 id="字符数组"><a href="#字符数组" class="headerlink" title="字符数组"></a>字符数组</h3><div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">char</span> str[<span class="number">6</span>] = &#123; <span class="string">&#x27;H&#x27;</span>, <span class="string">&#x27;e&#x27;</span>, <span class="string">&#x27;l&#x27;</span>, <span class="string">&#x27;l&#x27;</span>, <span class="string">&#x27;o&#x27;</span>, <span class="string">&#x27;\0&#x27;</span> &#125;;  <span class="comment">// 定义并初始化一个字符串。</span></span><br><span class="line">    <span class="comment">//此方法有诸多弊端,例如结尾符忘写会输出乱码</span></span><br><span class="line">    <span class="type">char</span> str2[] = <span class="string">&quot;Hello&quot;</span>;  <span class="comment">// 字符串的简化初始化形式。通常使用这种方法初始化</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> i;</span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; <span class="number">6</span>; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;str = %c\n&quot;</span>, str2[i]);  <span class="comment">//由于数组字符初始化时最后以为必定为\0,故长度为6的字符数组实际有效值只有5个,有效索引为0到4</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;str = %s\n&quot;</span>, str); <span class="comment">//字符数组可通过%s格式化来整体输出</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<h4 id="关于字符数组初始化"><a href="#关于字符数组初始化" class="headerlink" title="关于字符数组初始化"></a>关于字符数组初始化</h4><p>字符数组是用于存储字符的数组，通常用于存储和处理字符串。在C语言中，字符串是以空字符 <code>&#39;\0&#39;</code> 结尾的字符数组,在对字符数组进行操作是要尤为注意索引问题</p>
 <h3 id="标准代码架构"><a href="#标准代码架构" class="headerlink" title="标准代码架构"></a>标准代码架构</h3><div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line">ooo</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
 
 <h3 id="标准代码架构-1"><a href="#标准代码架构-1" class="headerlink" title="标准代码架构"></a>标准代码架构</h3><div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line">ooo</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
@@ -1214,15 +1370,7 @@
 
 <h3 id="标准代码架构-5"><a href="#标准代码架构-5" class="headerlink" title="标准代码架构"></a>标准代码架构</h3><div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line">ooo</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
 
-<h3 id="标准代码架构-6"><a href="#标准代码架构-6" class="headerlink" title="标准代码架构"></a>标准代码架构</h3><div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line">ooo</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
-
-<h3 id="标准代码架构-7"><a href="#标准代码架构-7" class="headerlink" title="标准代码架构"></a>标准代码架构</h3><div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line">ooo</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
-
-<h3 id="标准代码架构-8"><a href="#标准代码架构-8" class="headerlink" title="标准代码架构"></a>标准代码架构</h3><div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line">ooo</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
-
-<h3 id="标准代码架构-9"><a href="#标准代码架构-9" class="headerlink" title="标准代码架构"></a>标准代码架构</h3><div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line">ooo</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
-
-<h3 id="标准代码架构-10"><a href="#标准代码架构-10" class="headerlink" title="标准代码架构"></a>标准代码架构</h3><div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line">ooo</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>]]></content>
+<h3 id="标准代码架构-6"><a href="#标准代码架构-6" class="headerlink" title="标准代码架构"></a>标准代码架构</h3><div class="highlight-container" data-rel="C"><figure class="iseeu highlight c"><table><tr><td class="code"><pre><span class="line">ooo</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>]]></content>
       <categories>
         <category>C_Note</category>
       </categories>
