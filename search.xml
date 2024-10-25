@@ -1850,7 +1850,8 @@
     <title>Recursive problem</title>
     <url>/Displace.github.io/2024/10/23/Recursive%20problem_List/</url>
     <content><![CDATA[<p>啊吧 啊吧 啊吧</p>
-<h2 id="Recursive-Problem-Summary"><a href="#Recursive-Problem-Summary" class="headerlink" title="Recursive Problem Summary"></a>Recursive Problem Summary</h2><p>递归问题<br>![](&#x2F;images&#x2F;Recursive problem_L&#x2F;rabbitmiku.png)</p>
+<h2 id="Recursive-Problem-Summary"><a href="#Recursive-Problem-Summary" class="headerlink" title="Recursive Problem Summary"></a>Recursive Problem Summary</h2><p>递归问题</p>
+<p><img lazyload src="/images/loading.svg" data-src="/Displace.github.io/images/Recursive_problem_L/rabbitmiku.png"></p>
 <h3 id="1-斐波那契数列"><a href="#1-斐波那契数列" class="headerlink" title="1. 斐波那契数列"></a>1. <strong>斐波那契数列</strong></h3><p>斐波那契数列的定义是：</p>
 <ul>
 <li>F(0) &#x3D; 0</li>
