@@ -2226,8 +2226,28 @@
 <li><strong>peek</strong>：查看队头元素。</li>
 </ul>
 <p><strong>队列的应用</strong>：广泛用于任务调度、广度优先搜索、数据缓冲等场景。</p>
-<div class="highlight-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="comment">//队列的创建</span></span><br></pre></td></tr></table></figure></div>
+<h3 id="顺序队列-SquenceQueue"><a href="#顺序队列-SquenceQueue" class="headerlink" title="顺序队列(SquenceQueue)"></a>顺序队列(SquenceQueue)</h3><div class="highlight-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="comment">//队列的创建</span></span><br></pre></td></tr></table></figure></div>
 
+
+
+
+
+
+
+
+
+
+
+<h3 id="链队列-LinkQueue"><a href="#链队列-LinkQueue" class="headerlink" title="链队列(LinkQueue)"></a>链队列(LinkQueue)</h3><div class="highlight-container" data-rel="Cpp"><figure class="iseeu highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="comment">//create LinkQueue</span></span><br></pre></td></tr></table></figure></div>
+
+
+
+
+
+<h2 id="串-数组-广义表"><a href="#串-数组-广义表" class="headerlink" title="串,数组,广义表"></a>串,数组,广义表</h2><h3 id="串匹配算法"><a href="#串匹配算法" class="headerlink" title="串匹配算法"></a>串匹配算法</h3><h2 id="二叉树"><a href="#二叉树" class="headerlink" title="二叉树"></a>二叉树</h2><p><strong>二叉树</strong>是一种树形数据结构，其中每个节点最多有两个子节点，称为左子节点和右子节点。二叉树具有层次关系，广泛用于数据组织和处理。</p>
+<h3 id="树"><a href="#树" class="headerlink" title="树"></a>树</h3><h3 id="森林"><a href="#森林" class="headerlink" title="森林"></a>森林</h3><h3 id="二叉树-1"><a href="#二叉树-1" class="headerlink" title="二叉树"></a>二叉树</h3><h4 id="先序遍历"><a href="#先序遍历" class="headerlink" title="先序遍历"></a>先序遍历</h4><h3 id="哈夫曼树"><a href="#哈夫曼树" class="headerlink" title="哈夫曼树"></a>哈夫曼树</h3><h2 id="图"><a href="#图" class="headerlink" title="图"></a>图</h2><p>啊啊啊</p>
+<h2 id="查找"><a href="#查找" class="headerlink" title="查找"></a>查找</h2><p>啊啊啊啊</p>
+<h2 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h2><p>啊啊啊啊啊</p>
 ]]></content>
       <categories>
         <category>Data_structures</category>
