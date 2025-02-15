@@ -1,0 +1,1383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Hexo Theme Redefine">
+    
+    <meta name="author" content="Slience_Displace">
+    <!-- preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    
+    <!--- Seo Part-->
+    
+    <link rel="canonical" href="https://mikumikudaifans.github.io/Displace.github.io/2024/09/29/pythonnotes/"/>
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+    <meta name="revisit-after" content="1 days">
+    
+        <meta name="description" content="好好看,好好学">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PythonNotes">
+<meta property="og:url" content="https://mikumikudaifans.github.io/Displace.github.io/2024/09/29/PythonNotes/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="好好看,好好学">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://mikumikudaifans.github.io/Displace.github.io/images/PythonNotes/xuehuan_cry.png">
+<meta property="article:published_time" content="2024-09-28T16:00:00.000Z">
+<meta property="article:modified_time" content="2024-12-19T10:07:37.944Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="Python">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://mikumikudaifans.github.io/Displace.github.io/images/PythonNotes/xuehuan_cry.png">
+    
+    
+    <!--- Icon Part-->
+    <link rel="icon" type="image/png" href="/Displace.github.io/images/Logo_miku.png" sizes="192x192">
+    <link rel="apple-touch-icon" sizes="180x180" href="/Displace.github.io/images/Logo_miku.png">
+    <meta name="theme-color" content="#33CCCC">
+    <link rel="shortcut icon" href="/Displace.github.io/Displace.github.io/images/Logo_miku.png">
+    <!--- Page Info-->
+    
+    <title>
+        
+            PythonNotes -
+        
+        DisplaceStation
+    </title>
+    
+<link rel="stylesheet" href="/Displace.github.io/css/style.css">
+
+    
+<link rel="stylesheet" href="/Displace.github.io/assets/fonts.css">
+
+    <!--- Font Part-->
+    
+    
+    
+        <link href="" rel="stylesheet">
+    
+    
+        <link href="https://fonts.googleapis.com/css2?family=Farsan&display=swap" rel="stylesheet">
+    
+
+    <!--- Inject Part-->
+    
+    <script id="hexo-configurations">
+    let Global = window.Global || {};
+    Global.hexo_config = {"hostname":"mikumikudaifans.github.io","root":"/Displace.github.io/","language":"en","path":"search.xml"};
+    Global.theme_config = {"articles":{"style":{"font_size":"20px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":true,"link_icon":true},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":true,"auto":false,"list":[]},"code_block":{"copy":true,"style":"simple","font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":3,"number":false,"expand":true,"init_open":true},"copyright":true,"lazyload":true,"recommendation":{"enable":false,"title":"推荐阅读","limit":3,"placeholder":"/images/wallhaven-wqery6-light.webp","skip_dirs":[]}},"colors":{"primary":"#33CCCC","secondary":"#1890ff"},"global":{"fonts":{"chinese":{"enable":true,"family":null,"url":null},"english":{"enable":true,"family":"Farsan","url":"https://fonts.googleapis.com/css2?family=Farsan&display=swap"}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":true},"scroll_progress":{"bar":false,"percentage":true},"busuanzi_counter":{"enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"pjax":true,"open_graph":true,"google_analytics":{"enable":false,"id":null}},"home_banner":{"enable":true,"style":"fixed","image":{"light":"/Displace.github.io/images/walllight.jpg","dark":"/Displace.github.io/images/walldark.jpg"},"title":"DisplaceStation_ZjY","subtitle":{"text":["日复一日，必有精进","何日才能抵达呢？","路漫漫其修远兮，吾将上下而求索","虽不能至，心向往之"],"hitokoto":{"enable":false,"api":"https://v1.hitokoto.cn"},"typing_speed":120,"backing_speed":100,"starting_delay":500,"backing_delay":2000,"loop":true,"smart_backspace":true},"text_color":{"light":"#33CCCC","dark":"#d1d1b6"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":true,"links":{"github":"https://github.com/MikumikuDAIFans","instagram":null,"zhihu":null,"twitter":"https://twitter.com/NRcJOqSVzVjuSdv","email":"zhangjiayanglovemiku@gmail.com","bilibili":"https://space.bilibili.com/11958169?spm_id_from=333.1007.0.0","wecheat":null,"QQ":null}}},"plugins":{"feed":{"enable":false},"aplayer":{"enable":true,"type":"fixed","audios":[{"name":"使一颗心免于哀伤","artist":"知更鸟 _ HOYO-MiX _ Chevy","url":"https://raw.githubusercontent.com/MikumikuDAIFans/Displace.github.io/master/images/music/ificanstoponeheartkreaking.mp3","cover":"https://raw.githubusercontent.com/MikumikuDAIFans/Displace.github.io/master/images/music/Cover.png"},{"name":"希望有羽毛和翅膀","artist":"知更鸟 _ HOYO-MiX _ Chevy","url":"https://raw.githubusercontent.com/MikumikuDAIFans/Displace.github.io/master/images/music/HopeIstheThingWithFeathers.flac","cover":"https://raw.githubusercontent.com/MikumikuDAIFans/Displace.github.io/master/images/music/Cover.png"},{"name":"在银河中孤独摇摆","artist":"知更鸟 _ HOYO-MiX _ Chevy","url":"https://raw.githubusercontent.com/MikumikuDAIFans/Displace.github.io/master/images/music/SwaytoMyBeatinCosmos.flac","cover":"https://raw.githubusercontent.com/MikumikuDAIFans/Displace.github.io/master/images/music/Cover.png"}]},"mermaid":{"enable":false,"version":"9.3.0"}},"version":"2.1.4","navbar":{"auto_hide":false,"color":{"left":"#f78736","right":"#33CCCC","transparency":15},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"},"Archives":{"path":"/archives","icon":"fa-regular fa-archive"},"AboutVFX":{"icon":"fa-sharp fa-bat","submenus":{"UnrealNiagara":"https://docs.unrealengine.com/5.0/zh-CN/overview-of-niagara-effects-for-unreal-engine/","UE_VFX_LearningFuction":"https://zhuanlan.zhihu.com/p/369285183","Appliedhoudini":"https://www.appliedhoudini.com/","CG_How":"https://www.youtube.com/channel/UCN-XH6BI85RG2-Hj7C9oWOw","Natsuneko":"https://natsuneko3.github.io/","Friends":"/friends"}},"AI":{"icon":"fa-sharp fa-robot","submenus":{"CheatGPT":"https://openai.com/blog/chatgpt","stablediffusionweb_online":"https://stablediffusionweb.com/","firefly":"https://firefly.adobe.com/generate/images"}},"OtherLinks":{"icon":"fa-regular fa-link","submenus":{"Lks's website compilations":"https://www.bilibili.com/","Temporary mobile number":"https://sms-activate.org/getNumber","Temporary Email":"https://temp-mail.org/zh/","模之屋":"https://www.aplaybox.com/","Resource_龋齿一号":"https://www.gfxcamp.com/","Resource_摩卡":"https://mooka.top/","Resource_艾薇":"https://www.aiweibk.com/"}}},"search":{"enable":true,"preload":true}},"page_templates":{"friends_column":2,"tags_style":"blur"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"menu","announcement":"Welcome to my website, where I update my daily work and learning experiences","links":{"Photo":{"path":"/Displace.github.io/masonry/","icon":"fa-solid fa-image"}}},"article_date_format":"YYYY-MM-DD","categories":{"enable":true,"limit":3},"tags":{"enable":true,"limit":3}}};
+    Global.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
+    Global.data_config = {"masonry":true};
+  </script>
+    
+    <!--- Fontawesome Part-->
+    
+<link rel="stylesheet" href="/Displace.github.io/fontawesome/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/Displace.github.io/fontawesome/brands.min.css">
+
+    
+<link rel="stylesheet" href="/Displace.github.io/fontawesome/solid.min.css">
+
+    
+<link rel="stylesheet" href="/Displace.github.io/fontawesome/regular.min.css">
+
+    
+        
+<link rel="stylesheet" href="/Displace.github.io/fontawesome/thin.min.css">
+
+    
+    
+        
+<link rel="stylesheet" href="/Displace.github.io/fontawesome/light.min.css">
+
+    
+    
+        
+<link rel="stylesheet" href="/Displace.github.io/fontawesome/duotone.min.css">
+
+    
+    
+        
+<link rel="stylesheet" href="/Displace.github.io/fontawesome/sharp-solid.min.css">
+
+    
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+        <span class="pjax-progress-icon">
+            <i class="fa-solid fa-circle-notch fa-spin"></i>
+        </span>
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="main-content-container">
+
+        <div class="main-content-header">
+            <header class="navbar-container">
+    
+    <div class="navbar-content">
+        <div class="left">
+            
+                <a class="logo-image" href="/">
+                    <img src="/Displace.github.io/images/Logo_miku.png">
+                </a>
+            
+            <a class="logo-title" href="/">
+                
+                DisplaceStation
+                
+            </a>
+        </div>
+
+        <div class="right">
+            <!-- PC -->
+            <div class="desktop">
+                <ul class="navbar-list">
+                    
+                        
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class="" 
+                                    href="/Displace.github.io/"  >
+                                    
+                                        
+                                            <i class="fa-regular fa-house"></i>
+                                        
+                                        HOME
+                                    
+                                </a>
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class="" 
+                                    href="/Displace.github.io/archives"  >
+                                    
+                                        
+                                            <i class="fa-regular fa-archive"></i>
+                                        
+                                        ARCHIVES
+                                    
+                                </a>
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class="has-dropdown" 
+                                    href="#" onClick="return false;">
+                                    
+                                        
+                                            <i class="fa-sharp fa-bat"></i>
+                                        
+                                        ABOUTVFX&nbsp;<i class="fa-solid fa-chevron-down"></i>
+                                    
+                                </a>
+                                <!-- Submenu -->
+                                
+                                    <ul class="sub-menu">
+                                    
+                                        <li>
+                                        <a target="_blank" rel="noopener" href="https://docs.unrealengine.com/5.0/zh-CN/overview-of-niagara-effects-for-unreal-engine/">UNREALNIAGARA
+                                        </a>
+                                        </li>
+                                    
+                                        <li>
+                                        <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/369285183">UE_VFX_LEARNINGFUCTION
+                                        </a>
+                                        </li>
+                                    
+                                        <li>
+                                        <a target="_blank" rel="noopener" href="https://www.appliedhoudini.com/">APPLIEDHOUDINI
+                                        </a>
+                                        </li>
+                                    
+                                        <li>
+                                        <a target="_blank" rel="noopener" href="https://www.youtube.com/channel/UCN-XH6BI85RG2-Hj7C9oWOw">CG_HOW
+                                        </a>
+                                        </li>
+                                    
+                                        <li>
+                                        <a target="_blank" rel="noopener" href="https://natsuneko3.github.io/">NATSUNEKO
+                                        </a>
+                                        </li>
+                                    
+                                        <li>
+                                        <a href="/Displace.github.io/friends">FRIENDS
+                                        </a>
+                                        </li>
+                                    
+                                    </ul>
+                                
+                            </li>
+                    
+                        
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class="has-dropdown" 
+                                    href="#" onClick="return false;">
+                                    
+                                        
+                                            <i class="fa-sharp fa-robot"></i>
+                                        
+                                        AI&nbsp;<i class="fa-solid fa-chevron-down"></i>
+                                    
+                                </a>
+                                <!-- Submenu -->
+                                
+                                    <ul class="sub-menu">
+                                    
+                                        <li>
+                                        <a target="_blank" rel="noopener" href="https://openai.com/blog/chatgpt">CHEATGPT
+                                        </a>
+                                        </li>
+                                    
+                                        <li>
+                                        <a target="_blank" rel="noopener" href="https://stablediffusionweb.com/">STABLEDIFFUSIONWEB_ONLINE
+                                        </a>
+                                        </li>
+                                    
+                                        <li>
+                                        <a target="_blank" rel="noopener" href="https://firefly.adobe.com/generate/images">FIREFLY
+                                        </a>
+                                        </li>
+                                    
+                                    </ul>
+                                
+                            </li>
+                    
+                        
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class="has-dropdown" 
+                                    href="#" onClick="return false;">
+                                    
+                                        
+                                            <i class="fa-regular fa-link"></i>
+                                        
+                                        OTHERLINKS&nbsp;<i class="fa-solid fa-chevron-down"></i>
+                                    
+                                </a>
+                                <!-- Submenu -->
+                                
+                                    <ul class="sub-menu">
+                                    
+                                        <li>
+                                        <a target="_blank" rel="noopener" href="https://www.bilibili.com/">LKS&#39;S WEBSITE COMPILATIONS
+                                        </a>
+                                        </li>
+                                    
+                                        <li>
+                                        <a target="_blank" rel="noopener" href="https://sms-activate.org/getNumber">TEMPORARY MOBILE NUMBER
+                                        </a>
+                                        </li>
+                                    
+                                        <li>
+                                        <a target="_blank" rel="noopener" href="https://temp-mail.org/zh/">TEMPORARY EMAIL
+                                        </a>
+                                        </li>
+                                    
+                                        <li>
+                                        <a target="_blank" rel="noopener" href="https://www.aplaybox.com/">模之屋
+                                        </a>
+                                        </li>
+                                    
+                                        <li>
+                                        <a target="_blank" rel="noopener" href="https://www.gfxcamp.com/">RESOURCE_龋齿一号
+                                        </a>
+                                        </li>
+                                    
+                                        <li>
+                                        <a target="_blank" rel="noopener" href="https://mooka.top/">RESOURCE_摩卡
+                                        </a>
+                                        </li>
+                                    
+                                        <li>
+                                        <a target="_blank" rel="noopener" href="https://www.aiweibk.com/">RESOURCE_艾薇
+                                        </a>
+                                        </li>
+                                    
+                                    </ul>
+                                
+                            </li>
+                    
+                    
+                        <li class="navbar-item search search-popup-trigger">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <!-- Mobile -->
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fa-solid fa-magnifying-glass"></i></div>
+                
+                <div class="icon-item navbar-bar">
+                    <div class="navbar-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile drawer -->
+    <div class="navbar-drawer">
+        <ul class="drawer-navbar-list">
+            
+                
+                    <li class="drawer-navbar-item flex-center">
+                        <a class="" 
+                        href="/Displace.github.io/"  >
+                             
+                                
+                                    <i class="fa-regular fa-house"></i>
+                                
+                                HOME
+                            
+                        </a>
+                    </li>
+                    <!-- Submenu -->
+                    
+            
+                
+                    <li class="drawer-navbar-item flex-center">
+                        <a class="" 
+                        href="/Displace.github.io/archives"  >
+                             
+                                
+                                    <i class="fa-regular fa-archive"></i>
+                                
+                                ARCHIVES
+                            
+                        </a>
+                    </li>
+                    <!-- Submenu -->
+                    
+            
+                
+                    <li class="drawer-navbar-item flex-center">
+                        <a class="has-dropdown" 
+                        href="#" onClick="return false;">
+                            
+                                
+                                    <i class="fa-sharp fa-bat"></i>
+                                
+                                ABOUTVFX&nbsp;<i class="fa-solid fa-chevron-down"></i>
+                            
+                        </a>
+                    </li>
+                    <!-- Submenu -->
+                              
+                        
+                            <li class="dropdown-item flex-center">
+                                <a class="dropdown-item" target="_blank" rel="noopener" href="https://docs.unrealengine.com/5.0/zh-CN/overview-of-niagara-effects-for-unreal-engine/">UNREALNIAGARA</a>
+                            </li>
+                        
+                            <li class="dropdown-item flex-center">
+                                <a class="dropdown-item" target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/369285183">UE_VFX_LEARNINGFUCTION</a>
+                            </li>
+                        
+                            <li class="dropdown-item flex-center">
+                                <a class="dropdown-item" target="_blank" rel="noopener" href="https://www.appliedhoudini.com/">APPLIEDHOUDINI</a>
+                            </li>
+                        
+                            <li class="dropdown-item flex-center">
+                                <a class="dropdown-item" target="_blank" rel="noopener" href="https://www.youtube.com/channel/UCN-XH6BI85RG2-Hj7C9oWOw">CG_HOW</a>
+                            </li>
+                        
+                            <li class="dropdown-item flex-center">
+                                <a class="dropdown-item" target="_blank" rel="noopener" href="https://natsuneko3.github.io/">NATSUNEKO</a>
+                            </li>
+                        
+                            <li class="dropdown-item flex-center">
+                                <a class="dropdown-item" href="/Displace.github.io/friends">FRIENDS</a>
+                            </li>
+                        
+                    
+            
+                
+                    <li class="drawer-navbar-item flex-center">
+                        <a class="has-dropdown" 
+                        href="#" onClick="return false;">
+                            
+                                
+                                    <i class="fa-sharp fa-robot"></i>
+                                
+                                AI&nbsp;<i class="fa-solid fa-chevron-down"></i>
+                            
+                        </a>
+                    </li>
+                    <!-- Submenu -->
+                              
+                        
+                            <li class="dropdown-item flex-center">
+                                <a class="dropdown-item" target="_blank" rel="noopener" href="https://openai.com/blog/chatgpt">CHEATGPT</a>
+                            </li>
+                        
+                            <li class="dropdown-item flex-center">
+                                <a class="dropdown-item" target="_blank" rel="noopener" href="https://stablediffusionweb.com/">STABLEDIFFUSIONWEB_ONLINE</a>
+                            </li>
+                        
+                            <li class="dropdown-item flex-center">
+                                <a class="dropdown-item" target="_blank" rel="noopener" href="https://firefly.adobe.com/generate/images">FIREFLY</a>
+                            </li>
+                        
+                    
+            
+                
+                    <li class="drawer-navbar-item flex-center">
+                        <a class="has-dropdown" 
+                        href="#" onClick="return false;">
+                            
+                                
+                                    <i class="fa-regular fa-link"></i>
+                                
+                                OTHERLINKS&nbsp;<i class="fa-solid fa-chevron-down"></i>
+                            
+                        </a>
+                    </li>
+                    <!-- Submenu -->
+                              
+                        
+                            <li class="dropdown-item flex-center">
+                                <a class="dropdown-item" target="_blank" rel="noopener" href="https://www.bilibili.com/">LKS&#39;S WEBSITE COMPILATIONS</a>
+                            </li>
+                        
+                            <li class="dropdown-item flex-center">
+                                <a class="dropdown-item" target="_blank" rel="noopener" href="https://sms-activate.org/getNumber">TEMPORARY MOBILE NUMBER</a>
+                            </li>
+                        
+                            <li class="dropdown-item flex-center">
+                                <a class="dropdown-item" target="_blank" rel="noopener" href="https://temp-mail.org/zh/">TEMPORARY EMAIL</a>
+                            </li>
+                        
+                            <li class="dropdown-item flex-center">
+                                <a class="dropdown-item" target="_blank" rel="noopener" href="https://www.aplaybox.com/">模之屋</a>
+                            </li>
+                        
+                            <li class="dropdown-item flex-center">
+                                <a class="dropdown-item" target="_blank" rel="noopener" href="https://www.gfxcamp.com/">RESOURCE_龋齿一号</a>
+                            </li>
+                        
+                            <li class="dropdown-item flex-center">
+                                <a class="dropdown-item" target="_blank" rel="noopener" href="https://mooka.top/">RESOURCE_摩卡</a>
+                            </li>
+                        
+                            <li class="dropdown-item flex-center">
+                                <a class="dropdown-item" target="_blank" rel="noopener" href="https://www.aiweibk.com/">RESOURCE_艾薇</a>
+                            </li>
+                        
+                    
+            
+
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="main-content-body">
+
+            
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="post-page-container">
+        <div class="article-content-container">
+
+            
+             
+                <div class="article-title">         
+                    <img src="/Displace.github.io/images/PythonNotes/miku_point_buckground.png" alt="PythonNotes" />
+                    <h1 class="article-title-cover">PythonNotes</h1>
+                </div>
+            
+                
+            
+
+            
+                <div class="article-header">
+                    <div class="avatar">
+                        <img src="/Displace.github.io/Displace.github.io/images/Logo_miku.png">
+                    </div>
+                    <div class="info">
+                        <div class="author">
+                            <span class="name">Slience_Displace</span>
+                            
+                                <span class="author-label">Lv2</span>
+                            
+                        </div>
+                        <div class="meta-info">
+                            <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="desktop">2024-09-29</span>
+        <span class="mobile">2024-09-29 00</span>
+        <span class="hover-info">Created</span>
+    </span>
+    
+        <span class="article-date article-meta-item">
+            <i class="fa-regular fa-wrench"></i>&nbsp;
+            <span class="desktop">2024-12-19 18:07:37</span>
+            <span class="mobile">2024-12-19 18:07</span>
+            <span class="hover-info">Updated</span>
+        </span>
+    
+
+    
+        <span class="article-categories article-meta-item">
+            <i class="fa-regular fa-folders"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/Displace.github.io/categories/PythonNotes/">PythonNotes</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fa-regular fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/Displace.github.io/tags/Python/">Python</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>7.3k Words</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>30 Mins</span>
+        </span>
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fa-regular fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                        </div>
+                    </div>
+                </div>
+            
+
+            <div class="article-content markdown-body">
+                <p>Python Notes _Base Grammars </p>
+<h2 id="基础语法"><a href="#基础语法" class="headerlink" title="基础语法"></a>基础语法</h2><p>P(屁) y(眼) t(通) hon(红)<br><img lazyload src="/images/loading.svg" data-src="/Displace.github.io/images/PythonNotes/xuehuan_cry.png"></p>
+<h3 id="标准代码架构"><a href="#标准代码架构" class="headerlink" title="标准代码架构"></a>标准代码架构</h3><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">find7</span>():  <span class="comment">#含参fuction</span></span><br><span class="line">    num_I = <span class="number">1</span></span><br><span class="line">    <span class="keyword">while</span> num_I&lt;= <span class="number">100</span>:</span><br><span class="line">        <span class="keyword">if</span> num_I % <span class="number">7</span> == <span class="number">0</span> <span class="keyword">or</span> <span class="string">&#x27;7&#x27;</span> <span class="keyword">in</span> <span class="built_in">str</span>(num_I):</span><br><span class="line">            num_yv = num_I</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">f&#x27;<span class="subst">&#123;num_yv&#125;</span>&#x27;</span>)</span><br><span class="line">            num_I += <span class="number">1</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            num_I += <span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">main</span>():  <span class="comment">#主函数执行fuction调用</span></span><br><span class="line">    find7()</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:  <span class="comment">#启动语句</span></span><br><span class="line">    main()</span><br></pre></td></tr></table></figure></div>
+<p>优秀的代码架构是后期修bug的救命稻草</p>
+<h3 id="数据转换-数据计算"><a href="#数据转换-数据计算" class="headerlink" title="数据转换&amp;数据计算"></a>数据转换&amp;数据计算</h3><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">bin</span>(x) <span class="comment">#转为2进制 </span></span><br><span class="line"><span class="built_in">oct</span>(x) <span class="comment">#转为8进制</span></span><br><span class="line"><span class="built_in">int</span>(x) <span class="comment">#转为10进制,整数  常用 y = int(input(&#x27;啊吧啊吧&#x27;))</span></span><br><span class="line"><span class="built_in">hex</span>(x) <span class="comment">#转为16进制</span></span><br><span class="line"><span class="built_in">float</span>(x) <span class="comment">#转为浮点数</span></span><br><span class="line"><span class="built_in">complex</span>(x) <span class="comment">#转为复数</span></span><br><span class="line">_________________________</span><br><span class="line">+,-,*,/</span><br><span class="line">% <span class="comment">#取余</span></span><br><span class="line">// <span class="comment">#整除</span></span><br><span class="line">** <span class="comment">#幂运算</span></span><br><span class="line">__________________________</span><br><span class="line">num += <span class="number">2</span> <span class="comment">#表示num = num + 2</span></span><br><span class="line">-=,*=,/=,//=,%=,**=</span><br><span class="line">__________________________</span><br></pre></td></tr></table></figure></div>
+
+<p>在实际应用中二,八,十六进制数的显示方式分别为 : </p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 十进制转换为其他进制</span></span><br><span class="line">num = <span class="number">26</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 十进制转为二进制</span></span><br><span class="line">binary_num = <span class="built_in">bin</span>(num)  <span class="comment"># 输出为 &#x27;0b11010&#x27;</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&#x27;<span class="subst">&#123;num&#125;</span> 的二进制表示为: <span class="subst">&#123;binary_num&#125;</span>&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 十进制转为八进制</span></span><br><span class="line">octal_num = <span class="built_in">oct</span>(num)  <span class="comment"># 输出为 &#x27;0o32&#x27;</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&#x27;<span class="subst">&#123;num&#125;</span> 的八进制表示为: <span class="subst">&#123;octal_num&#125;</span>&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 十进制转为十六进制</span></span><br><span class="line">hex_num = <span class="built_in">hex</span>(num)  <span class="comment"># 输出为 &#x27;0x1a&#x27;</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&#x27;<span class="subst">&#123;num&#125;</span> 的十六进制表示为: <span class="subst">&#123;hex_num&#125;</span>&#x27;</span>)</span><br></pre></td></tr></table></figure></div>
+
+<p>带有 <code>0x</code> 前缀的数字代表十六进制数，<code>0b</code> 前缀代表二进制数，<code>0o</code> 代表八进制数。</p>
+<h3 id="逻辑-逻辑运算符"><a href="#逻辑-逻辑运算符" class="headerlink" title="逻辑&amp;逻辑运算符"></a>逻辑&amp;逻辑运算符</h3><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> x &lt; y :</span><br><span class="line">	<span class="built_in">print</span>(x)</span><br><span class="line"><span class="keyword">elif</span> x = y:</span><br><span class="line">	<span class="built_in">print</span>(x)</span><br><span class="line"><span class="keyword">else</span> :</span><br><span class="line">	<span class="built_in">print</span>(y)</span><br><span class="line">_______________________</span><br><span class="line"><span class="keyword">while</span> x &lt; y :</span><br><span class="line">	<span class="built_in">print</span>(x)</span><br><span class="line">______________________</span><br><span class="line"><span class="comment"># if 和 while 的判断条件输出的是bool值,因此可用 while True : 来实现无线循环</span></span><br><span class="line">判断条件:</span><br><span class="line">==,!=,&gt;,&lt;,&gt;=,&lt;=</span><br><span class="line">x <span class="keyword">and</span> y <span class="comment">#x和y均为true时输出y</span></span><br><span class="line">x <span class="keyword">or</span> y <span class="comment">#x和y均为true时输出x</span></span><br><span class="line"><span class="keyword">not</span> x  <span class="comment">#x为true时输出false</span></span><br><span class="line">x <span class="keyword">in</span> [<span class="string">&#x27;商业贷款&#x27;</span>, <span class="string">&#x27;公积金贷款&#x27;</span>, <span class="string">&#x27;组合贷款&#x27;</span>]:</span><br><span class="line">x <span class="keyword">not</span> <span class="keyword">in</span> [<span class="string">&#x27;商业贷款&#x27;</span>, <span class="string">&#x27;公积金贷款&#x27;</span>, <span class="string">&#x27;组合贷款&#x27;</span>]: <span class="comment">#用于判断多个条件中是否含有其中一个</span></span><br><span class="line"></span><br><span class="line">_____________________</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> rang(<span class="number">5</span>) : <span class="comment">#循环遍历数组里的元素</span></span><br><span class="line">	<span class="built_in">print</span>(i)</span><br><span class="line">________________________</span><br><span class="line"><span class="keyword">break</span> <span class="comment">#结束循环,执行下一段代码</span></span><br><span class="line"><span class="keyword">continue</span> <span class="comment">#跳过本次循环,执行下一次循环</span></span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+<p>好啊</p>
+<h3 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h3><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;啊吧啊吧&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;贷款年限：<span class="subst">&#123;years&#125;</span> 年&quot;</span>) <span class="comment">#f&#x27;&#123;x&#125;&#x27;用于在字符串中输出变量x</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;啊吧啊吧&#x27;</span>\n) <span class="comment">#\n为换行符</span></span><br><span class="line">\b,退格  \n,换行  \v,纵向制表 \t,横向制表 \r,回车</span><br><span class="line">________________________________________________</span><br><span class="line"><span class="comment"># 格式化字符串的输出方式</span></span><br><span class="line">value = <span class="number">10</span></span><br><span class="line">string_x = <span class="string">&#x27;我今年%d岁&#x27;</span> <span class="comment">#字符串中变量用%d格式化为整数</span></span><br><span class="line"><span class="built_in">print</span>(string_x % value) <span class="comment">#输出时按照 字符串%参数 的样式书写</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#数据格式化符</span></span><br><span class="line">%c <span class="comment">#格式化为字符</span></span><br><span class="line">%s <span class="comment">#格式化为字符串</span></span><br><span class="line">%d <span class="comment">#格式化为整数</span></span><br><span class="line">%u <span class="comment">#格式化为无符号整型</span></span><br><span class="line">%o <span class="comment">#格式化为八进制数</span></span><br><span class="line">%x <span class="comment">#格式化为十六进制数</span></span><br><span class="line">%f <span class="comment">#格式化为浮点数</span></span><br><span class="line">________________________________________________</span><br><span class="line">str_x.find(<span class="string">&#x27;a&#x27;</span>,<span class="number">0</span>,<span class="number">5</span>) <span class="comment">#目标字符串.find(&#x27;指定查出找的字符&#x27;,起始索引,结束索引)</span></span><br><span class="line"><span class="comment">#输出指定字符在字符串中的索引序号</span></span><br><span class="line">_________________________________________________</span><br><span class="line">str_x.replace(<span class="string">&#x27;a&#x27;</span>,<span class="string">&#x27;b&#x27;</span>,<span class="number">3</span>) <span class="comment">#目标字符串.replace(&#x27;指定字符&#x27;,&#x27;新字符&#x27;,替换次数(默认全部替换)) </span></span><br><span class="line"><span class="comment">#替换字符</span></span><br><span class="line">_________________________________________________</span><br><span class="line">str_x.split(<span class="string">&#x27;/&#x27;</span>,<span class="number">3</span>) <span class="comment">#目标字符串.split(&#x27;分割符号(默认为空格)&#x27;,分割次数(默认全部))</span></span><br><span class="line"><span class="comment">#分割字符串</span></span><br><span class="line">__________________________________________________</span><br><span class="line">str_x.jion(<span class="string">&#x27;a&#x27;</span>) <span class="comment">#目标字符串.join(&#x27;连接字符串的字符&#x27;)</span></span><br><span class="line">__________________________________________________</span><br><span class="line">str_x = <span class="string">&#x27;aabb&#x27;</span></span><br><span class="line">str_y = <span class="string">&#x27;bbcc&#x27;</span></span><br><span class="line"><span class="built_in">print</span>(str_x + str_y) <span class="comment">#+号课实现字符串首尾拼接</span></span><br><span class="line">__________________________________________________</span><br><span class="line">.strip(<span class="string">&#x27;a&#x27;</span>)<span class="comment">#移除首尾指定字符</span></span><br><span class="line">.lstrip(<span class="string">&#x27;a&#x27;</span>)<span class="comment">#移除右端指定字符(left strip)</span></span><br><span class="line">.rstrip(<span class="string">&#x27;a&#x27;</span>)<span class="comment">#移除左端指定字符(right strip)</span></span><br><span class="line">.upper()<span class="comment">#字符串全转换为大写字母</span></span><br><span class="line">.lower()<span class="comment">#字符串全转换为小写字母</span></span><br><span class="line">.capitalize()<span class="comment">#字符串中第一个字母大写</span></span><br><span class="line">.title()<span class="comment">#字符串每个单词字母大写</span></span><br><span class="line">.center(<span class="number">13</span>,<span class="string">&#x27;_&#x27;</span>)<span class="comment">#字符串居中  #目标字符串.center(字符串总长度,补齐两端的符号)</span></span><br><span class="line">.ljust(<span class="number">13</span>,<span class="string">&#x27;_&#x27;</span>)<span class="comment">#字符串向左对齐 #目标字符串.ljust(字符串总长度,补齐右端的符号)</span></span><br><span class="line">.rjust(<span class="number">13</span>,<span class="string">&#x27;_&#x27;</span>)<span class="comment">#字符串向左对齐 #目标字符串.rjust(字符串总长度,补齐左端的符号)</span></span><br><span class="line">__________________________________________________</span><br><span class="line"><span class="comment">#在字符串操作中总有将指定字符进行参数化,以实现模块化修改</span></span><br><span class="line">string_x = <span class="string">&#x27;okjuhtabab&#x27;</span></span><br><span class="line">find_y = <span class="string">&#x27;o&#x27;</span></span><br><span class="line">res_1 = string_x.find(find_y,<span class="number">0</span>,<span class="number">5</span>)</span><br><span class="line"><span class="built_in">print</span>(res_1)</span><br><span class="line">__________________________________________________</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+<p>好好好</p>
+<h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><h3 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h3><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line">list_x = [<span class="number">1</span>,<span class="string">&#x27;p&#x27;</span>,<span class="number">6</span>,<span class="string">&#x27;o&#x27;</span>]<span class="comment">#手动创建</span></span><br><span class="line">list_x =<span class="built_in">list</span>(<span class="number">1</span>,<span class="string">&#x27;p&#x27;</span>,<span class="number">6</span>,<span class="string">&#x27;o&#x27;</span>,<span class="number">6</span>)<span class="comment">#list()方法创建</span></span><br><span class="line"><span class="comment">#同一元素可重复</span></span><br><span class="line">_________________________________________</span><br><span class="line"><span class="comment">#以切片索引的方式访问和调用列表中的元素</span></span><br><span class="line"><span class="built_in">print</span>(list_x[<span class="number">1</span>:<span class="number">4</span>:<span class="number">3</span>])<span class="comment">#目标列表[起始索引:结束索引:步长]</span></span><br><span class="line">_________________________________________</span><br><span class="line"><span class="comment">#添加末尾元素</span></span><br><span class="line">list_x.append(<span class="string">&#x27;a&#x27;</span>)<span class="comment">#目标列表.append(元素or参数)</span></span><br><span class="line">_________________________________________</span><br><span class="line"><span class="comment">#末尾接新列表</span></span><br><span class="line">list_x.extend(list_y)<span class="comment">#目标列表.append(新列表)</span></span><br><span class="line">_________________________________________</span><br><span class="line"><span class="comment">#指定索引插入元素</span></span><br><span class="line">list_x.insert(<span class="number">2</span>,<span class="string">&#x27;a&#x27;</span>)<span class="comment">#目标列表.insert(索引序号，新元素)</span></span><br><span class="line">_________________________________________</span><br><span class="line"><span class="comment">#按特定顺序排列</span></span><br><span class="line">list_x.sort()<span class="comment">#目标列表.sort(key排序规则，布尔值（True为降序False为升序）)  </span></span><br><span class="line"><span class="comment">#在（）为空时，默认为字符串以大写字母有限的正序排列，数字升序排列</span></span><br><span class="line"><span class="comment">#string和数字无法进行sort排列</span></span><br><span class="line"><span class="comment">#常用的key：</span></span><br><span class="line">.sort(key=<span class="built_in">len</span>)  <span class="comment"># 按字符串长度排序</span></span><br><span class="line">.sort(key=<span class="built_in">str</span>.lower)  <span class="comment"># 忽略大小写进行排序</span></span><br><span class="line">.sort(key=<span class="keyword">lambda</span> x: x[<span class="number">1</span>]) <span class="comment">#自定义排序规则  #按第二个元素（字符串）排序，x:x[元素内索引号]</span></span><br><span class="line">_________________________________________</span><br><span class="line"><span class="comment">#升序排列列表元素并赋值到新列表，原列表排序不变</span></span><br><span class="line">list_y = <span class="built_in">sorted</span>(list_x)<span class="comment">#新列表 = sorted(原列表)</span></span><br><span class="line">_________________________________________</span><br><span class="line"><span class="comment">#反转列表排序</span></span><br><span class="line">list_x.reverse()</span><br><span class="line">_________________________________________</span><br><span class="line"><span class="comment">#按索引删除元素.s</span></span><br><span class="line"><span class="keyword">del</span> list_x[<span class="number">1</span>] <span class="comment">#del 目标列表[索引]  </span></span><br><span class="line"><span class="comment">#当为 del list_x 是为删除整个列表，此时list_x的定义也会消失</span></span><br><span class="line">_________________________________________</span><br><span class="line"><span class="comment">#按索引删除元素.f</span></span><br><span class="line">list_x.pop(<span class="number">4</span>) <span class="comment">#目标列表.pop(索引序号) #当()为空是为删除最后一个元素</span></span><br><span class="line">_________________________________________</span><br><span class="line"><span class="comment">#清空列表，列表定义依然存在</span></span><br><span class="line">list_x.clear()</span><br><span class="line">_________________________________________</span><br><span class="line"><span class="comment">#按值删除元素,若列表又多个同一元素仅删除匹配到的第一个元素</span></span><br><span class="line">list_x.remove(<span class="string">&#x27;a&#x27;</span>) <span class="comment">#目标列表.remove(目标值）</span></span><br><span class="line">_________________________________________</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+<p>好得很呐</p>
+<h3 id="元组"><a href="#元组" class="headerlink" title="元组"></a>元组</h3><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">tuple_x = (<span class="number">1</span>,<span class="string">&#x27;a&#x27;</span>,<span class="number">6</span>)</span><br><span class="line">_________________________________________</span><br><span class="line"><span class="comment">#元组可称为列表中的元素</span></span><br><span class="line">list_x = [(<span class="number">3</span>,<span class="string">&#x27;o&#x27;</span>)(<span class="number">1</span>,<span class="string">&#x27;a&#x27;</span>),(<span class="number">8</span>,<span class="string">&#x27;g&#x27;</span>),(<span class="number">2</span>,<span class="string">&#x27;i&#x27;</span>)]</span><br><span class="line"><span class="comment">#在使用元组式列表时元组同索引的数据类型必须相同，否则无法进行排序</span></span><br><span class="line">_________________________________________</span><br><span class="line"><span class="comment">#按索引切片访问元组</span></span><br><span class="line"><span class="built_in">print</span>(tuple_x[<span class="number">2</span>:<span class="number">5</span>:<span class="number">2</span>])<span class="comment">#目标元组[起始索引:结束索引:步长]</span></span><br><span class="line">_________________________________________</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+<p>好的不得了</p>
+<h3 id="集合"><a href="#集合" class="headerlink" title="集合"></a>集合</h3><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">set_x = &#123;<span class="number">1</span>,<span class="string">&#x27;a&#x27;</span>,<span class="number">6</span>&#125;</span><br><span class="line">set_x = &#123;(<span class="number">3</span>,<span class="string">&#x27;o&#x27;</span>)(<span class="number">1</span>,<span class="string">&#x27;a&#x27;</span>),(<span class="number">8</span>,<span class="string">&#x27;g&#x27;</span>)&#125;</span><br><span class="line">set_x = &#123;[<span class="number">1</span>,<span class="string">&#x27;p&#x27;</span>,<span class="number">6</span>,<span class="string">&#x27;o&#x27;</span>],[<span class="number">6</span>,<span class="string">&#x27;i&#x27;</span>,<span class="number">9</span>,<span class="number">8</span>]&#125;</span><br><span class="line"><span class="comment">#集合中的元素具有唯一性</span></span><br><span class="line">_________________________________________</span><br><span class="line"><span class="comment">#集合可包含列表、元组  #其本身为可变类型</span></span><br><span class="line">set_x = &#123;<span class="number">1</span>,<span class="string">&#x27;a&#x27;</span>,<span class="number">6</span>,(<span class="number">3</span>,<span class="string">&#x27;o&#x27;</span>),[<span class="number">1</span>,<span class="string">&#x27;p&#x27;</span>,(<span class="number">2</span>,<span class="string">&#x27;i&#x27;</span>)]&#125;</span><br><span class="line">_________________________________________</span><br><span class="line"><span class="comment">#set()传入元素</span></span><br><span class="line">set_x = <span class="built_in">set</span>([<span class="number">6</span>,(<span class="number">3</span>,<span class="string">&#x27;o&#x27;</span>),<span class="number">1</span>,<span class="string">&#x27;p&#x27;</span>,<span class="built_in">range</span>(<span class="number">5</span>)])</span><br><span class="line"><span class="comment">#set仅支持单次传入一种类型的数据，当需要传入不同类型数据时可将他们放入列表中，再进行传入</span></span><br><span class="line">_________________________________________</span><br><span class="line"><span class="comment">#添加元素</span></span><br><span class="line">set_x.add(<span class="string">&#x27;a&#x27;</span>)<span class="comment">#目标集合.add(元素)</span></span><br><span class="line">_________________________________________</span><br><span class="line"><span class="comment">#按值删除元素，当元素不存在时输出KeyError</span></span><br><span class="line">set_x.remove(<span class="string">&#x27;a&#x27;</span>)<span class="comment">#目标集合.remove(元素)</span></span><br><span class="line">_________________________________________</span><br><span class="line"><span class="comment">##按值删除元素，当元素不存在时不做操作</span></span><br><span class="line">set_x.discard(<span class="string">&#x27;a&#x27;</span>)<span class="comment">#目标集合.discord(元素)</span></span><br><span class="line">_________________________________________</span><br><span class="line"><span class="comment">#随机返回一个元素，并删除再集合中该元素</span></span><br><span class="line">y = set_x.pop()<span class="comment">#目标集合.pop(元素)</span></span><br><span class="line">_________________________________________</span><br><span class="line"><span class="comment">#清空集合,定义依然存在</span></span><br><span class="line">set_x.clear()</span><br><span class="line">_________________________________________</span><br><span class="line"><span class="comment">#复制集合</span></span><br><span class="line">set_y = set_x.copy()</span><br><span class="line">_________________________________________</span><br><span class="line"><span class="comment">#判断两个集合中是否有相同的元素，有相同元素输出False,无相同元素输出True</span></span><br><span class="line">set_x.isdisjoint(set_y)<span class="comment">#目标集合.isdisjiont(另一集合)</span></span><br><span class="line">_________________________________________</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+<p>这也太好了吧</p>
+<h3 id="字典"><a href="#字典" class="headerlink" title="字典"></a>字典</h3><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">dictionary_x = &#123;<span class="string">&#x27;a&#x27;</span>:<span class="number">1</span>,<span class="string">&#x27;b&#x27;</span>:<span class="number">2</span>,<span class="string">&#x27;k&#x27;</span>:<span class="string">&#x27;p&#x27;</span>,<span class="number">2</span>:<span class="string">&#x27;o&#x27;</span>，<span class="string">&#x27;l&#x27;</span>:<span class="number">1</span>&#125;<span class="comment"># &#123;key:value&#125;</span></span><br><span class="line"><span class="comment">#字典元素无序，key 唯一 ,value 可有多个重复</span></span><br><span class="line">_________________________________________</span><br><span class="line"><span class="comment">#按key值访问字典元素</span></span><br><span class="line"><span class="built_in">print</span>(dictionary_x.get(<span class="string">&#x27;a&#x27;</span>))<span class="comment">#目标字典.get(key值)</span></span><br><span class="line">_________________________________________</span><br><span class="line"><span class="comment">#仅访问所有key值</span></span><br><span class="line"><span class="built_in">print</span>(dictionary_x.key())<span class="comment">#目标字典.key()</span></span><br><span class="line">_________________________________________</span><br><span class="line"><span class="comment">#仅访问所有values值</span></span><br><span class="line"><span class="built_in">print</span>(dictionary_x.values())<span class="comment">#目标字典.values()</span></span><br><span class="line">_________________________________________</span><br><span class="line"><span class="comment">#仅访问所有items值</span></span><br><span class="line"><span class="built_in">print</span>(dictionary_x.items())<span class="comment">#目标字典.items()</span></span><br><span class="line">_________________________________________</span><br><span class="line"><span class="comment">#根据key值修改value，当key值不在字典中，则视为添加新key</span></span><br><span class="line">dictionary_x[<span class="string">&#x27;a&#x27;</span>] = <span class="number">8</span> <span class="comment">#目标字典[key值] = value</span></span><br><span class="line">_________________________________________</span><br><span class="line"><span class="comment">#使用update修改value</span></span><br><span class="line">dictionary_x.update(<span class="string">&#x27;a&#x27;</span>=<span class="number">8</span>)<span class="comment">#目标字典.update(key值 = value)</span></span><br><span class="line">_________________________________________</span><br><span class="line"><span class="comment">#按key值删除元素</span></span><br><span class="line">dictionary_x.pop(<span class="string">&#x27;a&#x27;</span>)<span class="comment">#目标字典.pop(key值)</span></span><br><span class="line">_________________________________________</span><br><span class="line"><span class="comment">#随机删除元素</span></span><br><span class="line">dictionary_x.popitem()<span class="comment">#目标字典.popitem()</span></span><br><span class="line">_________________________________________</span><br><span class="line"><span class="comment">#清空z字典,定义依然存在</span></span><br><span class="line">dictionary_x.clear()</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+<p>好好好</p>
+<h3 id="组合数据类型应用运算符"><a href="#组合数据类型应用运算符" class="headerlink" title="组合数据类型应用运算符"></a>组合数据类型应用运算符</h3><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#字符串，列表，元组，字典均可使用 + 来进行同类型元素合并</span></span><br><span class="line">dictionary_z = dictionary_x + dictionary_y</span><br><span class="line">list_z = list_x + list_y</span><br><span class="line">_________________________________________</span><br><span class="line"><span class="comment"># * 实现表内元素自行复制</span></span><br><span class="line">list_z = list_x * <span class="number">3</span></span><br><span class="line"><span class="comment">#判断元素是否在表内,返回值为bool</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;a&#x27;</span> <span class="keyword">in</span> list_x)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;a&#x27;</span> <span class="keyword">not</span> <span class="keyword">in</span> list_x)</span><br></pre></td></tr></table></figure></div>
+
+<p>没见过这么好的</p>
+<h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><h3 id="函数参数"><a href="#函数参数" class="headerlink" title="函数参数"></a>函数参数</h3><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">fuction_x</span>(<span class="params">a,b</span>): </span><br><span class="line">	result = a + b </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">fuction_y</span>(<span class="params">a,b,/,c</span>):</span><br><span class="line">    	y = c + d</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+<p>简直令人惊叹不已</p>
+<h3 id="参数传递"><a href="#参数传递" class="headerlink" title="参数传递"></a>参数传递</h3><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">fuction_x</span>(<span class="params">a,b</span>): <span class="comment">#a和b称为形参,在调用函数时可通过对应位置进行传参</span></span><br><span class="line">	result = a + b</span><br><span class="line">_____________________________________________________    </span><br><span class="line"><span class="comment">#位置参数传递</span></span><br><span class="line">fuction_x(<span class="number">2</span>,<span class="number">3</span>) <span class="comment">#2和3称为实参,实际传入fuction_x中的参数</span></span><br><span class="line">_____________________________________________________</span><br><span class="line"><span class="comment">#关键字参数传递</span></span><br><span class="line">fuction_x(a=<span class="number">2</span>,b=<span class="number">3</span>) <span class="comment">#在参数数量过多时,关键字参数传递更为优秀</span></span><br><span class="line">_____________________________________________________</span><br><span class="line"><span class="comment">#传递限制</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">fuction_x</span>(<span class="params">a,b,/,c,d</span>): <span class="comment"># /前的参数仅能接受位置传递,/后的参数二者均可</span></span><br><span class="line">_____________________________________________________</span><br><span class="line"><span class="comment">#参数混合传递</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">fuction_x</span>(<span class="params">a,b,*c,**d</span>):</span><br><span class="line">	<span class="built_in">print</span>(a,b,*c,d) <span class="comment">#print不接受字典形式的参数,因此应写为d而不是**d</span></span><br><span class="line">fuction_x(<span class="number">1</span>,<span class="string">&#x27;o&#x27;</span>,(<span class="number">4</span>,<span class="number">5</span>,<span class="number">9</span>),p=<span class="number">2</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+<p>让人心潮澎湃的好啊</p>
+<h3 id="参数打包-解包"><a href="#参数打包-解包" class="headerlink" title="参数打包&#x2F;解包"></a>参数打包&#x2F;解包</h3><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#参数打包</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">fuction_x</span>(<span class="params">*a</span>): <span class="comment"># *a为以元组形式接受参数</span></span><br><span class="line">fuction_x(<span class="number">11</span>,<span class="number">23</span>,<span class="number">56</span>,<span class="number">80</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">fuction_x</span>(<span class="params">**b</span>): <span class="comment">#**b为以字典形式接受参数</span></span><br><span class="line">fuction_x(a=<span class="number">11</span>,b=<span class="number">22</span>,c=<span class="number">90</span>) <span class="comment">#在字典传递参数时应遵循 key=value 的形式,字符串不用引号</span></span><br><span class="line">_____________________________________________________</span><br><span class="line"><span class="comment">#参数解包,用于组合数据向多个单数据接口传输</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">fuction_x</span>(<span class="params">a,b,c,d,e</span>):</span><br><span class="line">parameter_x = (<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="string">&#x27;p&#x27;</span>)</span><br><span class="line">fuction_x(*parameter_x) <span class="comment">#parameter_x被解包成多个单数据,并按照索引传fuction_x</span></span><br><span class="line"><span class="comment">#当组合数据与单数据接口数不对应时会报错</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">fuction_x</span>(<span class="params">a,b,c,d,e</span>):</span><br><span class="line">parameter_x = &#123;<span class="string">&#x27;a&#x27;</span>:<span class="number">1</span>,<span class="string">&#x27;b&#x27;</span>:<span class="number">2</span>,<span class="string">&#x27;k&#x27;</span>:<span class="string">&#x27;p&#x27;</span>,<span class="number">2</span>:<span class="string">&#x27;o&#x27;</span>,<span class="number">5</span>:<span class="string">&#x27;n&#x27;</span>&#125;</span><br><span class="line">fuction_x(**parameter_x) <span class="comment">#解包字典后传入的是value值</span></span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+<p>实在是太令人满意了呀</p>
+<h3 id="参数返回值"><a href="#参数返回值" class="headerlink" title="参数返回值"></a>参数返回值</h3><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">fuction_x</span>(<span class="params">a,b</span>):</span><br><span class="line">    c = a + b</span><br><span class="line">    <span class="keyword">return</span> c <span class="comment">#return将值返回到主程序中,同时程序回到函数被调用的时候继续执行</span></span><br><span class="line"><span class="built_in">print</span>(fuction_x(<span class="number">1</span>,<span class="number">2</span>)) <span class="comment">#此时fuction_x(1,2)实际被替换成了c的值</span></span><br><span class="line"><span class="comment">#当return多个值的时候将返回元组</span></span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+<p>真是无可挑剔的完美体验</p>
+<h3 id="变量作用域"><a href="#变量作用域" class="headerlink" title="变量作用域"></a>变量作用域</h3><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#局部变量</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">fuction_x</span>():</span><br><span class="line">    a = <span class="number">5</span> <span class="comment">#对于变量a,只能在函数内调用,函数外无a的定义</span></span><br><span class="line">_____________________________________________________</span><br><span class="line"><span class="comment">#全局变量 #global 变量</span></span><br><span class="line">a = <span class="number">1</span> </span><br><span class="line">b = <span class="number">3</span> <span class="comment">#在函数外定义变量之后可被全局调用</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">fuction_x</span>():</span><br><span class="line">    <span class="keyword">global</span> a <span class="comment">#声明a为全局变量,实现函数内外a值互通</span></span><br><span class="line">    b += <span class="number">1</span> <span class="comment">#在b进行迭代时,外部定义将被覆盖,此时a又变成了局部变量,此步会报错,需像a一样声明全局变量</span></span><br><span class="line">	a += <span class="number">2</span></span><br><span class="line">    c = a + b </span><br><span class="line">_____________________________________________________</span><br><span class="line"><span class="comment">#嵌套函数变量 #nonlocal 变量        </span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">fuction_x</span>():</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">fuction_y</span>():</span><br><span class="line">        <span class="keyword">nonlocal</span> a <span class="comment">#声明局部作用变量a,使得fuction_x可以调用a,同时不溢出整个函数</span></span><br><span class="line">        a = <span class="number">2</span></span><br><span class="line">    fuction_y()</span><br><span class="line">    b = a + <span class="number">1</span></span><br><span class="line">    <span class="built_in">print</span>(b)</span><br><span class="line"></span><br><span class="line">fuction_x()</span><br></pre></td></tr></table></figure></div>
+
+
+
+<h3 id="递归-匿名函数"><a href="#递归-匿名函数" class="headerlink" title="递归&#x2F;匿名函数"></a>递归&#x2F;匿名函数</h3><p>这个学起来有点费劲,回头再补</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">啊吧 啊吧 啊吧</span><br></pre></td></tr></table></figure></div>
+
+
+
+
+
+<h2 id="文件-数据-操作"><a href="#文件-数据-操作" class="headerlink" title="文件&#x2F;数据 操作"></a>文件&#x2F;数据 操作</h2><h3 id="标准文件访问方法"><a href="#标准文件访问方法" class="headerlink" title="标准文件访问方法"></a>标准文件访问方法</h3><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 打开文本文件</span></span><br><span class="line">file_path = <span class="string">&#x27;F:\\mulyilytest\\pytest.txt&#x27;</span> <span class="comment">#文件地址参数化 #地址区分符号用\\</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(file_path, <span class="string">&#x27;r&#x27;</span>, encoding=<span class="string">&#x27;utf-8&#x27;</span>) <span class="keyword">as</span> file_01: <span class="comment">#as后命名文件在代码中的参数名</span></span><br><span class="line">    content = file.read()  <span class="comment">#读取文件内容并参数化</span></span><br></pre></td></tr></table></figure></div>
+
+<h3 id="文本文件操作"><a href="#文本文件操作" class="headerlink" title="文本文件操作"></a>文本文件操作</h3><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#打开文件</span></span><br><span class="line">flie_01 = <span class="built_in">open</span>(<span class="string">&#x27;F:\\genshinUsercount.txt&#x27;</span>,<span class="string">&#x27;r&#x27;</span>,encoding=<span class="string">&#x27;utf-8&#x27;</span>)<span class="comment">#open(&#x27;路径&#x27;,&#x27;打开模式&#x27;,&#x27;编码格式&#x27;)#常用的编码格式 : ascii , utf-8 , Unicode , gbk</span></span><br><span class="line"></span><br><span class="line">r/rb <span class="comment">#以只读方式打开</span></span><br><span class="line">w/wb <span class="comment">#以只写方式打开,若文件不存在则创建新文件,此模式下执行写入会覆盖原来数据</span></span><br><span class="line">a/ab <span class="comment">#以追加方式打开,若文件不存在则创建新文件</span></span><br><span class="line"></span><br><span class="line">_____________________________________________________</span><br><span class="line"><span class="comment">#关闭文件</span></span><br><span class="line">file_01.close()</span><br><span class="line">_____________________________________________________</span><br><span class="line"><span class="comment">#文件操作前置语句</span></span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(file_path, <span class="string">&#x27;r&#x27;</span>, encoding=<span class="string">&#x27;utf-8&#x27;</span>) <span class="keyword">as</span> file_01:  </span><br><span class="line"><span class="comment">#with open() as filename : #as后命名文件在代码中的参数名</span></span><br><span class="line">_____________________________________________________</span><br><span class="line"><span class="comment">#读取文件内容</span></span><br><span class="line"><span class="built_in">print</span>(file_01.read(<span class="number">2</span>)) <span class="comment">#file_01.read(字节索引) #当索引为空或-1是为全读</span></span><br><span class="line">content = file_01.read()</span><br><span class="line"></span><br><span class="line">file_01.readline() <span class="comment">#读取指定文件的一行数据,当二次调用.readline()时会读取下一行数据</span></span><br><span class="line"></span><br><span class="line">file_01.readlines(<span class="number">5</span>) <span class="comment">#读取指定文件的多行数据,当索引为空或-1是为全读</span></span><br><span class="line"></span><br><span class="line">_____________________________________________________</span><br><span class="line"><span class="comment">#文件写入</span></span><br><span class="line">file_01.write(<span class="string">&#x27;abcd114514&#x27;</span>) <span class="comment">#在文件末尾写入数据,无法换行</span></span><br><span class="line"></span><br><span class="line">file_01.writelines(<span class="string">&#x27;abcd114514 \n 啊实打实打算&#x27;</span>) <span class="comment">#可用\n进行换行</span></span><br><span class="line">_____________________________________________________</span><br><span class="line"><span class="comment">#获取当前读写索引</span></span><br><span class="line">file_01.tell() <span class="comment">#文件每次被读写一个位置之后会接着上一个位置往下进行读写,此方法可产看当前读写位置索引</span></span><br><span class="line">_____________________________________________________</span><br><span class="line"><span class="comment">#读写索引控制</span></span><br><span class="line">file_01.seek(<span class="number">5</span>,<span class="number">0</span>) <span class="comment">#.seek(位置索引偏移量,指定位置索引) </span></span><br><span class="line"><span class="comment">#指定位置索引值为 0时为文章开头 1时为当前位置 2时为文章结尾</span></span><br><span class="line">_____________________________________________________</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+
+<h3 id="文件与目录-文件夹-管理"><a href="#文件与目录-文件夹-管理" class="headerlink" title="文件与目录(文件夹)管理"></a>文件与目录(文件夹)管理</h3><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#文件管理需调用os模块</span></span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line">_____________________________________________________</span><br><span class="line"><span class="comment">#删除文件</span></span><br><span class="line">os.remove(<span class="string">&#x27;F:\\mulyilytest\\python_test.txt&#x27;</span>)</span><br><span class="line">_____________________________________________________</span><br><span class="line"><span class="comment">#文件重命名</span></span><br><span class="line">os.rename(<span class="string">&#x27;F:\\mulyilytest\\pytest.txt&#x27;</span>,<span class="string">&#x27;F:\\mulyilytest\\python_test.txt&#x27;</span>) <span class="comment">#os.rename(旧地址和名字,新) #通常将地址和名字参数化</span></span><br><span class="line">_____________________________________________________</span><br><span class="line"><span class="comment">#创建/删除目录(文件夹)</span></span><br><span class="line">os.mkdir(<span class="string">&#x27;F:\\mulyilytest\\pytteesstt&#x27;</span>) <span class="comment">#创建目录makedirectory</span></span><br><span class="line">os.rmdir(<span class="string">&#x27;F:\\mulyilytest\\pytteesstt&#x27;</span>) <span class="comment">#删除目录removedirectory</span></span><br><span class="line">_____________________________________________________</span><br><span class="line"><span class="comment">#获取当前目录</span></span><br><span class="line">os.getcwd()</span><br><span class="line">_____________________________________________________</span><br><span class="line"><span class="comment">#更改默认目录</span></span><br><span class="line">os.chdir(<span class="string">&#x27;F:\\mulyilytest&#x27;</span>)</span><br><span class="line"><span class="comment">#os在没有指定路径时会自动在默认中寻找文件,修改默认目录后可不在重复书写路经</span></span><br><span class="line"></span><br><span class="line">_____________________________________________________</span><br><span class="line"><span class="comment">#获取文件名列表</span></span><br><span class="line">os.listdir(<span class="string">&#x27;./&#x27;</span>) <span class="comment">#输出的是列表类型数据 # ./ 表示当前工作目录</span></span><br><span class="line"> </span><br></pre></td></tr></table></figure></div>
+
+<h3 id="数据维度与数据格式化"><a href="#数据维度与数据格式化" class="headerlink" title="数据维度与数据格式化"></a>数据维度与数据格式化</h3><p>在代码输出栏里绘表???神金</p>
+<h2 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a>面向对象</h2><h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">cls_x</span>:  <span class="comment"># 创建类; class 类名称</span></span><br><span class="line">    name_a = <span class="number">66</span>  <span class="comment"># 类属性; 属性名 = 属性值</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">fuc_x</span>(<span class="params">self,value</span>):  <span class="comment"># 实例方法; def 方法名(self);</span></span><br><span class="line">        <span class="comment"># 实例方法的第一个参数总是 self，它指向调用这个方法的具体实例对象</span></span><br><span class="line">        self.value = value  <span class="comment">#实例属性value,可接受外部传参</span></span><br><span class="line">        <span class="built_in">print</span>(self.value)</span><br><span class="line">        instan_x = cls_x()  <span class="comment"># 创建类的实例</span></span><br><span class="line">        <span class="built_in">print</span>(instan_x.name_a)  <span class="comment"># 实例访问类属性；输出类属性</span></span><br><span class="line"></span><br><span class="line">        instan_x.name_a = <span class="number">1</span> <span class="comment">#通过实例访问类属性并修改</span></span><br><span class="line">        <span class="built_in">print</span>(instan_x.name_a) <span class="comment">#通过实例修改类属性后实例会在内存中创建一个专属于instan_x的name_a参数,不会对clas_x的name_a产生影响</span></span><br><span class="line">        <span class="built_in">print</span>(cls_x.name_a) <span class="comment">#通过类访问属性发现值并未改变</span></span><br><span class="line"></span><br><span class="line">        instan_x.str_new = <span class="string">&#x27;好i好i好i&#x27;</span></span><br><span class="line">        <span class="built_in">print</span>(instan_x.str_new)</span><br><span class="line">        <span class="comment">#print(cls_x.str_new) #类无法调用通过实例创建的新属性</span></span><br><span class="line"></span><br><span class="line">        cls_x.str_new01 = <span class="string">&#x27;n牛牛牛&#x27;</span></span><br><span class="line">        <span class="built_in">print</span>(instan_x.str_new01)</span><br><span class="line">        <span class="built_in">print</span>(cls_x.str_new01) <span class="comment">#通过类创建的新属性,类和实例均可调用</span></span><br><span class="line"></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;-----------------------------------------&#x27;</span>)</span><br><span class="line"></span><br><span class="line">        cls_x.name_a = <span class="number">9</span> <span class="comment">#通过类访问类属性并修改</span></span><br><span class="line">        <span class="built_in">print</span>(instan_x.name_a) <span class="comment">#通过类修改类属性后不影响实例属性</span></span><br><span class="line">        <span class="built_in">print</span>(cls_x.name_a)</span><br><span class="line">        <span class="comment">#类和实例的属性关系课理解为UE中母材质和材质实例的关系</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">    @classmethod </span><span class="comment"># 类方法修饰符</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">fuc_y</span>(<span class="params">cls</span>): <span class="comment">#类方法;; def 方法名(cls);</span></span><br><span class="line">        <span class="comment"># 类方法的第一个参数是 cls，它指向类本身，而不是具体的实例</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;bbbb&#x27;</span>)</span><br><span class="line">        instan_y = cls_x()</span><br><span class="line">        <span class="built_in">print</span>(instan_y.name_a)</span><br><span class="line"></span><br><span class="line">        instan_y.str_new = <span class="string">&#x27;好i好i好i&#x27;</span></span><br><span class="line">        <span class="built_in">print</span>(instan_y.str_new)</span><br><span class="line">        <span class="comment">#print(cls_x.str_new) #类无法调用通过实例创建的新属性</span></span><br><span class="line"></span><br><span class="line"><span class="meta">    @staticmethod  </span><span class="comment"># 类方法修饰符</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">fuc_z</span>():</span><br><span class="line">        <span class="built_in">print</span>(<span class="number">111</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建类的实例</span></span><br><span class="line">instance = cls_x()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 调用实例方法并向其传参;</span></span><br><span class="line">instance.fuc_x(<span class="number">233</span>) <span class="comment">#调用实例方法必须先将类实例化,然后才能调用,该参数传给value而非self</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">cls_x.fuc_y() <span class="comment">#调用类方法,类方法可直接通过类调用</span></span><br><span class="line"></span><br><span class="line">cls_x.fuc_z() <span class="comment">#调用静态方法,类方法可直接通过类调用</span></span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+
+<h3 id="类创建"><a href="#类创建" class="headerlink" title="类创建"></a>类创建</h3><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">cls_x</span>:  <span class="comment"># 创建类; class 类名称</span></span><br><span class="line">    name_a = <span class="number">66</span>  <span class="comment"># 类属性; 属性名 = 属性值</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">fuc_x</span>(<span class="params">self,value</span>):  <span class="comment"># 实例方法; def 方法名(self);</span></span><br><span class="line">        self.value = value  <span class="comment">#实例属性value,可接受外部传参</span></span><br><span class="line">        <span class="built_in">print</span>(self.value)</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="类成员"><a href="#类成员" class="headerlink" title="类成员"></a>类成员</h3><p>类和实例的属性关系课理解为UE中母材质和材质实例的关系</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#类/实例属性</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">cls_x</span>:  <span class="comment"># 创建类; class 类名称</span></span><br><span class="line">    name_a = <span class="number">66</span>  <span class="comment"># 类属性; 属性名 = 属性值</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">fuc_x</span>(<span class="params">self,value</span>):  <span class="comment"># 实例方法; def 方法名(self);</span></span><br><span class="line">        <span class="comment"># 实例方法的第一个参数总是 self，它指向调用这个方法的具体实例对象</span></span><br><span class="line">        self.value = value  <span class="comment">#实例属性value,可接受外部传参</span></span><br><span class="line">        <span class="built_in">print</span>(self.value)</span><br><span class="line">        instan_x = cls_x()  <span class="comment"># 创建类的实例</span></span><br><span class="line">        <span class="built_in">print</span>(instan_x.name_a)  <span class="comment"># 实例访问类属性；输出类属性</span></span><br><span class="line"></span><br><span class="line">        instan_x.name_a = <span class="number">1</span> <span class="comment">#通过实例访问类属性并修改</span></span><br><span class="line">        <span class="built_in">print</span>(instan_x.name_a) <span class="comment">#通过实例修改类属性后实例会在内存中创建一个专属于instan_x的name_a参数,不会对clas_x的name_a产生影响</span></span><br><span class="line">        <span class="built_in">print</span>(cls_x.name_a) <span class="comment">#通过类访问属性发现值并未改变</span></span><br><span class="line"></span><br><span class="line">        instan_x.str_new = <span class="string">&#x27;好i好i好i&#x27;</span></span><br><span class="line">        <span class="built_in">print</span>(instan_x.str_new)</span><br><span class="line">        <span class="comment">#print(cls_x.str_new) #类无法调用通过实例创建的新属性</span></span><br><span class="line"></span><br><span class="line">        cls_x.str_new01 = <span class="string">&#x27;n牛牛牛&#x27;</span></span><br><span class="line">        <span class="built_in">print</span>(instan_x.str_new01)</span><br><span class="line">        <span class="built_in">print</span>(cls_x.str_new01) <span class="comment">#通过类创建的新属性,类和实例均可调用</span></span><br><span class="line"></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;-----------------------------------------&#x27;</span>)</span><br><span class="line"></span><br><span class="line">        cls_x.name_a = <span class="number">9</span> <span class="comment">#通过类访问类属性并修改</span></span><br><span class="line">        <span class="built_in">print</span>(instan_x.name_a) <span class="comment">#通过类修改类属性后不影响实例属性</span></span><br><span class="line">        <span class="built_in">print</span>(cls_x.name_a)</span><br></pre></td></tr></table></figure></div>
+
+<p>关于对象:实例和对象本质是一个东西,均为类的继承体</p>
+<h3 id="实例方法"><a href="#实例方法" class="headerlink" title="实例方法"></a>实例方法</h3><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">cls_x</span>:  <span class="comment"># 创建类; class 类名称</span></span><br><span class="line">    name_a = <span class="number">66</span></span><br><span class="line"><span class="comment"># 实例方法</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">fuc_x</span>(<span class="params">self</span>):  <span class="comment"># 实例方法; def 方法名(self);slef代表函数本身</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;aaaa&#x27;</span>)</span><br><span class="line"><span class="comment">#调用:</span></span><br><span class="line"><span class="comment"># 创建类的实例</span></span><br><span class="line">instance = cls_x()</span><br><span class="line"><span class="comment"># 调用实例方法并向其传参;</span></span><br><span class="line">instance.fuc_x(<span class="number">233</span>) <span class="comment">#调用实例方法必须先将类实例化,然后才能调用,该参数传给value而非self       </span></span><br></pre></td></tr></table></figure></div>
+
+<p>两种方法中属性修改和继承关系是相同的</p>
+<h3 id="类方法"><a href="#类方法" class="headerlink" title="类方法"></a>类方法</h3><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">cls_x</span>:  </span><br><span class="line">    name_a = <span class="number">6</span></span><br><span class="line"><span class="comment">#类方法       </span></span><br><span class="line"><span class="meta">    @classmethod </span><span class="comment"># 类方法修饰符</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">fuc_y</span>(<span class="params">cls</span>): <span class="comment">#类方法;; def 方法名(cls);cls代表类本身</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;bbbb&#x27;</span>)    </span><br><span class="line"> <span class="comment">#调用:       </span></span><br><span class="line"> cls_x.fuc_y() <span class="comment">#调用类方法,类方法可直接通过类调用 </span></span><br></pre></td></tr></table></figure></div>
+
+<h4 id="类方法-vs-实例方法的区别"><a href="#类方法-vs-实例方法的区别" class="headerlink" title="类方法 vs 实例方法的区别"></a>类方法 vs 实例方法的区别</h4><table>
+<thead>
+<tr>
+<th>特性</th>
+<th>实例方法</th>
+<th>类方法</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>绑定对象</td>
+<td>实例（<code>self</code> 指向实例对象）</td>
+<td>类（<code>cls</code> 指向类本身）</td>
+</tr>
+<tr>
+<td>装饰器</td>
+<td>无特殊装饰器</td>
+<td><code>@classmethod</code></td>
+</tr>
+<tr>
+<td>调用方式</td>
+<td>通过实例调用</td>
+<td>通过类或实例调用</td>
+</tr>
+<tr>
+<td>访问权限</td>
+<td>可以访问和修改实例属性和方法</td>
+<td>不能访问实例属性，但可访问类属性</td>
+</tr>
+<tr>
+<td>常见用途</td>
+<td>操作对象实例，修改实例状态</td>
+<td>操作类的状态，通常用于工厂方法</td>
+</tr>
+</tbody></table>
+<h3 id="静态方法"><a href="#静态方法" class="headerlink" title="静态方法"></a>静态方法</h3><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">cls_x</span>:  </span><br><span class="line">    name_a = <span class="number">6</span></span><br><span class="line"><span class="comment">#静态法</span></span><br><span class="line"><span class="meta">    @staticmethod  </span><span class="comment"># 类方法修饰符</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">fuc_z</span>():</span><br><span class="line">        <span class="built_in">print</span>(<span class="number">111</span>)</span><br><span class="line"><span class="comment">#调用:</span></span><br><span class="line">cls_x.fuc_z() <span class="comment">#调用静态方法,类方法可直接通过类调用</span></span><br><span class="line">        </span><br></pre></td></tr></table></figure></div>
+
+
+
+<h4 id="类方法-vs-静态方法的区别"><a href="#类方法-vs-静态方法的区别" class="headerlink" title="类方法 vs 静态方法的区别"></a>类方法 vs 静态方法的区别</h4><table>
+<thead>
+<tr>
+<th>特性</th>
+<th>类方法</th>
+<th>静态方法</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>绑定对象</td>
+<td>类（<code>cls</code> 指向类本身）</td>
+<td>无绑定对象</td>
+</tr>
+<tr>
+<td>装饰器</td>
+<td><code>@classmethod</code></td>
+<td><code>@staticmethod</code></td>
+</tr>
+<tr>
+<td>调用方式</td>
+<td>通过类或实例调用</td>
+<td>通过类或实例调用</td>
+</tr>
+<tr>
+<td>访问权限</td>
+<td>可以访问类属性，不能访问实例属性</td>
+<td>不能访问实例或类的任何属性</td>
+</tr>
+<tr>
+<td>常见用途</td>
+<td>操作类的状态，创建类方法</td>
+<td>定义功能函数，逻辑上和类有关</td>
+</tr>
+</tbody></table>
+<h3 id="私有成员"><a href="#私有成员" class="headerlink" title="私有成员"></a>私有成员</h3><div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">cls_x</span> :</span><br><span class="line">    __attribute = <span class="number">8</span>  <span class="comment">#__参数名 = 值</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__fuction_1</span>(<span class="params">self</span>): <span class="comment">#__方法名()</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;aaa&#x27;</span>)</span><br><span class="line"></span><br><span class="line">instanse_x = cls_x()</span><br><span class="line"><span class="comment"># instanse_x.__fuction_1() #无法从外部访问私有方法</span></span><br><span class="line"><span class="comment"># print(instanse_x.__attribute) #无法从外部访问私有参数</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 虽然私有成员不能直接访问，但可以通过名称改编来访问</span></span><br><span class="line"><span class="built_in">print</span>(instanse_x._cls_x__attribute) <span class="comment">#实例名._类名__属性名</span></span><br></pre></td></tr></table></figure></div>
+
+<p>关于私有成员调用,看封装模块的代码</p>
+<h3 id="受保护成员"><a href="#受保护成员" class="headerlink" title="受保护成员"></a>受保护成员</h3><p>除了公有和私有成员，还有一种称为<strong>受保护成员（Protected Members）</strong>的概念，尽管 Python 本身没有严格的受保护机制,用处不大</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">cls_x</span> :</span><br><span class="line">    _attribute = <span class="number">8</span>  <span class="comment">#受保护参数 #_参数名 = 值</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__fuction_1</span>(<span class="params">self</span>): <span class="comment">#__方法名(self):</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;aaa&#x27;</span>)</span><br><span class="line"></span><br><span class="line">instanse_x = cls_x()</span><br><span class="line"><span class="comment"># instanse_x.__fuction_1() #无法从外部访问私有方法</span></span><br><span class="line"><span class="comment"># print(instanse_x.__attribute) #无法从外部访问私有参数</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 虽然私有成员不能直接访问，但可以通过名称改编来访问</span></span><br><span class="line"><span class="built_in">print</span>(instanse_x._cls_x__attribute) <span class="comment">#实例名._类名__属性名</span></span><br></pre></td></tr></table></figure></div>
+
+<h4 id="共有成员-vs-私有成员-vs-受保护成员"><a href="#共有成员-vs-私有成员-vs-受保护成员" class="headerlink" title="共有成员 vs 私有成员 vs 受保护成员"></a>共有成员 vs 私有成员 vs 受保护成员</h4><table>
+<thead>
+<tr>
+<th>特性</th>
+<th>共有成员（Public Members）</th>
+<th>受保护成员（Protected Members）</th>
+<th>私有成员（Private Members）</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>前缀</td>
+<td>无前缀</td>
+<td><code>_</code> 开头</td>
+<td><code>__</code> 开头</td>
+</tr>
+<tr>
+<td>访问权限</td>
+<td>类内外都可访问</td>
+<td>子类可访问，外部不推荐访问</td>
+<td>只能在类内部访问（但有例外）</td>
+</tr>
+<tr>
+<td>子类访问</td>
+<td>可以访问</td>
+<td>可以访问</td>
+<td>无法直接访问</td>
+</tr>
+<tr>
+<td>外部访问</td>
+<td>可以访问</td>
+<td>按照惯例不建议访问</td>
+<td>不能直接访问</td>
+</tr>
+<tr>
+<td>使用场景</td>
+<td>对外公开的成员</td>
+<td>半封装，允许子类继承使用</td>
+<td>完全封装，隐藏类的实现细节</td>
+</tr>
+</tbody></table>
+<h3 id="构造方法"><a href="#构造方法" class="headerlink" title="构造方法"></a>构造方法</h3><p>构造方法在创建类的对象时自动调用，用来初始化对象的属性。它是类的实例化过程中执行的第一个方法，常用于设置实例的初始状态。</p>
+<p>相当于在类本身上附加一系列属性</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Person</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, name, age</span>): <span class="comment">#构造方法 #__int__(self,属性名):</span></span><br><span class="line">        self.name = name  <span class="comment"># 初始化属性 name</span></span><br><span class="line">        self.age = age  <span class="comment"># 初始化属性 age</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">introduce</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;My name is <span class="subst">&#123;self.name&#125;</span>, and I am <span class="subst">&#123;self.age&#125;</span> years old.&quot;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建类的实例</span></span><br><span class="line">person1 = Person(<span class="string">&quot;Alice&quot;</span>, <span class="number">30</span>) <span class="comment">#当 Person 类被实例化时，__init__ 方法被自动调用，设置了 name 和 age 属性</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 调用实例方法</span></span><br><span class="line">person1.introduce()  <span class="comment"># 输出: My name is Alice, and I am 30 years old.</span></span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+
+<h3 id="析构方法"><a href="#析构方法" class="headerlink" title="析构方法"></a>析构方法</h3><p>Python使用垃圾回收机制（Garbage Collection）来处理内存管理，当对象不再被引用时，它会自动调用 <code>__del__</code> 来进行清理。</p>
+<p>值得注意的是，Python 的垃圾回收机制是基于引用计数的。当对象不再有任何引用时，Python 会自动回收内存并调用 <code>__del__</code> 方法。但在实际开发中，除非有明确的资源管理需求，通常不需要定义 <code>__del__</code>。</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">FileManager</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, filename</span>):</span><br><span class="line">        self.file = <span class="built_in">open</span>(filename, <span class="string">&#x27;w&#x27;</span>)</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;<span class="subst">&#123;filename&#125;</span> 文件已打开&quot;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__del__</span>(<span class="params">self</span>): <span class="comment">#析构方法 #__del__(self):</span></span><br><span class="line">        <span class="comment"># 在对象被销毁时关闭文件</span></span><br><span class="line">        self.file.close()</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;文件已关闭&quot;</span>)</span><br></pre></td></tr></table></figure></div>
+
+<h4 id="构造方法和析构方法的区别："><a href="#构造方法和析构方法的区别：" class="headerlink" title="构造方法和析构方法的区别："></a>构造方法和析构方法的区别：</h4><table>
+<thead>
+<tr>
+<th>特性</th>
+<th>构造方法 (<code>__init__()</code>)</th>
+<th>析构方法 (<code>__del__()</code>)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>作用</td>
+<td>在对象创建时初始化属性</td>
+<td>在对象销毁时清理资源</td>
+</tr>
+<tr>
+<td>调用时机</td>
+<td>对象实例化时自动调用</td>
+<td>对象销毁时自动调用</td>
+</tr>
+<tr>
+<td>使用场景</td>
+<td>设置初始状态、传递参数</td>
+<td>释放资源（如文件关闭、网络连接关闭等）</td>
+</tr>
+<tr>
+<td>手动调用</td>
+<td>通常不需要手动调用，但可以通过类名直接调用构造方法</td>
+<td>不需要手动调用，由 Python 自动管理</td>
+</tr>
+</tbody></table>
+<h3 id="封装"><a href="#封装" class="headerlink" title="封装"></a>封装</h3><p>在 Python 中，封装通常结合<strong>访问器方法</strong>（getter 和 setter）来管理属性的访问与修改。访问器方法用于控制对私有或受保护属性的读取和写入</p>
+<p>优秀的封装能大大降低维护难度</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#标准封装</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Car</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, brand, price,num</span>):</span><br><span class="line">        self.__brand = brand  <span class="comment">#私有属性</span></span><br><span class="line">        self.__price = price</span><br><span class="line">        self.num = num  <span class="comment">#共有属性</span></span><br><span class="line">        </span><br><span class="line">	<span class="comment"># 标准私有值调用方法</span></span><br><span class="line">    <span class="comment"># getter 方法，用于获取私有属性的值</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">get_price</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="keyword">return</span> self.__price  </span><br><span class="line">    </span><br><span class="line">	<span class="comment">#标准属性修改方法</span></span><br><span class="line">    <span class="comment"># setter 方法，用于修改私有属性的值</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">set_price</span>(<span class="params">self, new_price</span>):</span><br><span class="line">        <span class="keyword">if</span> new_price &gt; <span class="number">0</span>:</span><br><span class="line">            self.__price = new_price * self.num</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">&quot;Price cannot be negative!&quot;</span>)</span><br><span class="line"></span><br><span class="line">car = Car(<span class="string">&quot;Audi&quot;</span>, <span class="number">40000</span>,<span class="number">2</span>)</span><br><span class="line"><span class="built_in">print</span>(car.get_price())  </span><br><span class="line"></span><br><span class="line"><span class="comment"># 修改私有属性的值</span></span><br><span class="line">car.set_price(<span class="number">45000</span>)</span><br><span class="line"><span class="built_in">print</span>(car.get_price()) </span><br></pre></td></tr></table></figure></div>
+
+<h3 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h3><p>定义一个子类，使它获得代码中已有类的属性和方法</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#单继承（Single Inheritance）</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 定义一个父类</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Animal</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, name</span>):</span><br><span class="line">        self.name = name</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">speak</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;<span class="subst">&#123;self.name&#125;</span> makes a sound.&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 定义一个子类，继承自 Animal</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Dog</span>(<span class="title class_ inherited__">Animal</span>):  <span class="comment">#此时Dog类获得了Animal类的所有属性和方法</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">speak</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;<span class="subst">&#123;self.name&#125;</span> barks.&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建 Dog 类的实例</span></span><br><span class="line">dog = Dog(<span class="string">&quot;Buddy&quot;</span>)</span><br><span class="line">dog.speak()  <span class="comment"># 输出: Buddy barks.</span></span><br><span class="line">_____________________________________________________</span><br><span class="line"><span class="comment">#多继承（Multiple Inheritance）</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 定义两个父类</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Animal</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, name</span>):</span><br><span class="line">        self.name = name</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">speak</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;<span class="subst">&#123;self.name&#125;</span> makes a sound.&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Runner</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">run</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;<span class="subst">&#123;self.name&#125;</span> runs fast.&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 定义一个子类，同时继承 Animal 和 Runner</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Dog</span>(Animal, Runner):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">speak</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;<span class="subst">&#123;self.name&#125;</span> barks.&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建 Dog 类的实例</span></span><br><span class="line">dog = Dog(<span class="string">&quot;Buddy&quot;</span>)</span><br><span class="line">dog.speak()  <span class="comment"># 输出: Buddy barks.</span></span><br><span class="line">dog.run()    <span class="comment"># 输出: Buddy runs fast.</span></span><br></pre></td></tr></table></figure></div>
+
+<p><strong>单继承</strong>适用于简单的类层次结构，继承关系明确，易于管理。</p>
+<p><strong>多继承</strong>可以带来更强的灵活性和功能组合，但要小心类之间的复杂关系以及可能产生的命名冲突</p>
+<h3 id="重写"><a href="#重写" class="headerlink" title="重写"></a>重写</h3><p>子类和父类具有同名的方法，子类方法会覆盖父类的实现。</p>
+<p>子类可以通过 <code>super()</code> 调用被重写的父类方法。</p>
+<p>重写的过程中，子类通常会保留父类的功能并增加新的行为，但也可以完全改变父类的方法逻辑</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 父类</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Animal</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, name</span>):</span><br><span class="line">        self.name = name</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">speak</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;<span class="subst">&#123;self.name&#125;</span> makes a sound&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 子类</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Dog</span>(<span class="title class_ inherited__">Animal</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, name, breed</span>): <span class="comment">#重写构造方法,在重写后原父类的属性会被覆盖,需要重新调父类构造方法来初始化属性</span></span><br><span class="line">        <span class="comment"># 调用父类的构造方法，初始化 name 属性</span></span><br><span class="line">        <span class="built_in">super</span>().__init__(name) </span><br><span class="line">        <span class="comment"># 初始化子类的属性</span></span><br><span class="line">        self.breed = breed</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">speak</span>(<span class="params">self</span>): <span class="comment">#重写父类方法</span></span><br><span class="line">        <span class="built_in">super</span>().speak()  <span class="comment"># 调用父类的 speak 方法  #super().父类方法</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;<span class="subst">&#123;self.name&#125;</span> is a <span class="subst">&#123;self.breed&#125;</span> and barks&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建实例</span></span><br><span class="line">dog = Dog(<span class="string">&quot;Buddy&quot;</span>, <span class="string">&quot;Golden Retriever&quot;</span>)</span><br><span class="line">dog.speak()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 输出:</span></span><br><span class="line"><span class="comment"># Buddy makes a sound</span></span><br><span class="line"><span class="comment"># Buddy is a Golden Retriever and barks</span></span><br></pre></td></tr></table></figure></div>
+
+<h3 id="多态"><a href="#多态" class="headerlink" title="多态"></a>多态</h3><p>多态是面向对象编程中的一个重要概念，指的是不同的对象可以对同一个方法或操作作出不同的响应。换句话说，在多态中，<strong>同样的接口，可以根据对象的类型，执行不同的行为</strong>。</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Animal</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">speak</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;Animal makes a sound&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Dog</span>(<span class="title class_ inherited__">Animal</span>):  <span class="comment">#子类01</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">speak</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;Bark&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Cat</span>(<span class="title class_ inherited__">Animal</span>):  <span class="comment">#子类02</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">speak</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;Meow&quot;</span></span><br><span class="line">    </span><br><span class="line"><span class="comment">#创建多态函数</span></span><br><span class="line"><span class="comment">#animal_sound() 函数接受 Animal 类的对象，并调用 speak() 方法</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">animal_sound</span>(<span class="params">animal</span>):</span><br><span class="line">    <span class="built_in">print</span>(animal.speak())</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建对象</span></span><br><span class="line">dog = Dog()  <span class="comment">#实例化后即作为识别参数进入animal_sound() 函数中来决定执行哪个子类方法</span></span><br><span class="line">cat = Cat()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 调用相同的函数，传入不同的对象</span></span><br><span class="line">animal_sound(dog)  <span class="comment"># 输出: Bark</span></span><br><span class="line">animal_sound(cat)  <span class="comment"># 输出: Meow</span></span><br></pre></td></tr></table></figure></div>
+
+<h3 id="运算符重载"><a href="#运算符重载" class="headerlink" title="运算符重载"></a>运算符重载</h3><p>在 Python 中，运算符本质上是特殊方法的另一种表示方式。例如，<code>+</code> 运算符对应的特殊方法是 <code>__add__()</code>，<code>-</code> 运算符对应的是 <code>__sub__()</code>，等等。通过重载这些特殊方法，我们可以自定义运算符在自定义对象中的行为。</p>
+<p><del>(这B玩意改底层算法逻辑,看着都费劲,还容易和别的底层代码出现奇怪的耦合bug,我的评价是,不学!)</del></p>
+<p>想要啥新算法自己写方法或者导库,别整这玩意</p>
+<div class="highlight-container" data-rel="Python"><figure class="iseeu highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Vector</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, x, y</span>):</span><br><span class="line">        self.x = x</span><br><span class="line">        self.y = y</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__add__</span>(<span class="params">self, other</span>):</span><br><span class="line">        <span class="comment"># 重载 + 运算符，定义向量相加</span></span><br><span class="line">        <span class="keyword">return</span> Vector(self.x + other.x, self.y + other.y)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__sub__</span>(<span class="params">self, other</span>):</span><br><span class="line">        <span class="comment"># 重载 - 运算符，定义向量相减</span></span><br><span class="line">        <span class="keyword">return</span> Vector(self.x - other.x, self.y - other.y)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__eq__</span>(<span class="params">self, other</span>):</span><br><span class="line">        <span class="comment"># 重载 == 运算符，定义向量相等比较</span></span><br><span class="line">        <span class="keyword">return</span> self.x == other.x <span class="keyword">and</span> self.y == other.y</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__str__</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="comment"># 重载 str() 函数，使对象可读性更强</span></span><br><span class="line">        <span class="keyword">return</span> <span class="string">f&quot;Vector(<span class="subst">&#123;self.x&#125;</span>, <span class="subst">&#123;self.y&#125;</span>)&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建向量对象</span></span><br><span class="line">v1 = Vector(<span class="number">2</span>, <span class="number">3</span>)</span><br><span class="line">v2 = Vector(<span class="number">5</span>, <span class="number">7</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 使用 + 和 - 运算符进行向量运算</span></span><br><span class="line">v3 = v1 + v2</span><br><span class="line">v4 = v1 - v2</span><br><span class="line"></span><br><span class="line"><span class="comment"># 输出结果</span></span><br><span class="line"><span class="built_in">print</span>(v3)  <span class="comment"># Vector(7, 10)</span></span><br><span class="line"><span class="built_in">print</span>(v4)  <span class="comment"># Vector(-3, -4)</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 比较两个向量是否相等</span></span><br><span class="line"><span class="built_in">print</span>(v1 == v2)  <span class="comment"># False</span></span><br></pre></td></tr></table></figure></div>
+
+<p>下面是 Python 中一些常见的运算符及其对应的特殊方法：</p>
+<table>
+<thead>
+<tr>
+<th>运算符</th>
+<th>特殊方法</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>+</code></td>
+<td><code>__add__</code></td>
+</tr>
+<tr>
+<td><code>-</code></td>
+<td><code>__sub__</code></td>
+</tr>
+<tr>
+<td><code>*</code></td>
+<td><code>__mul__</code></td>
+</tr>
+<tr>
+<td><code>/</code></td>
+<td><code>__truediv__</code></td>
+</tr>
+<tr>
+<td><code>//</code></td>
+<td><code>__floordiv__</code></td>
+</tr>
+<tr>
+<td><code>%</code></td>
+<td><code>__mod__</code></td>
+</tr>
+<tr>
+<td><code>**</code></td>
+<td><code>__pow__</code></td>
+</tr>
+<tr>
+<td><code>==</code></td>
+<td><code>__eq__</code></td>
+</tr>
+<tr>
+<td><code>!=</code></td>
+<td><code>__ne__</code></td>
+</tr>
+<tr>
+<td><code>&gt;</code></td>
+<td><code>__gt__</code></td>
+</tr>
+<tr>
+<td><code>&lt;</code></td>
+<td><code>__lt__</code></td>
+</tr>
+<tr>
+<td><code>&gt;=</code></td>
+<td><code>__ge__</code></td>
+</tr>
+<tr>
+<td><code>&lt;=</code></td>
+<td><code>__le__</code></td>
+</tr>
+</tbody></table>
+<h2 id="异常"><a href="#异常" class="headerlink" title="异常"></a>异常</h2><p>出异常问GPT,这玩意总结了也没屌用</p>
+<p>这里有个好东西<a class="link" target="_blank" rel="noopener" href="https://github.com/lencx/chatgpt">ChatGPT桌面版 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<h2 id="Python常用库"><a href="#Python常用库" class="headerlink" title="Python常用库"></a>Python常用库</h2><a class="button  regular" target="_blank" rel="noopener" href="https://www.pythoncheatsheet.org/cheatsheet/basics" title="常用库速查"><i class="fa-solid fa-play-circle"></i> 常用库速查</a>
+
+<a class="button  regular" target="_blank" rel="noopener" href="https://pypi.org/" title="官方的包管理库"><i class="fa-solid fa-play-circle"></i> 官方的包管理库</a>
+
+<a class="button  regular" target="_blank" rel="noopener" href="https://docs.python.org/3/library/" title="官方提供的标准库文档"><i class="fa-solid fa-play-circle"></i> 官方提供的标准库文档</a>
+
+<a class="button  regular" target="_blank" rel="noopener" href="https://awesome-python.com/" title="按用途类型筛选库"><i class="fa-solid fa-play-circle"></i> 按用途类型筛选库</a>
+            </div>
+
+            
+                <div class="post-copyright-info">
+                    <div class="article-copyright-info-container">
+    <ul>
+        <li><strong>Title:</strong> PythonNotes</li>
+        <li><strong>Author:</strong> Slience_Displace</li>
+        <li><strong>Created at:</strong> 2024-09-29 00:00:00</li>
+        
+            <li>
+                <strong>Updated at:</strong> 2024-12-19 18:07:37
+            </li>
+        
+        <li>
+            <strong>Link:</strong> https://mikumikudaifans.github.io/Displace.github.io/2024/09/29/PythonNotes/
+        </li>
+        <li>
+            <strong>License:</strong> This work is licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0</a>.
+        </li>
+    </ul>
+</div>
+
+                </div>
+            
+
+            
+                <ul class="post-tags-box">
+                    
+                        <li class="tag-item">
+                            <a href="/Displace.github.io/tags/Python/">#Python</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            
+
+            
+
+            
+                <div class="article-nav">
+                    
+                        <div class="article-prev">
+                            <a class="prev"
+                            rel="prev"
+                            href="/Displace.github.io/2024/10/14/C_Note/"
+                            >
+                                <span class="left arrow-icon flex-center">
+                                    <i class="fa-solid fa-chevron-left"></i>
+                                </span>
+                                <span class="title flex-center">
+                                    <span class="post-nav-title-item">C_Note</span>
+                                    <span class="post-nav-item">Prev posts</span>
+                                </span>
+                            </a>
+                        </div>
+                    
+                    
+                        <div class="article-next">
+                            <a class="next"
+                            rel="next"
+                            href="/Displace.github.io/2024/05/08/2/"
+                            >
+                                <span class="title flex-center">
+                                    <span class="post-nav-title-item">Blog Notes</span>
+                                    <span class="post-nav-item">Next posts</span>
+                                </span>
+                                <span class="right arrow-icon flex-center">
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </span>
+                            </a>
+                        </div>
+                    
+                </div>
+            
+
+
+            
+                <div class="comment-container">
+                    <div class="comments-container">
+    <div id="comment-anchor"></div>
+    <div class="comment-area-title">
+        <i class="fa-solid fa-comments"></i>&nbsp;Comments
+    </div>
+    
+
+        
+            
+    <div id="gitalk-container"></div>
+    <script data-pjax
+            src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
+    <script data-pjax>
+
+        function loadGitalk() {
+            let __gitalk__pathname = decodeURI(location.pathname);
+            const __gitalk__pathnameLength = __gitalk__pathname.length;
+            const __gitalk__pathnameMaxLength = 50;
+            if (__gitalk__pathnameLength > __gitalk__pathnameMaxLength) {
+                __gitalk__pathname = __gitalk__pathname.substring(0, __gitalk__pathnameMaxLength - 3) + '...';
+            }
+
+            try {
+                Gitalk && new Gitalk({
+                    clientID: 'Ov23ctOsC2N8paZFnRkB',
+                    clientSecret: '023adeb8f70c598071efdeeed84226c1570dd1b0',
+                    repo: 'StationComment_Gitalk',
+                    owner: 'MikumikuDAIFans',
+                    admin: ['MikumikuDAIFans'],
+                    id: __gitalk__pathname,
+                    language: 'en'
+                }).render('gitalk-container');
+
+            } catch (e) {
+                window.Gitalk = null;
+            }
+        }
+
+        if ('true') {
+            const loadGitalkTimeout = setTimeout(() => {
+                loadGitalk();
+                clearTimeout(loadGitalkTimeout);
+            }, 1000);
+        } else {
+            window.addEventListener('DOMContentLoaded', loadGitalk);
+        }
+    </script>
+
+
+
+        
+    
+</div>
+
+                </div>
+            
+        </div>
+
+        
+            <div class="toc-content-container">
+                <div class="post-toc-wrap">
+    <div class="post-toc">
+        <div class="toc-title">On this page</div>
+        <div class="page-title">PythonNotes</div>
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95"><span class="nav-text">基础语法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%87%E5%87%86%E4%BB%A3%E7%A0%81%E6%9E%B6%E6%9E%84"><span class="nav-text">标准代码架构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E8%BD%AC%E6%8D%A2-%E6%95%B0%E6%8D%AE%E8%AE%A1%E7%AE%97"><span class="nav-text">数据转换&amp;数据计算</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%BB%E8%BE%91-%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="nav-text">逻辑&amp;逻辑运算符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="nav-text">字符串</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="nav-text">数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%97%E8%A1%A8"><span class="nav-text">列表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%83%E7%BB%84"><span class="nav-text">元组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9B%86%E5%90%88"><span class="nav-text">集合</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AD%97%E5%85%B8"><span class="nav-text">字典</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%84%E5%90%88%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%BA%94%E7%94%A8%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="nav-text">组合数据类型应用运算符</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%87%BD%E6%95%B0"><span class="nav-text">函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%87%BD%E6%95%B0%E5%8F%82%E6%95%B0"><span class="nav-text">函数参数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%82%E6%95%B0%E4%BC%A0%E9%80%92"><span class="nav-text">参数传递</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%82%E6%95%B0%E6%89%93%E5%8C%85-%E8%A7%A3%E5%8C%85"><span class="nav-text">参数打包&#x2F;解包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%82%E6%95%B0%E8%BF%94%E5%9B%9E%E5%80%BC"><span class="nav-text">参数返回值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%98%E9%87%8F%E4%BD%9C%E7%94%A8%E5%9F%9F"><span class="nav-text">变量作用域</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%92%E5%BD%92-%E5%8C%BF%E5%90%8D%E5%87%BD%E6%95%B0"><span class="nav-text">递归&#x2F;匿名函数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%87%E4%BB%B6-%E6%95%B0%E6%8D%AE-%E6%93%8D%E4%BD%9C"><span class="nav-text">文件&#x2F;数据 操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%87%E5%87%86%E6%96%87%E4%BB%B6%E8%AE%BF%E9%97%AE%E6%96%B9%E6%B3%95"><span class="nav-text">标准文件访问方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%87%E6%9C%AC%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C"><span class="nav-text">文本文件操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%87%E4%BB%B6%E4%B8%8E%E7%9B%AE%E5%BD%95-%E6%96%87%E4%BB%B6%E5%A4%B9-%E7%AE%A1%E7%90%86"><span class="nav-text">文件与目录(文件夹)管理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E7%BB%B4%E5%BA%A6%E4%B8%8E%E6%95%B0%E6%8D%AE%E6%A0%BC%E5%BC%8F%E5%8C%96"><span class="nav-text">数据维度与数据格式化</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1"><span class="nav-text">面向对象</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A6%82%E8%BF%B0"><span class="nav-text">概述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%B1%BB%E5%88%9B%E5%BB%BA"><span class="nav-text">类创建</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%B1%BB%E6%88%90%E5%91%98"><span class="nav-text">类成员</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9E%E4%BE%8B%E6%96%B9%E6%B3%95"><span class="nav-text">实例方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%B1%BB%E6%96%B9%E6%B3%95"><span class="nav-text">类方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9D%99%E6%80%81%E6%96%B9%E6%B3%95"><span class="nav-text">静态方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A7%81%E6%9C%89%E6%88%90%E5%91%98"><span class="nav-text">私有成员</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%97%E4%BF%9D%E6%8A%A4%E6%88%90%E5%91%98"><span class="nav-text">受保护成员</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95"><span class="nav-text">构造方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9E%90%E6%9E%84%E6%96%B9%E6%B3%95"><span class="nav-text">析构方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B0%81%E8%A3%85"><span class="nav-text">封装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%A7%E6%89%BF"><span class="nav-text">继承</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%87%8D%E5%86%99"><span class="nav-text">重写</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%9A%E6%80%81"><span class="nav-text">多态</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%90%E7%AE%97%E7%AC%A6%E9%87%8D%E8%BD%BD"><span class="nav-text">运算符重载</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%82%E5%B8%B8"><span class="nav-text">异常</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Python%E5%B8%B8%E7%94%A8%E5%BA%93"><span class="nav-text">Python常用库</span></a></li></ol>
+
+    </div>
+</div>
+            </div>
+        
+    </div>
+</div>
+
+
+                
+
+            </div>
+            
+            
+
+        </div>
+
+        <div class="main-content-footer">
+            <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info">
+            &copy;
+            
+              <span>2023</span>
+              -
+            
+            2024&nbsp;&nbsp;<i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s; color: #f54545"></i>&nbsp;&nbsp;<a href="/">Slience_Displace</a>
+        </div>
+        
+            <script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="website-count info-item">
+                
+                    <span id="busuanzi_container_site_uv" class="busuanzi_container_site_uv">
+                        VISITOR COUNT&nbsp;<span id="busuanzi_value_site_uv" class="busuanzi_value_site_uv"></span>
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv" class="busuanzi_container_site_pv">
+                        TOTAL PAGE VIEWS&nbsp;<span id="busuanzi_value_site_pv" class="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="theme-info info-item">
+            <span class="powered-by-container">POWERED BY <?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1rem" height="1rem" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path fill="#0E83CD" d="M256.4,25.8l-200,115.5L56,371.5l199.6,114.7l200-115.5l0.4-230.2L256.4,25.8z M349,354.6l-18.4,10.7l-18.6-11V275H200v79.6l-18.4,10.7l-18.6-11v-197l18.5-10.6l18.5,10.8V237h112v-79.6l18.5-10.6l18.5,10.8V354.6z"/></svg><a target="_blank" href="https://hexo.io">Hexo</a></span>
+                <br>
+            <span class="theme-version-container">THEME&nbsp;<a class="theme-version" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v2.1.4</a>
+        </div>
+        
+        
+        
+            <div id="start_div" style="display:none">
+                2023/5/25 11:20:14
+            </div>
+            <div>
+                Blog up for <span class="odometer" id="runtime_days" ></span> days <span class="odometer" id="runtime_hours"></span> hrs <span class="odometer" id="runtime_minutes"></span> Min <span class="odometer" id="runtime_seconds"></span> Sec
+            </div>
+        
+        
+            <div class="customize-info info-item">你说的对，但是《原神》是由米哈游自主研发的一款全新开放世界冒险游戏。</div>
+        
+        
+            <script async data-pjax>
+                try {
+                    function odometer_init() {
+                    const elements = document.querySelectorAll('.odometer');
+                    elements.forEach(el => {
+                        new Odometer({
+                            el,
+                            format: '( ddd).dd',
+                            duration: 200
+                        });
+                    });
+                    }
+                    odometer_init();
+                } catch (error) {}
+            </script>
+        
+        
+        
+    </div>  
+</footer>
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="article-tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="right-bottom-tools page-aside-toggle">
+                <i class="fa-regular fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+            <li class="go-comment">
+                <i class="fa-regular fa-comments"></i>
+            </li>
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-side-tools-container">
+        <div class="side-tools-container">
+    <ul class="hidden-tools-list">
+        <li class="right-bottom-tools tool-font-adjust-plus flex-center">
+            <i class="fa-regular fa-magnifying-glass-plus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-font-adjust-minus flex-center">
+            <i class="fa-regular fa-magnifying-glass-minus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-expand-width flex-center">
+            <i class="fa-regular fa-expand"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-dark-light-toggle flex-center">
+            <i class="fa-regular fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+
+        <li class="right-bottom-tools tool-scroll-to-bottom flex-center">
+            <i class="fa-regular fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="visible-tools-list">
+        <li class="right-bottom-tools toggle-tools-list flex-center">
+            <i class="fa-regular fa-cog fa-spin"></i>
+        </li>
+        
+            <li class="right-bottom-tools tool-scroll-to-top flex-center">
+                <i class="arrow-up fas fa-arrow-up"></i>
+                <span class="percent"></span>
+            </li>
+        
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fa-solid fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="Search..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fa-solid fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fa-solid fa-spinner fa-spin-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+
+</main>
+
+
+
+
+<script src="/Displace.github.io/js/utils.js"></script>
+
+<script src="/Displace.github.io/js/main.js"></script>
+
+<script src="/Displace.github.io/js/layouts/navbarShrink.js"></script>
+
+<script src="/Displace.github.io/js/tools/scrollTopBottom.js"></script>
+
+<script src="/Displace.github.io/js/tools/lightDarkSwitch.js"></script>
+
+
+
+    
+<script src="/Displace.github.io/js/tools/localSearch.js"></script>
+
+
+
+
+    
+<script src="/Displace.github.io/js/tools/codeBlock.js"></script>
+
+
+
+
+    
+<script src="/Displace.github.io/js/layouts/lazyload.js"></script>
+
+
+
+
+    
+<script src="/Displace.github.io/js/tools/runtime.js"></script>
+
+    
+<script src="/Displace.github.io/js/layouts/odometer.min.js"></script>
+
+    
+<link rel="stylesheet" href="/Displace.github.io/assets/odometer-theme-minimal.css">
+
+
+
+
+  
+<script src="/Displace.github.io/js/libs/Typed.min.js"></script>
+
+  
+<script src="/Displace.github.io/js/plugins/typed.js"></script>
+
+
+
+
+
+
+    
+<script src="/Displace.github.io/js/libs/minimasonry.min.js"></script>
+
+    
+<script src="/Displace.github.io/js/plugins/masonry.js"></script>
+
+
+
+<div class="post-scripts pjax">
+    
+        
+<script src="/Displace.github.io/js/tools/tocToggle.js"></script>
+
+<script src="/Displace.github.io/js/libs/anime.min.js"></script>
+
+<script src="/Displace.github.io/js/layouts/toc.js"></script>
+
+<script src="/Displace.github.io/js/plugins/tabs.js"></script>
+
+    
+</div>
+
+
+    
+<script src="/Displace.github.io/js/libs/pjax.min.js"></script>
+
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        window.pjax = new Pjax({
+            selectors: [
+                'head title',
+                '.page-container',
+                '.pjax',
+            ],
+            history: true,
+            debug: false,
+            cacheBust: false,
+            timeout: 0,
+            analytics: false,
+            currentUrlFullReload: false,
+            scrollRestoration: false,
+            // scrollTo: true,
+        });
+
+        document.addEventListener('pjax:send', () => {
+            Global.utils.pjaxProgressBarStart();
+        });
+
+        document.addEventListener('pjax:complete', () => {
+            Global.utils.pjaxProgressBarEnd();
+            window.pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
+            Global.refresh();
+        });
+    });
+</script>
+
+
+
+
+    <div id="aplayer"></div>
+
+<script src="/Displace.github.io/js/libs/APlayer.min.js"></script>
+
+
+<script src="/Displace.github.io/js/plugins/aplayer.js"></script>
+
+
+</body>
+</html>
