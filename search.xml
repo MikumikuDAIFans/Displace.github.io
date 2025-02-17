@@ -1,19 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>MachingLearningCodeNote</title>
-    <url>/2025/01/01/MachingLearningCodNote/</url>
-    <content><![CDATA[<p>MachingLearningCodeNote</p>
-<p><img lazyload="" src="/images/loading.svg" data-src="/images/MachingLearningCodNote/CatMikuDemen.png"></p>
-]]></content>
-      <categories>
-        <category>MachingLearning</category>
-      </categories>
-      <tags>
-        <tag>Code</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Data_structures_Algorithms</title>
     <url>/2024/11/28/DataStructuresAdvance/</url>
     <content><![CDATA[<p>Data_structures_Algorithms</p>
@@ -2440,15 +2427,16 @@
       </tags>
   </entry>
   <entry>
-    <title>AAAAAAAAAA</title>
-    <url>/2025/01/14/TEST/</url>
-    <content><![CDATA[<p>C _Base Grammars </p>
+    <title>DeepLearningNote</title>
+    <url>/2025/01/01/DeepLearningNote/</url>
+    <content><![CDATA[<p>DeepLearningCodeNote</p>
+<p><img lazyload="" src="/images/loading.svg" data-src="/images/DeepLearningCodeNote/CatMikuDemen.png"></p>
 ]]></content>
       <categories>
-        <category>C_Note</category>
+        <category>DeepLearningNote</category>
       </categories>
       <tags>
-        <tag>C</tag>
+        <tag>Code</tag>
       </tags>
   </entry>
 </search>
