@@ -267,7 +267,7 @@ pre,
 pre,
 code {
   line-height: 1.5 !important;
-  font-family: 'Geist Mono', Courier, monospace !important;
+  font-family: 'Signika Negative', 'Geist Mono', Courier, monospace !important;
 }
 pre.mermaid {
   background-color: var(--background-color);
@@ -302,7 +302,6 @@ pre code {
   padding-bottom: 5px;
   overflow: auto;
   margin: 0 !important;
-  border-top: 1px solid var(--shadow-color-1);
 }
 .highlight:hover::-webkit-scrollbar-thumb {
   border: 3px solid rgba(183,183,183,0.3);
