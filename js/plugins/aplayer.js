@@ -1,10 +1,11 @@
-(function() {
-  const audioList = [];
-  const isFixed = theme.plugins.aplayer.type === "fixed";
-  const isMini = theme.plugins.aplayer.type === "mini";
+const audioList = [];
+const isFixed = Global.theme_config.plugins.aplayer.type == "fixed"
+const isMini = Global.theme_config.plugins.aplayer.type == "mini"
 
-  for (const audio of theme.plugins.aplayer.audios) {
-    const audioObj = {
+
+
+for (const audio of Global.theme_config.plugins.aplayer.audios) {
+    const a = {
       name: audio.name,
       artist: audio.artist,
       url: audio.url,
@@ -12,22 +13,20 @@
       lrc: audio.lrc,
       theme: audio.theme,
     };
-    audioList.push(audioObj);
-  }
+    audioList.push(a);
+}
 
-  if (isMini) {
-    new APlayer({
-      container: document.getElementById("aplayer"),
+
+if (isMini) {
+  const ap = new APlayer({
+      container: document.getElementById('aplayer'),
       mini: true,
       audio: audioList,
-    });
-  } else if (isFixed) {
-    const player = new APlayer({
-      container: document.getElementById("aplayer"),
+  });
+} else if (isFixed) {
+  const ap = new APlayer({
+      container: document.getElementById('aplayer'),
       fixed: true,
-      lrcType: 3,
       audio: audioList,
-    });
-    document.querySelector(".aplayer-icon-lrc").click();
-  }
-})();
+  });
+}
