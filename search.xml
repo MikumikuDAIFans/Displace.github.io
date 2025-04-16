@@ -450,12 +450,12 @@
       </tags>
   </entry>
   <entry>
-    <title>ComfyUI_AnimeWorkflow</title>
+    <title>ComfyUI_AnimeWorlkflow</title>
     <url>/2025/04/16/NoobXL_AnimeWorkFlow/</url>
     <content><![CDATA[<p>方便快速的动漫工作流，包含了我进行ai艺术创作的所有流程，看完你也是CUI大神（<del>大嘘</del></p>
-<p>PS：阅读本文的前提是你已经了解了基础的StableDiffusion架构和ComfyUI基础知识，如果你是初学者请先仔细阅读 <a class="button  regular" href="[Tensor Book 潜工具书](https://docs.qq.com/doc/p/230e7ada2a60d8e347d639edd5521f5e62332fe9?nlc=1)" title="Tensor Book 潜工具书"><i class="fa-solid fa-play-circle"></i> Tensor Book 潜工具书</a> ，开源社区的大佬们已经整理好了从入门到入土的全面教程，本文仅展示和介绍我自己常用的工作流，不对细节进行解释说明</p>
+<p>PS：阅读本文的前提是你已经了解了基础的StableDiffusion架构和ComfyUI基础知识，如果你是初学者请先仔细阅读 <a class="button  regular" href="https://docs.qq.com/doc/p/230e7ada2a60d8e347d639edd5521f5e62332fe9?nlc=1" title="Tensor Book 潜工具书"><i class="fa-solid fa-play-circle"></i> Tensor Book 潜工具书</a> ，开源社区的大佬们已经整理好了从入门到入土的全面教程，本文仅展示和介绍我自己常用的工作流，不对细节进行解释说明</p>
 <p><img lazyload="" src="/images/loading.svg" data-src="/images/ComfyUI_AnimeWorlkflow/exsample.png"></p>
-<a class="button  regular" href="https://www.cs.usfca.edu/~galles/visualization/Algorithms.html" title="我的C站主页"><i class="fa-solid fa-play-circle"></i> 我的C站主页</a> 
+<a class="button  regular" href="https://civitai.com/user/Displace_Ta" title="我的C站主页"><i class="fa-solid fa-play-circle"></i> 我的C站主页</a> 
 
 
 
@@ -483,14 +483,14 @@
 <p><img lazyload="" src="/images/loading.svg" data-src="/images/ComfyUI_AnimeWorlkflow/controlcenter.png"></p>
 <p>全局种子可使图片被二次生成，其他没什么好说的</p>
 <h4 id="IPAdepter"><a href="#IPAdepter" class="headerlink" title="IPAdepter"></a>IPAdepter</h4><p><img lazyload="" src="/images/loading.svg" data-src="/images/ComfyUI_AnimeWorlkflow/IPAdetiter.png"></p>
-<p>简单来说就是画风迁移，使用模型为 <a class="button  regular" href="[NOOB-IPA-MARK1 - mark1 | NoobAI Controlnet | Civitai](https://civitai.com/models/1000401/noob-ipa-mark1)" title="NOOB-IPA"><i class="fa-solid fa-play-circle"></i> NOOB-IPA</a> ，画风偏移的源图片可以去</p>
+<p>简单来说就是画风迁移，使用模型为 <a class="button  regular" href="https://civitai.com/models/1000401/noob-ipa-mark1" title="NOOB-IPA"><i class="fa-solid fa-play-circle"></i> NOOB-IPA</a> ，画风偏移的源图片可以去</p>
 <a class="button  regular" href="https://jp.pinterest.com/" title="Pinterest"><i class="fa-solid fa-play-circle"></i> Pinterest</a> 上寻找
 
 <h3 id="Controlnet"><a href="#Controlnet" class="headerlink" title="Controlnet"></a>Controlnet</h3><p><img lazyload="" src="/images/loading.svg" data-src="/images/ComfyUI_AnimeWorlkflow/controlnet.png"></p>
-<p>在日常使用中Controlnet最常用的模型有 <a class="button  regular" href="[NoobAI-XL ControlNet - eps-lineart_anime | NoobAI Controlnet | Civitai](https://civitai.com/models/929685?modelVersionId=1049196)" title="LineArt"><i class="fa-solid fa-play-circle"></i> LineArt</a> , <a class="button  regular" href="[NoobAI-XL ControlNet - eps-canny | NoobAI Controlnet | Civitai](https://civitai.com/models/929685?modelVersionId=1040650)" title="Canny"><i class="fa-solid fa-play-circle"></i> Canny</a> , <a class="button  regular" href="[NoobAI-XL ControlNet - eps-depth_midas | NoobAI Controlnet | Civitai](https://civitai.com/models/929685?modelVersionId=1042508)" title="Depth"><i class="fa-solid fa-play-circle"></i> Depth</a> ,<a class="button  regular" href="[NoobAI-XL ControlNet-OPENPOSE - openpose model | NoobAI Controlnet | Civitai](https://civitai.com/models/962537?modelVersionId=1077649)" title="OpenPose"><i class="fa-solid fa-play-circle"></i> OpenPose</a> 配合提示词反推使用可以很好的复刻和差分图片，<br>值得注意的是：lineart在提起线稿是会丢失一些细节线条，而canny会尽可能详尽的提取线稿，我们在实际使用时需要结合二者特性对线稿进行处理，具体用法我会在接下来的Controlnet_Preprocessor工作流中讲解</p>
+<p>在日常使用中Controlnet最常用的模型有 <a class="button  regular" href="https://civitai.com/models/929685?modelVersionId=1049196" title="LineArt"><i class="fa-solid fa-play-circle"></i> LineArt</a> , <a class="button  regular" href="https://civitai.com/models/929685?modelVersionId=1040650" title="Canny"><i class="fa-solid fa-play-circle"></i> Canny</a> , <a class="button  regular" href="https://civitai.com/models/929685?modelVersionId=1042508" title="Depth"><i class="fa-solid fa-play-circle"></i> Depth</a> ,<a class="button  regular" href="https://civitai.com/models/962537?modelVersionId=1077649" title="OpenPose"><i class="fa-solid fa-play-circle"></i> OpenPose</a> 配合提示词反推使用可以很好的复刻和差分图片，<br>值得注意的是：lineart在提起线稿是会丢失一些细节线条，而canny会尽可能详尽的提取线稿，我们在实际使用时需要结合二者特性对线稿进行处理，具体用法我会在接下来的Controlnet_Preprocessor工作流中讲解</p>
 <h3 id="TagsRoll图"><a href="#TagsRoll图" class="headerlink" title="TagsRoll图"></a>TagsRoll图</h3><p><img lazyload="" src="/images/loading.svg" data-src="/images/ComfyUI_AnimeWorlkflow/TagRoll.png"></p>
 <p>以迭代器为核心的自动roll图模块，以换行为分隔符进行提示词分组然后迭代输出提示词</p>
-<p>首先在使用前你需要将收集的提示词做好整理，每组提示词一行，输入到文本框内，为此开发了一个提示词处理器<a class="button  regular" href="[[Releases · MikumikuDAIFans/TagConverter](https://github.com/MikumikuDAIFans/TagConverter)](https://civitai.com/models/962537?modelVersionId=1077649)" title="TagConverter"><i class="fa-solid fa-play-circle"></i> TagConverter</a> </p>
+<p>首先在使用前你需要将收集的提示词做好整理，每组提示词一行，输入到文本框内，为此开发了一个提示词处理器<a class="button  regular" href="https://github.com/MikumikuDAIFans/TagConverter" title="TagConverter"><i class="fa-solid fa-play-circle"></i> TagConverter</a> </p>
 <p><img lazyload="" src="/images/loading.svg" data-src="/images/ComfyUI_AnimeWorlkflow/tagsroll_empty.png"></p>
 <p>它可将NAI提示词与SD提示词进行转换，并压缩空行时提示词转换为<code>TagsRoll图</code>可用的格式，</p>
 <p><img lazyload="" src="/images/loading.svg" data-src="/images/ComfyUI_AnimeWorlkflow/TagConverter.png"></p>
