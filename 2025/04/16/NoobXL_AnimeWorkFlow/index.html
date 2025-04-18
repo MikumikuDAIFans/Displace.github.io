@@ -30,7 +30,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://mikumikudaifans.github.io/Displace.github.io/images/redefine-og.webp">
 <meta property="article:published_time" content="2025-04-15T16:00:00.000Z">
-<meta property="article:modified_time" content="2025-04-16T10:57:39.500Z">
+<meta property="article:modified_time" content="2025-04-18T05:27:30.246Z">
 <meta property="article:author" content="Dispalce">
 <meta property="article:tag" content="TechShare">
 <meta name="twitter:card" content="summary">
@@ -678,8 +678,8 @@ mjx-container[display="true"] + br {
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2025-04-16 18:57:39</span>
-            <span class="mobile">2025-04-16 18:57:39</span>
+            <span class="desktop">2025-04-18 13:27:30</span>
+            <span class="mobile">2025-04-18 13:27:30</span>
             <span class="hover-info">Updated</span>
         </span>
     
@@ -742,7 +742,7 @@ mjx-container[display="true"] + br {
 
 		<div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
 			<p>方便快速的动漫工作流，包含了我进行ai艺术创作的所有流程，看完你也是CUI大神（<del>大嘘</del></p>
-<p>PS：阅读本文的前提是你已经了解了基础的StableDiffusion架构和ComfyUI基础知识，如果你是初学者请先仔细阅读 <a class="button  regular" target="_blank" rel="noopener" href="https://docs.qq.com/doc/p/230e7ada2a60d8e347d639edd5521f5e62332fe9?nlc=1" title="Tensor Book 潜工具书"><i class="fa-solid fa-play-circle"></i> Tensor Book 潜工具书</a> ，开源社区的大佬们已经整理好了从入门到入土的全面教程，本文仅展示和介绍我自己常用的工作流，不对细节进行解释说明</p>
+<p>SP：阅读本文的前提是你已经了解了基础的StableDiffusion架构和ComfyUI基础知识，如果你是初学者请先仔细阅读 <a class="button  regular" target="_blank" rel="noopener" href="https://docs.qq.com/doc/p/230e7ada2a60d8e347d639edd5521f5e62332fe9?nlc=1" title="Tensor Book 潜工具书"><i class="fa-solid fa-play-circle"></i> Tensor Book 潜工具书</a> ，开源社区的大佬们已经整理好了从入门到入土的全面教程，本文仅展示和介绍我自己常用的工作流，不对细节进行解释说明</p>
 <p><img lazyload="" src="/images/loading.svg" data-src="/images/ComfyUI_AnimeWorlkflow/exsample.png"></p>
 <a class="button  regular" target="_blank" rel="noopener" href="https://civitai.com/user/Displace_Ta" title="我的C站主页"><i class="fa-solid fa-play-circle"></i> 我的C站主页</a> 
 
@@ -800,7 +800,7 @@ mjx-container[display="true"] + br {
 <p><img lazyload="" src="/images/loading.svg" data-src="/images/ComfyUI_AnimeWorlkflow/changeSeedSetting.png"></p>
 <h3 id="FaceFix-HandsFix"><a href="#FaceFix-HandsFix" class="headerlink" title="FaceFix & HandsFix"></a>FaceFix &amp; HandsFix</h3><p>二者本质也是模型检测获得蒙版进行局部重绘，没有什么特别的东西</p>
 <h3 id="UpScale"><a href="#UpScale" class="headerlink" title="UpScale"></a>UpScale</h3><p><img lazyload="" src="/images/loading.svg" data-src="/images/ComfyUI_AnimeWorlkflow/UPscale.png"></p>
-<p>首先使用模型放大，然后在使用算法缩小，最后得到期望的放大倍率，最后对缩放后的图像进行低噪声的重归，来对冲放大导致细节扭曲，你可以通过调整噪声大小来决定图像输出与原图像的差别</p>
+<p>首先使用模型放大，再使用算法缩小，得到期望的放大倍率，最后对缩放后的图像进行低噪声的重归，来对冲放大导致细节扭曲，你可以通过调整噪声大小来决定图像输出与原图像的差别</p>
 <p><img lazyload="" src="/images/loading.svg" data-src="/images/ComfyUI_AnimeWorlkflow/noise.png"></p>
 <p>通常在使用时我会先将原图像放大1.5倍使得手，脸，眼睛获得更多的像素，方便后续重绘增加细节（过大的图像重绘对性能要求较高，1.5倍放大是我的经验之谈，你应根据实际情况来选择放大倍率）</p>
 <p>工作流最后也有一个<code>UpScale</code>模块，这次的放大我会给到一个较高的倍率，来放大已经重回好的图像</p>
@@ -812,7 +812,7 @@ mjx-container[display="true"] + br {
 <p>在处理线稿时我会有时将<code>Lineart</code>和<code>Canny</code>一起导入编辑器，将二者叠加然后扬长避短的进行修改</p>
 <p><img lazyload="" src="/images/loading.svg" data-src="/images/ComfyUI_AnimeWorlkflow/editLine.png"></p>
 <p><img lazyload="" src="/images/loading.svg" data-src="/images/ComfyUI_AnimeWorlkflow/editphoto.png"></p>
-<h3 id="OpenposePreprocessor"><a href="#OpenposePreprocessor" class="headerlink" title="OpenposePreprocessor"></a>OpenposePreprocessor</h3><p>说实话，我已解决的poenpose的效果不是很尽如人意（<del>可能是我比较菜</del>),因此一般我使用的较少</p>
+<h3 id="OpenposePreprocessor"><a href="#OpenposePreprocessor" class="headerlink" title="OpenposePreprocessor"></a>OpenposePreprocessor</h3><p>说实话，我一直觉得的poenpose的效果不是很尽如人意（<del>可能是我比较菜</del>),因此一般我使用的较少</p>
 <p><img lazyload="" src="/images/loading.svg" data-src="/images/ComfyUI_AnimeWorlkflow/openposeedit.png"></p>
 <p>右键点击<code>Load Openpose JSON</code>进如Openpose编辑界面简单的拖动一下火柴人的关节就算是编辑好了pose了，最后下载图片可以给controlnet的openpose模型使用的了</p>
 <p><img lazyload="" src="/images/loading.svg" data-src="/images/ComfyUI_AnimeWorlkflow/editpoenpose.png"></p>
@@ -834,7 +834,7 @@ mjx-container[display="true"] + br {
         
             <li>
                 <strong>Updated at
-                    :</strong> 2025-04-16 18:57:39
+                    :</strong> 2025-04-18 13:27:30
             </li>
         
         <li>
