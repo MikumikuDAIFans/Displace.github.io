@@ -3079,4 +3079,356 @@
         <tag>Note</tag>
       </tags>
   </entry>
+  <entry>
+    <title>MathematicalSymbol</title>
+    <url>/2025/01/01/Mathematical_Symbol/</url>
+    <content><![CDATA[<h2 id="数学常用希腊字母及读音"><a href="#数学常用希腊字母及读音" class="headerlink" title="数学常用希腊字母及读音"></a>数学常用希腊字母及读音</h2><table>
+<thead>
+<tr>
+<th><strong>大写</strong></th>
+<th><strong>小写</strong></th>
+<th><strong>英文名</strong></th>
+<th><strong>中文名</strong></th>
+<th><strong>中文近似读音</strong></th>
+<th><strong>常用含义</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>A</td>
+<td>α</td>
+<td>alpha</td>
+<td>阿尔法</td>
+<td>ā ěr fǎ</td>
+<td>角, 系数, 比例常数</td>
+</tr>
+<tr>
+<td>B</td>
+<td>β</td>
+<td>beta</td>
+<td>贝塔</td>
+<td>bèi tǎ</td>
+<td>角, 系数</td>
+</tr>
+<tr>
+<td>Γ</td>
+<td>γ</td>
+<td>gamma</td>
+<td>伽马</td>
+<td>gā mǎ</td>
+<td>伽马函数, 比热容比</td>
+</tr>
+<tr>
+<td>Δ</td>
+<td>δ</td>
+<td>delta</td>
+<td>德尔塔</td>
+<td>dé ěr tǎ</td>
+<td>变化量, 判别式</td>
+</tr>
+<tr>
+<td>E</td>
+<td>ε 或 ϵ</td>
+<td>epsilon</td>
+<td>伊普西隆</td>
+<td>yī pǔ xī lóng</td>
+<td>小量, 误差</td>
+</tr>
+<tr>
+<td>Z</td>
+<td>ζ</td>
+<td>zeta</td>
+<td>泽塔</td>
+<td>zé tǎ</td>
+<td>黎曼Zeta函数</td>
+</tr>
+<tr>
+<td>H</td>
+<td>η</td>
+<td>eta</td>
+<td>艾塔</td>
+<td>ài tǎ</td>
+<td>黏度, 效率</td>
+</tr>
+<tr>
+<td>Θ</td>
+<td>θ 或 ϑ</td>
+<td>theta</td>
+<td>西塔</td>
+<td>xī tǎ</td>
+<td>角</td>
+</tr>
+<tr>
+<td>I</td>
+<td>ι</td>
+<td>iota</td>
+<td>约塔</td>
+<td>yuē tǎ</td>
+<td>很少使用</td>
+</tr>
+<tr>
+<td>K</td>
+<td>κ</td>
+<td>kappa</td>
+<td>卡帕</td>
+<td>kǎ pǎ</td>
+<td>曲率</td>
+</tr>
+<tr>
+<td>Λ</td>
+<td>λ</td>
+<td>lambda</td>
+<td>兰布达</td>
+<td>lán bǔ dá</td>
+<td>波长, 特征值</td>
+</tr>
+<tr>
+<td>M</td>
+<td>μ</td>
+<td>mu</td>
+<td>缪</td>
+<td>miù</td>
+<td>磁导率, 微</td>
+</tr>
+<tr>
+<td>N</td>
+<td>ν</td>
+<td>nu</td>
+<td>纽</td>
+<td>niǔ</td>
+<td>频率</td>
+</tr>
+<tr>
+<td>Ξ</td>
+<td>ξ</td>
+<td>xi</td>
+<td>克西</td>
+<td>kè xī</td>
+<td>随机变量</td>
+</tr>
+<tr>
+<td>O</td>
+<td>o</td>
+<td>omicron</td>
+<td>奥米克戎</td>
+<td>ào mǐ kè róng</td>
+<td>很少使用</td>
+</tr>
+<tr>
+<td>Π</td>
+<td>π</td>
+<td>pi</td>
+<td>派</td>
+<td>pài</td>
+<td>圆周率</td>
+</tr>
+<tr>
+<td>P</td>
+<td>ρ</td>
+<td>rho</td>
+<td>柔</td>
+<td>róu</td>
+<td>密度, 相关系数</td>
+</tr>
+<tr>
+<td>Σ</td>
+<td>σ 或 ς(词尾)</td>
+<td>sigma</td>
+<td>西格玛</td>
+<td>xī gé mǎ</td>
+<td>总和, 标准差</td>
+</tr>
+<tr>
+<td>T</td>
+<td>τ</td>
+<td>tau</td>
+<td>陶</td>
+<td>tāo</td>
+<td>时间常数, 切应力</td>
+</tr>
+<tr>
+<td>Υ</td>
+<td>υ</td>
+<td>upsilon</td>
+<td>宇普西隆</td>
+<td>yǔ pǔ xī lóng</td>
+<td>很少使用</td>
+</tr>
+<tr>
+<td>Φ</td>
+<td>φ 或 ϕ</td>
+<td>phi</td>
+<td>斐</td>
+<td>fěi</td>
+<td>角, 磁通量, 黄金分割</td>
+</tr>
+<tr>
+<td>X</td>
+<td>χ</td>
+<td>chi</td>
+<td>卡伊</td>
+<td>kǎ yī</td>
+<td>统计量</td>
+</tr>
+<tr>
+<td>Ψ</td>
+<td>ψ</td>
+<td>psi</td>
+<td>普西</td>
+<td>pǔ xī</td>
+<td>波函数</td>
+</tr>
+<tr>
+<td>Ω</td>
+<td>ω</td>
+<td>omega</td>
+<td>欧米伽</td>
+<td>ōu mǐ jiā</td>
+<td>角速度, 电阻</td>
+</tr>
+</tbody></table>
+<h2 id="其他常用数学符号及读音"><a href="#其他常用数学符号及读音" class="headerlink" title="其他常用数学符号及读音"></a>其他常用数学符号及读音</h2><table>
+<thead>
+<tr>
+<th><strong>符号</strong></th>
+<th><strong>英文名</strong></th>
+<th><strong>中文名</strong></th>
+<th><strong>中文近似读音</strong></th>
+<th><strong>含义</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>∞</td>
+<td>infinity</td>
+<td>无穷大</td>
+<td>wú qióng dà</td>
+<td>无穷大</td>
+</tr>
+<tr>
+<td>∇</td>
+<td>nabla</td>
+<td>倒三角</td>
+<td>dào sān jiǎo</td>
+<td>梯度, 散度, 旋度</td>
+</tr>
+<tr>
+<td>∂</td>
+<td>partial</td>
+<td>偏微分</td>
+<td>piān wēi fēn</td>
+<td>偏微分符号</td>
+</tr>
+<tr>
+<td>∫</td>
+<td>integral</td>
+<td>积分</td>
+<td>jī fēn</td>
+<td>积分符号</td>
+</tr>
+<tr>
+<td>∑</td>
+<td>summation</td>
+<td>求和</td>
+<td>qiú hé</td>
+<td>求和符号</td>
+</tr>
+<tr>
+<td>∏</td>
+<td>product</td>
+<td>乘积</td>
+<td>chéng jī</td>
+<td>乘积符号</td>
+</tr>
+<tr>
+<td>√</td>
+<td>square root</td>
+<td>平方根</td>
+<td>píng fāng gēn</td>
+<td>平方根</td>
+</tr>
+<tr>
+<td>±</td>
+<td>plus-minus</td>
+<td>正负</td>
+<td>zhèng fù</td>
+<td>正负号</td>
+</tr>
+<tr>
+<td>×</td>
+<td>times</td>
+<td>乘</td>
+<td>chéng</td>
+<td>乘号</td>
+</tr>
+<tr>
+<td>÷</td>
+<td>divided by</td>
+<td>除</td>
+<td>chú</td>
+<td>除号</td>
+</tr>
+<tr>
+<td>≠</td>
+<td>not equal to</td>
+<td>不等于</td>
+<td>bù děng yú</td>
+<td>不等于号</td>
+</tr>
+<tr>
+<td>≈</td>
+<td>approximately equal to</td>
+<td>约等于</td>
+<td>yuē děng yú</td>
+<td>约等于号</td>
+</tr>
+<tr>
+<td>≡</td>
+<td>congruent to</td>
+<td>全等于</td>
+<td>quán děng yú</td>
+<td>全等于，同余</td>
+</tr>
+<tr>
+<td>∝</td>
+<td>proportional to</td>
+<td>正比于</td>
+<td>zhèng bǐ yú</td>
+<td>正比于</td>
+</tr>
+<tr>
+<td>∈</td>
+<td>belongs to</td>
+<td>属于</td>
+<td>shǔ yú</td>
+<td>属于</td>
+</tr>
+<tr>
+<td>⊂</td>
+<td>subset of</td>
+<td>子集</td>
+<td>zǐ jí</td>
+<td>子集</td>
+</tr>
+<tr>
+<td>∀</td>
+<td>for all</td>
+<td>对于所有</td>
+<td>duì yú suǒ yǒu</td>
+<td>对于所有</td>
+</tr>
+<tr>
+<td>∃</td>
+<td>there exists</td>
+<td>存在</td>
+<td>cún zài</td>
+<td>存在</td>
+</tr>
+</tbody></table>
+]]></content>
+      <categories>
+        <category>Math</category>
+      </categories>
+      <tags>
+        <tag>Note</tag>
+      </tags>
+  </entry>
 </search>
