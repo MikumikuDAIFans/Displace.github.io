@@ -13,7 +13,7 @@
     
     <!--- Seo Part-->
     
-    <link rel="canonical" href="https://mikumikudaifans.github.io/categories/deeplearning/"/>
+    <link rel="canonical" href="https://mikumikudaifans.github.io/2026/03/26/agentlearningnote/"/>
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
@@ -22,14 +22,17 @@
     
         
         <meta name="description" content="Hexo Theme Redefine, Redefine Your Hexo Journey.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="https://mikumikudaifans.github.io/categories/DeepLearning/index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Anthropic Agent SDK：拒绝幻觉腐烂，重塑上下文工程">
+<meta property="og:url" content="https://mikumikudaifans.github.io/2026/03/26/AgentLearningNote/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="Hexo Theme Redefine, Redefine Your Hexo Journey.">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://mikumikudaifans.github.io/Displace.github.io/images/redefine-og.webp">
+<meta property="article:published_time" content="2026-03-25T16:00:00.000Z">
+<meta property="article:modified_time" content="2026-03-26T15:43:00.650Z">
 <meta property="article:author" content="Dispalce">
+<meta property="article:tag" content="Agent, Note">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://mikumikudaifans.github.io/Displace.github.io/images/redefine-og.webp">
     
@@ -43,7 +46,7 @@
     
     <title>
         
-            Category: DeepLearning | DisplaceStation
+            Anthropic Agent SDK：拒绝幻觉腐烂，重塑上下文工程 | DisplaceStation
         
     </title>
 
@@ -120,7 +123,119 @@
 <link rel="stylesheet" href="/fontawesome/sharp-solid.min.css">
 
     
-<meta name="generator" content="Hexo 7.3.0"></head>
+<meta name="generator" content="Hexo 7.3.0"><style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style></head>
 
 
 
@@ -500,7 +615,7 @@
 
         <div class="statistics flex justify-around my-2.5">
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/tags">
-        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">3</div>
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">4</div>
         <div class="label text-third-text-color text-sm">Tags</div>
     </a>
     <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="/categories">
@@ -525,59 +640,291 @@
 			
 
 			<div class="main-content">
-				<div class="page-template-container">
-	
+				<div class="post-page-container flex relative justify-between box-border w-full h-full">
+	<div class="article-content-container">
 
-	
-	<div class="category-name">
-    <i class="fa-solid fa-folder"></i>&nbsp;DeepLearning
-</div>
-<div class="category-post-list">
+		<div class="article-title relative w-full">
+			
+			
+			
+			<img src="/images/DeepLearningCodeNote/cyberpunkMiku.png" alt="Anthropic Agent SDK：拒绝幻觉腐烂，重塑上下文工程" class="w-full h-60 sm:h-72 md:h-80 object-cover sm:rounded-t-large dark:brightness-75" />
+			
+			<div class="w-full flex items-center absolute bottom-0 justify-start">
+				<h1 class="article-title-cover text-center mx-6 my-6 text-second-text-color bg-background-color-transparent px-4 py-3 text-3xl sm:text-4xl md:text-5xl font-semibold backdrop-blur-lg rounded-xl border border-border-color ">Anthropic Agent SDK：拒绝幻觉腐烂，重塑上下文工程</h1>
+			</div>
+			
+		</div>
+
+		
+		<div class="article-header flex flex-row gap-2 items-center px-2 sm:px-6 md:px-8">
+			<div class="avatar w-[46px] h-[46px] flex-shrink-0 rounded-medium border border-border-color p-[1px]">
+				<img src="/Displace.github.io/images/Logo_miku.png">
+			</div>
+			<div class="info flex flex-col justify-between">
+				<div class="author flex items-center">
+					<span class="name text-default-text-color text-lg font-semibold">Displace</span>
+					
+					<span class="author-label ml-1.5 text-xs px-2 py-0.5 rounded-small text-third-text-color border border-shadow-color-1">Lv2</span>
+					
+				</div>
+				<div class="meta-info">
+					<div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="desktop">2026-03-26</span>
+        <span class="mobile">2026-03-26</span>
+        <span class="hover-info">Created</span>
+    </span>
     
-<div class="archive-list-container">
+        <span class="article-date article-meta-item">
+            <i class="fa-regular fa-wrench"></i>&nbsp;
+            <span class="desktop">2026-03-26 23:43</span>
+            <span class="mobile">2026-03-26 23:43</span>
+            <span class="hover-info">Updated</span>
+        </span>
     
-        <section class="archive-item mb-spacing-unit last:mb-0">
-            <div class="archive-item-header flex flex-row items-center mb-2">
-                <span class="archive-year font-semibold text-3xl mr-2">2025</span>
-                <span class="archive-year-post-count text-xs md:text-sm font-bold rounded-small bg-third-background-color py-[2px] px-[10px] border border-border-color">1</span>
-            </div>
-            
-            <ul class="article-list pl-0 md:pl-8 text-lg leading-[1.5]">
+
+    
+        <span class="article-categories article-meta-item">
+            <i class="fa-regular fa-folders"></i>&nbsp;
+            <ul>
+                
                 
                     
+                        
+                        <li>
+                            <a href="/categories/AgentLearning/">AgentLearning</a>&nbsp;
+                        </li>
                     
-                         <!-- Close the previous LI if not the first item -->
-                        <li class="article-item space-y-2 px-6 pt-10 pb-2 text-xl relative border-l-2 border-border-color" date-is='01-19'>
-                    
-                    <a href="/2025/01/19/DeepLearningNote/" class="block w-fit">
-                        <span class="article-title my-0.5 text-2xl">DeepLearningNote</span>
-                    </a>
                     
                 
-                </li> <!-- Ensure the last item is properly closed -->
             </ul>
-        </section>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fa-regular fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/Agent-Note/">Agent, Note</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>1.7k Words</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>5 Mins</span>
+        </span>
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fa-regular fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
     
 </div>
+
+				</div>
+			</div>
+		</div>
+		
+
+		
+
+
+		<div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
+			<p><img lazyload="" src="/images/loading.svg" data-src="/images/DeepLearningCodeNote/CatMikuDemen.png"></p>
+<p>最近写 Agent 框架真的写到头秃，数据结构和算法已经够让人啊吧啊吧了，结果现在的智能体动不动就“记忆错乱”，执行长任务时宛如一个只有七秒记忆的金鱼。直到我把 Anthropic 最近释出的两篇硬核工程文章生啃了一遍：</p>
+<ul>
+<li>《Claude Agent SDK: Building an Agent Harness from Scratch》 (2026.01)</li>
+<li>《Agent Harness: Understanding Claude Code’s Superpower Engine》</li>
+</ul>
+<p>目前纯靠 Prompt 堆砌的框架受限于上下文性能极其有限，难以应对复杂项目，但时我通过深度拆解 Anthropic 的这套 <strong>“Agentic Engine”</strong> 范式了解到了agent的新方法。</p>
+<hr>
+<h2 id="1-痛点突围：被“幻觉腐烂”支配的恐惧"><a href="#1-痛点突围：被“幻觉腐烂”支配的恐惧" class="headerlink" title="1. 痛点突围：被“幻觉腐烂”支配的恐惧"></a>1. 痛点突围：被“幻觉腐烂”支配的恐惧</h2><p>写过稍微复杂点 Agent 的同学一定遇到过这个问题：当我们让 Agent 执行一个长达数十分钟甚至几小时的编程任务时，随着对话轮次的增加，上下文窗口 (Context Window) 会被大量的中间思考过程、报错信息、重试日志塞满。</p>
+<p>这个时候，Agent 就会出现 Anthropic 提出的一个极其精准的概念——<strong>幻觉腐烂 (Hallucination Decay)</strong>。</p>
+<p>大模型的注意力机制在超长文本下是会严重衰减的。你以为你给了它 200K 的上下文它就能纵观全局？错，它只会迷失在茫茫的报错日志里，甚至忘了你最开始让它干什么。</p>
+<p>为了解决这个问题，Anthropic 没有选择无脑拉长 Context Window，而是把破局点放在了 <strong>Harness（脚手架/运行环境）</strong> 上。他们不再将 Harness 视为一个简单的 API 封装器，而是将其定位为整个系统的 <strong>Agentic Engine（智能引擎）</strong></p>
+<hr>
+<h2 id="2-核心内功：Harness-的上下文工程-Context-Engineering"><a href="#2-核心内功：Harness-的上下文工程-Context-Engineering" class="headerlink" title="2. 核心内功：Harness 的上下文工程 (Context Engineering)"></a>2. 核心内功：Harness 的上下文工程 (Context Engineering)</h2><p>在《Building an Agent Harness from Scratch》这篇官方工作坊总结中，Anthropic 明确指出了优秀 Harness 必须具备的两大核心机制。这完全是拿做操作系统的思维在做大模型！</p>
+<h3 id="2-1-上下文压缩-Compaction-：给大模型做“内存回收”"><a href="#2-1-上下文压缩-Compaction-：给大模型做“内存回收”" class="headerlink" title="2.1 上下文压缩 (Compaction)：给大模型做“内存回收”"></a>2.1 上下文压缩 (Compaction)：给大模型做“内存回收”</h3><p>传统的聊天框架往往采用“滑动窗口”或“掐头去尾”的方式来清理上下文，但这会丢失关键的全局信息。</p>
+<p>Anthropic 提出的 <strong>Compaction</strong> 是一种主动的、结构化的状态提炼。</p>
+<ul>
+<li><strong>工作机制</strong>：Harness 会在后台定期触发一个轻量级的总结进程。它会将冗长复杂的 <code>Thought</code> (思考链)、<code>Action</code> (工具调用记录) 和 <code>Observation</code> (执行结果) 剥离出来，压缩成一个结构化的 <strong>状态快照 (State Snapshot)</strong>。</li>
+<li><strong>工程意义</strong>：这就好比操作系统里的“内存页置换”。Agent 只需要知道“我已经尝试了 X 方法并且失败了，当前系统的核心状态是 Y”，而不需要再去阅读之前那长达 5000 Token 的具体报错堆栈。这极大延缓了幻觉腐烂的发生。</li>
+</ul>
+<h3 id="2-2-动态注入-Dynamic-Injection-：按需加载的艺术"><a href="#2-2-动态注入-Dynamic-Injection-：按需加载的艺术" class="headerlink" title="2.2 动态注入 (Dynamic Injection)：按需加载的艺术"></a>2.2 动态注入 (Dynamic Injection)：按需加载的艺术</h3><p>如果说压缩是“节流”，那么动态注入就是“开源”。</p>
+<p>在执行复杂编程任务时（比如在巨大的代码仓库里 debug），把所有代码都塞进 Prompt 是极其愚蠢的。Harness 具备强大的环境感知能力，它可以做到：</p>
+<ul>
+<li><strong>精准挂载</strong>：当 Agent 决定分析 <code>user_auth.py</code> 时，Harness 才将该文件的 AST（抽象语法树）或具体代码片段<strong>动态注入</strong>到当前的 Prompt 空间中。</li>
+<li><strong>用完即焚</strong>：一旦该模块的分析任务结束，这部分上下文就会被 Harness 剥离，释放 Token 空间。这保证了 Agent 始终在一个极其干净、高信噪比的环境中工作。</li>
+</ul>
+<hr>
+<h2 id="3-架构实战：Claude-Code-的多智能体流派"><a href="#3-架构实战：Claude-Code-的多智能体流派" class="headerlink" title="3. 架构实战：Claude Code 的多智能体流派"></a>3. 架构实战：Claude Code 的多智能体流派</h2><p>如果说第一篇文章是内功心法，那么《Understanding Claude Code’s Superpower Engine》就是一套极度精密的连招。Claude Code 能够实现长达数小时的自主编程，靠的是一套<strong>严格分工的多智能体协作架构</strong>与<strong>全局共享内存池</strong>。</p>
+<h3 id="3-1-职权分离：Initiator-与-Worker"><a href="#3-1-职权分离：Initiator-与-Worker" class="headerlink" title="3.1 职权分离：Initiator 与 Worker"></a>3.1 职权分离：Initiator 与 Worker</h3><p>在这个引擎中，Anthropic 极其强调工种的边界：</p>
+<ul>
+<li><strong>Initiator Agent (启动者)</strong>：<ul>
+<li>它是整个工程的大脑和架构师。</li>
+<li><strong>核心职责</strong>：设置工作环境，拆解宏观任务目标，定义安全边界，并拉起子任务。它<strong>绝对不</strong>负责写具体的底层业务代码，只做决策和资源调度。</li>
+</ul>
+</li>
+<li><strong>Worker Sub-agents (执行者)</strong>：<ul>
+<li>纯纯的“打工人”。</li>
+<li><strong>核心职责</strong>：被 Initiator 拉起后，专注于解决极其具体的原子任务（例如：为 <code>login</code> 函数补充单元测试，或者修复某个特定的类型推导报错）。任务完成，立刻销毁，绝不占用长期资源。</li>
+</ul>
+</li>
+</ul>
+<p>这种控制流和执行流解耦的设计，简直是软件工程的典范。我们甚至可以用极其聪明的千亿级大模型做 Initiator，用便宜、快速的小模型集群做 Worker，性价比拉满。</p>
+<h3 id="3-2-终极杀器：共享内存-Shared-Memory-协作"><a href="#3-2-终极杀器：共享内存-Shared-Memory-协作" class="headerlink" title="3.2 终极杀器：共享内存 (Shared Memory) 协作"></a>3.2 终极杀器：共享内存 (Shared Memory) 协作</h3><p>在传统的 LangChain 或 AutoGen 这种链式调用里，Agent 之间传递信息往往靠互相“喊话”（即把一堆上下文作为文本发送给另一个 Agent）。这就导致信息在多次传递中被“包浆”，Token 消耗也呈指数级上升。</p>
+<p><strong>Claude Code 的 Harness 是怎么做的？</strong><br>它在底层维护了一个类似 Redis 的 <strong>全局状态内存池 (Shared Memory Pool)</strong>。</p>
+<ol>
+<li>Initiator 把拆解好的任务清单写进内存池。</li>
+<li>Worker A 领走任务，执行完毕后，不向 Initiator 汇报长篇大论，而是直接把执行结果（例如修改后的代码 diff、测试通过率）更新到内存池的特定字段。</li>
+<li>Initiator 通过订阅内存池的状态变化，来进行下一步的宏观调度。</li>
+</ol>
+<p>这就彻底摆脱了“大模型之间互相聊天”的低效模式，转向了正规军的“数据总线 (Data Bus)”架构。</p>
+<hr>
+<h2 id="4-工程碎碎念-Takeaways"><a href="#4-工程碎碎念-Takeaways" class="headerlink" title="4. 工程碎碎念 (Takeaways)"></a>4. 工程碎碎念 (Takeaways)</h2><p>好好看，好好学！啃完这两篇文章，我的几点暴论：</p>
+<ol>
+<li><strong>别再迷信纯 Prompt 工程了。</strong> 真正能落地的复杂 Agent，本质上是一个带有状态机的复杂后台程序，大模型只是这个程序里的一个“自然语言处理器 (CPU)”。Harness 才是那个决定系统上限的“主板和操作系统”。</li>
+<li><strong>管理注意力比扩充容量更重要。</strong> 200K 甚至 1M 的上下文窗口是用来兜底的，不是用来给你塞垃圾日志的。结构化的上下文管理才是王道。</li>
+<li><strong>多智能体协作的尽头是共享状态。</strong> 别让 Agent 聊天了，让它们读写数据库</li>
+</ol>
+
+		</div>
+
+		
+		<div class="post-copyright-info w-full my-8 px-2 sm:px-6 md:px-8">
+			<div class="article-copyright-info-container">
+    <ul>
+        <li><strong>Title:</strong> Anthropic Agent SDK：拒绝幻觉腐烂，重塑上下文工程</li>
+        <li><strong>Author:</strong> Displace</li>
+        <li><strong>Created at
+                :</strong> 2026-03-26 00:00:00</li>
+        
+            <li>
+                <strong>Updated at
+                    :</strong> 2026-03-26 23:43:00
+            </li>
+        
+        <li>
+            <strong>Link:</strong> https://mikumikudaifans.github.io/Displace.github.io/2026/03/26/AgentLearningNote/
+        </li>
+        <li>
+            <strong>
+                License:
+            </strong>
+            
+
+            
+                This work is licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0">CC BY-NC-SA 4.0</a>.
+            
+        </li>
+    </ul>
 </div>
+
+		</div>
+		
+
+		
+		<ul class="post-tags-box text-lg mt-1.5 flex-wrap justify-center flex md:hidden">
+			
+			<li class="tag-item mx-0.5">
+				<a href="/tags/Agent-Note/">#Agent, Note</a>&nbsp;
+			</li>
+			
+		</ul>
+		
+
+		
+
+		
+		<div class="article-nav my-8 flex justify-between items-center px-2 sm:px-6 md:px-8">
+			
+			
+			<div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+				<a class="next" rel="next" href="/2025/12/19/How%20to%20Biuld%20Effect%20Agent/">
+					<span class="title flex justify-center items-center">
+						<span class="post-nav-title-item">How to Biuld Effect Agent</span>
+						<span class="post-nav-item">Next posts</span>
+					</span>
+					<span class="right arrow-icon flex justify-center items-center">
+						<i class="fa-solid fa-chevron-right"></i>
+					</span>
+				</a>
+			</div>
+			
+		</div>
+		
+
+
+		
+		<div class="comment-container px-2 sm:px-6 md:px-8 pb-8">
+			<div class="comments-container mt-10 w-full ">
+    <div id="comment-anchor" class="w-full h-2.5"></div>
+    <div class="comment-area-title w-full my-1.5 md:my-2.5 text-xl md:text-3xl font-bold">
+        Comments
+    </div>
+    
+
+        
+            
+    <div id="waline"></div>
+    <script type="module" data-swup-reload-script>
+      import { init } from '/js/libs/waline.mjs';
+
+      function loadWaline() {
+        init({
+          el: '#waline',
+          serverURL: 'https://commentgitalk.vercel.app/',
+          lang: 'zh-CN',
+          dark: 'body[class~="dark-mode"]',
+          reaction: false,
+          requiredMeta: ['nick', 'mail'],
+          emoji: ['https://unpkg.com/@waline/emojis@1.2.0/soul-emoji'],
+          
+          
+        });
+      }
+
+      if (typeof swup !== 'undefined') {
+        loadWaline();
+      } else {
+        window.addEventListener('DOMContentLoaded', loadWaline);
+      }
+    </script>
+
+
+
+        
+    
+</div>
+
+		</div>
+		
+	</div>
 
 	
+	<div class="toc-content-container">
+		<div class="post-toc-wrap">
+	<div class="post-toc">
+		<div class="toc-title">On this page</div>
+		<div class="page-title">Anthropic Agent SDK：拒绝幻觉腐烂，重塑上下文工程</div>
+		<ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E7%97%9B%E7%82%B9%E7%AA%81%E5%9B%B4%EF%BC%9A%E8%A2%AB%E2%80%9C%E5%B9%BB%E8%A7%89%E8%85%90%E7%83%82%E2%80%9D%E6%94%AF%E9%85%8D%E7%9A%84%E6%81%90%E6%83%A7"><span class="nav-number">1.</span> <span class="nav-text">1. 痛点突围：被“幻觉腐烂”支配的恐惧</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E6%A0%B8%E5%BF%83%E5%86%85%E5%8A%9F%EF%BC%9AHarness-%E7%9A%84%E4%B8%8A%E4%B8%8B%E6%96%87%E5%B7%A5%E7%A8%8B-Context-Engineering"><span class="nav-number">2.</span> <span class="nav-text">2. 核心内功：Harness 的上下文工程 (Context Engineering)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-%E4%B8%8A%E4%B8%8B%E6%96%87%E5%8E%8B%E7%BC%A9-Compaction-%EF%BC%9A%E7%BB%99%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%81%9A%E2%80%9C%E5%86%85%E5%AD%98%E5%9B%9E%E6%94%B6%E2%80%9D"><span class="nav-number">2.1.</span> <span class="nav-text">2.1 上下文压缩 (Compaction)：给大模型做“内存回收”</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-%E5%8A%A8%E6%80%81%E6%B3%A8%E5%85%A5-Dynamic-Injection-%EF%BC%9A%E6%8C%89%E9%9C%80%E5%8A%A0%E8%BD%BD%E7%9A%84%E8%89%BA%E6%9C%AF"><span class="nav-number">2.2.</span> <span class="nav-text">2.2 动态注入 (Dynamic Injection)：按需加载的艺术</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E6%9E%B6%E6%9E%84%E5%AE%9E%E6%88%98%EF%BC%9AClaude-Code-%E7%9A%84%E5%A4%9A%E6%99%BA%E8%83%BD%E4%BD%93%E6%B5%81%E6%B4%BE"><span class="nav-number">3.</span> <span class="nav-text">3. 架构实战：Claude Code 的多智能体流派</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-%E8%81%8C%E6%9D%83%E5%88%86%E7%A6%BB%EF%BC%9AInitiator-%E4%B8%8E-Worker"><span class="nav-number">3.1.</span> <span class="nav-text">3.1 职权分离：Initiator 与 Worker</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-%E7%BB%88%E6%9E%81%E6%9D%80%E5%99%A8%EF%BC%9A%E5%85%B1%E4%BA%AB%E5%86%85%E5%AD%98-Shared-Memory-%E5%8D%8F%E4%BD%9C"><span class="nav-number">3.2.</span> <span class="nav-text">3.2 终极杀器：共享内存 (Shared Memory) 协作</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-%E5%B7%A5%E7%A8%8B%E7%A2%8E%E7%A2%8E%E5%BF%B5-Takeaways"><span class="nav-number">4.</span> <span class="nav-text">4. 工程碎碎念 (Takeaways)</span></a></li></ol>
 
-	<div class="page-template-content markdown-body">
-		
-
-		
-	</div>
-
-	<div class="page-template-comments">
-		
 	</div>
 </div>
-
-<div class="paginator">
-	<span class="page-number current">1</span>
+	</div>
+	
 </div>
-  
 			</div>
 
 			
@@ -604,7 +951,7 @@
                     </span>
                     
                         <span>
-                            61.8k words in total
+                            63.5k words in total
                         </span>
                     
                 </p>
@@ -661,6 +1008,26 @@
 		</div>
 	</div>
 
+	
+	<div class="post-tools">
+		<div class="post-tools-container">
+	<ul class="article-tools-list">
+		<!-- TOC aside toggle -->
+		
+		<li class="right-bottom-tools page-aside-toggle">
+			<i class="fa-regular fa-outdent"></i>
+		</li>
+		
+
+		<!-- go comment -->
+		
+		<li class="go-comment">
+			<i class="fa-regular fa-comments"></i>
+		</li>
+		
+	</ul>
+</div>
+	</div>
 	
 
 	<div class="right-side-tools-container">
@@ -764,6 +1131,7 @@
         containers: ["#swup"],
     });
 </script>
+
 
 
 
