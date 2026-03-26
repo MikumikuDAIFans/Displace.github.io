@@ -3683,7 +3683,7 @@
   </entry>
   <entry>
     <title>Anthropic Agent SDK：拒绝幻觉腐烂，重塑上下文工程</title>
-    <url>/2026/03/26/AgentLearningNote/</url>
+    <url>/2026/01/22/AgentLearningNote/</url>
     <content><![CDATA[<p><img lazyload="" src="/images/loading.svg" data-src="/images/DeepLearningCodeNote/CatMikuDemen.png"></p>
 <p>最近写 Agent 框架真的写到头秃，数据结构和算法已经够让人啊吧啊吧了，结果现在的智能体动不动就“记忆错乱”，执行长任务时宛如一个只有七秒记忆的金鱼。直到我把 Anthropic 最近释出的两篇硬核工程文章生啃了一遍：</p>
 <ul>
